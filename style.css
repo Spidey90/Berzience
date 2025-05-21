@@ -107,13 +107,14 @@ header {
 }
 
 /*Navigation bar*/
-#navbar {
+#sidebar {
   display: flex;
-  height: 128px;
-  align-items: end;
-  gap: 1px;
+  flex-direction: column;
+  width: 3%;
+  height: 100vh;
+  gap: 50px;
   font-size: 20px;
-  margin-left: 48px;
+  background-color: #171614;
 }
 
 .icon {
@@ -126,14 +127,6 @@ header {
 .inactive {
   font-family: Inter-Regular;
   text-align: center;
-}
-
-.active div,
-.inactive div {
-  height: 1px;
-  width: 150px;
-  margin-top: 5px;
-  border-radius: 5px;
 }
 
 .active {
