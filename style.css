@@ -2,14 +2,6 @@
   margin: 0;
 }
 
-/*Variables*/
-:root {
-  --title_location_top: 15px;
-  --title_location_left: 69px;
-  --active_tab: #f0f0f0;
-  --inactive_tab: #bababa;
-}
-
 /*Fonts*/
 @font-face {
   font-family: Inter-SemiBold;
@@ -28,77 +20,53 @@
 
 /*Header*/
 header {
-  height: 128px;
-  background-color: #171614;
-  color: #ffffff;
-  font-family: Inter-SemiBold;
-  box-shadow: 0px 2px 10px -1px #171614;
-  position: relative; /* Add this */
-  z-index: 1;
+  display: flex;
+  width: 100%;
+  height: 100px;
+  color: #f0f0f0;
+  background-color: hsl(0, 0%, 10%);
+  align-items: center;
+  position: fixed;
 }
 
-/* Logo */
 #title {
   display: flex;
+  gap: 16px;
   align-items: center;
-  height: 65px;
-  position: absolute;
-  top: var(--title_location_top);
-  left: var(--title_location_left);
+  font-family: Inter-SemiBold;
+  font-size: 32px;
 }
 
-#logo {
-  max-width: 60px;
-  max-height: 60px;
+#title,
+#log {
+  margin: 0px 50px 0px 50px;
 }
 
-#title h1 {
-  font-size: 52px;
-  position: relative;
-  left: 10px;
-}
-
-/*Log in / Bli medlem */
 #log {
   display: flex;
+  gap: 16px;
   position: absolute;
-  gap: 20px;
-  right: var(--title_location_left);
-  top: calc(var(--title_location_top) + 13px);
+  right: 0px;
 }
 
 .login {
-  color: #ffffff; /*Needs text settings becuase it is a button*/
+  width: 180px;
+  height: 52px;
+  border-radius: 50px;
+  color: #f0f0f0;
+  font-size: 24px;
   font-family: Inter-SemiBold;
-  font-size: 20px;
-  height: 48px; /*48 / 20 * font-size*/
-  
-}
-
-#discord, #instagram{
-  background-color: #ffffff;
-  border: 1px solid #ffffff;
-  border-radius: 15px;
-  color: #171614;
-  width: 60px;
 }
 
 #medlem {
-  border: 1px solid #d84797;
   background-color: #d84797;
-  border-radius: 100px;
-  width: 148px; /*170 / 20 * font-size*/
+  border: 1px solid #d84797;
 }
 
-#login{
-  border: 1px solid #b47aea;
-  background-color: #171614;
-  border-radius: 100px;
-  width: 148px; /*170 / 20 * font-size*/
-}
-
-#medlem:hover {
-  box-shadow: 5px 5px 8px hsl(0, 0%, 0%), -5px -5px 8px hsl(0, 0%, 15%);
+#medlem:hover{
+  box-shadow: 8px 8px 8px hsl(0, 0%, 0%), -6px -6px 8px hsl(0, 0%, 18%);
+  box-shadow: 6px 6px 8px hsl(327, 65%, 62%) inset,
+    -6px -6px 8px hsl(327, 65%, 46%) inset;
 }
 
 #medlem:active {
@@ -106,99 +74,34 @@ header {
     -6px -6px 8px hsl(327, 65%, 62%) inset;
 }
 
-/*Navigation bar*/
-#sidebar {
-  display: flex;
-  flex-direction: column;
-  width: 3%;
+#login {
+  background-color: #b47aea;
+  border: 1px solid #b47aea;
+}
+
+#login:hover {
+  box-shadow: 8px 8px 8px hsl(0, 0%, 0%), -6px -6px 8px hsl(0, 0%, 18%);
+  box-shadow: 6px 6px 8px hsl(271, 73%, 75%) inset,
+    -6px -6px 8px hsl(271, 73%, 60%) inset;
+}
+
+#login:active {
+  box-shadow: 6px 6px 8px hsl(271, 73%, 60%) inset,
+    -6px -6px 8px hsl(271, 73%, 75%) inset;
+}
+
+/*Sidebar*/
+nav {
   height: 100vh;
-  gap: 50px;
-  font-size: 20px;
-  background-color: #171614;
-}
+  width: 2%;
 
-.icon {
-  width: 16px;
-  position: relative;
-  top: 1px;
-}
-
-.active,
-.inactive {
-  font-family: Inter-Regular;
-  text-align: center;
-}
-
-.active {
-  color: var(--active_tab);
-}
-
-.active div {
-  background-color: #f0f0f0;
-  box-shadow: 0px 2px 5px 0px #ffffff;
-}
-
-.inactive {
-  color: var(--inactive_tab);
-}
-
-.inactive div {
-  background-color: #bababa;
-}
-
-.inactive img {
-  filter: brightness(0) saturate(100%) invert(83%) sepia(1%) saturate(0%)
-    hue-rotate(161deg) brightness(93%) contrast(83%);
-}
-
-/*Main*/
-#omoss {
-  display: flex;
-  align-items: end;
-}
-
-.info,
-#filter {
-  height: 50%;
-  max-height: 488px;
-}
-
-#filter {
-  position: absolute;
-  width: 100%;
-}
-
-#text_Omoss {
-  position: absolute;
-  width: 500px;
-  margin: 0px 0px 45px 50px;
-  font-family: Inter-Medium;
-  font-size: 20px;
-  color: #ffffff;
-}
-
-#titel_omoss {
-  font-family: Inter-SemiBold;
-  font-size: 40px;
-  margin-bottom: 15px;
-}
-
-/*Footer*/
-footer {
-  display: flex;
-  background-color: #171614;
-}
-
-.important_text {
   display: flex;
   flex-direction: column;
-  gap: 15px;
-  margin: 30px 0px 30px 50px;
-  color: #bababa;
-  font-family: Inter-Medium;
-  font-size: 14px;
-}
+  align-items: center;
+  gap: 50px;
 
-#integritetspolicy a {
-  text-decoration: underline;
+  position: fixed;
+  top: 100px;
+  background-color: hsl(0, 0%, 10%);
+  color: #f0f0f0;
 }
