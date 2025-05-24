@@ -27,6 +27,7 @@ header {
   background-color: hsl(0, 0%, 10%);
   align-items: center;
   position: fixed;
+  z-index: 1;
 }
 
 #logo{
@@ -71,7 +72,7 @@ header {
   box-shadow: 8px 8px 8px hsl(0, 0%, 0%), -6px -6px 8px hsl(0, 0%, 18%);
   box-shadow: 6px 6px 8px hsl(327, 65%, 62%) inset,
     -6px -6px 8px hsl(327, 65%, 46%) inset;
-  font-size: 1.1em;
+  font-size: 1.08em;
 }
 
 #medlem:active {
@@ -89,7 +90,7 @@ header {
   box-shadow: 8px 8px 8px hsl(0, 0%, 0%), -6px -6px 8px hsl(0, 0%, 18%);
   box-shadow: 6px 6px 8px hsl(271, 73%, 75%) inset,
     -6px -6px 8px hsl(271, 73%, 60%) inset;
-  font-size: 1.1em;
+  font-size: 1.08em;
 
 }
 
@@ -107,15 +108,62 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 50px;
+  gap: 16px;
 
   position: fixed;
+  z-index: 1;
   top: 64px;
   background-color: hsl(0, 0%, 10%);
   color: #f0f0f0;
 }
 
+nav a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 64px;
+  width: 100%;
+  box-sizing: border-box;
+  border-right: #f0f0f0 solid 2px;
+}
+
 .page_icon{
   height: 20px;
-  margin-top: 16px;
+}
+
+/*Main*/
+main{
+  padding-top: 64px;
+  margin-left: 2%;
+  color: #f0f0f0;
+}
+
+#explanation{
+  display: flex;
+}
+
+.banner{
+  height: 448px;
+}
+
+#filter{
+  position: absolute;
+  width: 100%;
+}
+
+#explanation div{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
+  gap: 16px;
+  margin: 0px 0px 36px 48px;
+  width: 512px;
+  font-size: 24px;
+  font-family: Inter-Regular;
+}
+
+#banner_title{
+  font-family: Inter-SemiBold;
+  font-size: 36px;
 }
