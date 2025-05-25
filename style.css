@@ -55,13 +55,17 @@ header {
 }
 
 .login {
-  width: 120px;
-  height: 36px;
+  width: 145px;
+  height: 45px;
   max-width: 20vw;
   border-radius: 50px;
   color: #f0f0f0;
-  font-size: 16px;
+  font-size: 20px;
   font-family: Inter-SemiBold;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #medlem {
@@ -69,36 +73,69 @@ header {
   border: 1px solid #d84797;
 }
 
-#medlem:hover{
-  box-shadow: 8px 8px 8px hsl(0, 0%, 0%), -6px -6px 8px hsl(0, 0%, 18%);
-  box-shadow: 6px 6px 8px hsl(327, 65%, 62%) inset,
-    -6px -6px 8px hsl(327, 65%, 46%) inset;
-  font-size: 1.08em;
-}
-
-#medlem:active {
-  box-shadow: 6px 6px 8px hsl(327, 65%, 46%) inset,
-    -6px -6px 8px hsl(327, 65%, 62%) inset;
-  font-size: 0.99em;
-}
 
 #login {
   background-color: #b47aea;
   border: 1px solid #b47aea;
 }
 
+@property --angle{
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.login::after, .login::before{
+  content: '';
+  position: absolute;
+  z-index: -1;
+  width: 146px;
+  height: 100%;
+  padding: 2px 2px 2px 2px;
+  border-radius: 25px;
+  background-image: conic-gradient(from var(--angle), rgb(255, 71, 71, 0.8), rgb(0, 255, 153, 0.8), rgb(0, 106, 255, 0.8), rgb(255, 0, 149, 0.8), rgb(255, 71, 71, 0.8));
+  animation: spin 3s linear infinite;
+}
+
+.login::before{
+  filter: blur(20px);
+  opacity: 0.8;
+}
+
+@keyframes spin{
+  from{
+    --angle: 0deg
+  }
+  to{
+    --angle: 360deg
+  }
+}
+
+#medlem:hover{
+  box-shadow: 8px 8px 8px hsl(0, 0%, 0%), -6px -6px 8px hsl(0, 0%, 18%);
+  box-shadow: 6px 6px 8px hsl(327, 65%, 62%) inset,
+    -6px -6px 8px hsl(327, 65%, 46%) inset;
+  font-size: 1.32em;
+}
+
+#medlem:active {
+  box-shadow: 6px 6px 8px hsl(327, 65%, 46%) inset,
+    -6px -6px 8px hsl(327, 65%, 62%) inset;
+  font-size: 1.2em;
+}
+
 #login:hover {
   box-shadow: 8px 8px 8px hsl(0, 0%, 0%), -6px -6px 8px hsl(0, 0%, 18%);
   box-shadow: 6px 6px 8px hsl(271, 73%, 75%) inset,
     -6px -6px 8px hsl(271, 73%, 60%) inset;
-  font-size: 1.08em;
+  font-size: 1.32em;
 
 }
 
 #login:active {
   box-shadow: 6px 6px 8px hsl(271, 73%, 60%) inset,
     -6px -6px 8px hsl(271, 73%, 75%) inset;
-  font-size: 0.99em;
+  font-size: 1.2em;
 }
 
 /*Sidebar*/
@@ -178,3 +215,4 @@ main{
   font-family: Inter-SemiBold;
   font-size: 36px;
 }
+
