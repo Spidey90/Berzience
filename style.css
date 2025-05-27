@@ -30,27 +30,16 @@ header {
   z-index: 2;
 }
 
-button {
+header button{
   background: none;
   border: none;
   padding: 0;
-  margin: 0;
-  outline: none;
-  box-shadow: none;
-  /* Optional: for debugging, add */
-  /* background-color: transparent; */
-}
-
-nav button{
-  background-color: rgb(0, 0, 0, 0);
-  border-color: rgb(0, 0, 0, 0);
+  width: 48px;
+  text-align: center;
 }
 
 #menu{
   height: 28px;
-  margin-left: 6px;
-  background-color: black;
-
 }
 
 #logo{
@@ -166,7 +155,7 @@ nav button{
 
 /*Sidebar*/
 nav {
-  height: 100vh;
+  height: calc(100vh - 64px);
   width: 48px;
   margin-top: 64px;
 
@@ -185,7 +174,7 @@ nav {
 }
 
 nav:hover{
-  width: 250px;
+  width: 125px;
 }
 
 nav a{
@@ -211,7 +200,7 @@ nav a{
   margin-left: 24px;
   margin-top: 3px;
   font-family: Inter-Regular;
-  transition: opacity 0.3s, margin-left 0.2s;
+  transition: opacity 0.3s, margin-left 0.35s;
 }
 
 nav:hover .page_icon_text {
@@ -220,10 +209,15 @@ nav:hover .page_icon_text {
 }
 
 #night{
-  height: 20px;
+  background: none;
+  border: none;
+  padding: 0px;
   position: absolute;
-  bottom: 84px;
-  left: 16px;
+  bottom: 20px;
+}
+
+#night img{
+  height: 20px;
 }
 
 /*Main*/
