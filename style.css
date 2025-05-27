@@ -183,7 +183,18 @@ nav > a{
   height: 64px;
   width: 100%;
   box-sizing: border-box;
+  border-right: grey solid 2px;
+  transition: background-color 0.15s;
+  transition: border-right 0.15s;
+}
+
+nav > a:hover{
+  background-color: rgb(255, 255, 255, 0.1);
   border-right: #f0f0f0 solid 2px;
+}
+
+.active{
+  border-color: white;
 }
 
 .page_icon{
