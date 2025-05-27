@@ -177,7 +177,7 @@ nav:hover{
   width: 200px;
 }
 
-nav a{
+nav > a{
   display: flex;
   align-items: center;
   height: 64px;
@@ -208,16 +208,32 @@ nav:hover .page_icon_text {
   margin-left: 48px;
 }
 
+#extra{
+  display: grid;
+  gap: 32px;
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+}
+
+nav:hover #extra{
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+#extra img{
+  height: 20px;
+}
+
+#extra a{
+  width: 100%;
+  object-fit: contain;
+  text-align: center;
+}
+
 #night{
   background: none;
   border: none;
   padding: 0px;
-  position: absolute;
-  bottom: 20px;
-}
-
-#night img{
-  height: 20px;
 }
 
 /*Main*/
