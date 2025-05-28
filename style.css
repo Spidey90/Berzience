@@ -30,10 +30,13 @@ header {
   z-index: 2;
 }
 
-header button{
+header button, nav button{
   background: none;
   border: none;
   padding: 0;
+}
+
+header button{
   width: 48px;
   text-align: center;
 }
@@ -174,7 +177,7 @@ nav {
 }
 
 nav:hover{
-  width: 200px;
+  width: 400px;
 }
 
 nav > a{
@@ -224,11 +227,7 @@ nav:hover .page_icon_text {
   gap: 32px;
   position: absolute;
   bottom: 20px;
-  width: 100%;
-}
-
-nav:hover #extra{
-  grid-template-columns: 1fr 1fr 1fr;
+  border: 1px solid green;
 }
 
 #extra img{
@@ -236,15 +235,8 @@ nav:hover #extra{
 }
 
 #extra a{
-  width: 100%;
   object-fit: contain;
   text-align: center;
-}
-
-#night{
-  background: none;
-  border: none;
-  padding: 0px;
 }
 
 /*Main*/
