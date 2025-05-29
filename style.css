@@ -30,13 +30,10 @@ header {
   z-index: 2;
 }
 
-header button, nav button{
+header button{
   background: none;
   border: none;
   padding: 0;
-}
-
-header button{
   width: 48px;
   text-align: center;
 }
@@ -164,8 +161,6 @@ nav {
 
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 8px;
 
   position: fixed;
   z-index: 1;
@@ -177,7 +172,12 @@ nav {
 }
 
 nav:hover{
-  width: 400px;
+  width: 240px;
+}
+
+nav:hover > a{
+  border-top: 1px solid rgb(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgb(255, 255, 255, 0.2);
 }
 
 nav > a{
@@ -224,19 +224,36 @@ nav:hover .page_icon_text {
 
 #extra{
   display: grid;
-  gap: 32px;
+  gap: 40px;
   position: absolute;
-  bottom: 20px;
-  border: 1px solid green;
+  bottom: 24px;
+}
+
+#extra button{
+  padding: 0;
+  border: none;
+  background: none;
+  color: white;
 }
 
 #extra img{
+  display: flex;
+  align-items: center;
+  align-items: center;
+  position: absolute;
+  left: 0px;
+  width: 48px;
   height: 20px;
 }
 
 #extra a{
   object-fit: contain;
   text-align: center;
+}
+
+#extra span{
+  text-wrap: nowrap;
+  font-size: 12px;
 }
 
 /*Main*/
