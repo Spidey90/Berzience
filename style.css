@@ -2,6 +2,12 @@
   margin: 0;
 }
 
+button{
+  padding: 0;
+  border: none;
+  background: none;
+}
+
 /*Fonts*/
 @font-face {
   font-family: Inter-SemiBold;
@@ -31,9 +37,6 @@ header {
 }
 
 header button{
-  background: none;
-  border: none;
-  padding: 0;
   width: 48px;
   text-align: center;
 }
@@ -56,7 +59,7 @@ header button{
 
 #title,
 #log {
-  margin: 0px 56px 0px 32px;
+  margin: 0px 10px 0px 10px;
 }
 
 #log {
@@ -176,8 +179,8 @@ nav:hover{
 }
 
 nav:hover > a{
-  border-top: 1px solid rgb(255, 255, 255, 0.2);
-  border-bottom: 1px solid rgb(255, 255, 255, 0.2);
+  border-top: 1px solid rgb(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgb(255, 255, 255, 0.1);
 }
 
 nav > a{
@@ -188,11 +191,11 @@ nav > a{
   box-sizing: border-box;
   border-right: grey solid 2px;
   transition: background-color 0.15s;
-  transition: border-right 0.15s;
+  transition: border-right 0.1s;
 }
 
 nav > a:hover{
-  background-color: rgb(255, 255, 255, 0.1);
+  background-color: rgb(255, 255, 255, 0.12);
   border-right: #f0f0f0 solid 2px;
 }
 
@@ -224,36 +227,64 @@ nav:hover .page_icon_text {
 
 #extra{
   display: grid;
-  gap: 40px;
   position: absolute;
-  bottom: 24px;
+  bottom: 0px;
 }
 
 #extra button{
-  padding: 0;
-  border: none;
-  background: none;
   color: white;
+  height: 50px;
+  width: 400px;
 }
 
 #extra img{
   display: flex;
-  align-items: center;
-  align-items: center;
   position: absolute;
-  left: 0px;
-  width: 48px;
-  height: 20px;
+  z-index: 2;
+  left: 7px;
+  width: 24px;
+  height: 24px;
+  padding: 5px;
+  border-radius: 8px;
+  transition: background-color 1ms;
 }
 
 #extra a{
+  height: 50px;
   object-fit: contain;
   text-align: center;
+}
+
+#extra a, #extra button{
+  display: flex;
+  align-items: center;
 }
 
 #extra span{
   text-wrap: nowrap;
   font-size: 12px;
+}
+
+#instagram{
+  filter: brightness(0) saturate(100%) invert(46%) sepia(9%) saturate(7470%) hue-rotate(278deg) brightness(78%) contrast(105%);
+}
+
+#instagram:hover{
+  filter: none;
+  background-color: #cc39a4;
+} 
+
+#discord{
+  filter: brightness(0) saturate(100%) invert(36%) sepia(75%) saturate(2191%) hue-rotate(222deg) brightness(95%) contrast(100%);
+}
+
+#discord:hover{
+  filter:none;
+  background-color: #5865F2;
+}
+
+#view_mode:hover {
+  background-color: rgb(255, 255, 255, 0.25);
 }
 
 /*Main*/
