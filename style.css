@@ -24,56 +24,48 @@ button{
   src: url(fonts/static/Inter_18pt-Medium.ttf);
 }
 
+body{
+  display: grid;
+}
+
 /*Header*/
 header {
   display: flex;
   width: 100%;
-  height: 64px;
+  height: 48px;
   color: #f0f0f0;
   background-color: hsl(0, 0%, 0%);
   align-items: center;
-  position: fixed;
+  position: sticky;
+  top: 0;
   z-index: 2;
-}
-
-header button{
-  width: 48px;
-  text-align: center;
-}
-
-#menu{
-  height: 24px;
-}
-
-#logo{
-  height: 48px;
 }
 
 #title {
   display: flex;
-  gap: 8px;
+  gap: 0px;
   align-items: center;
   font-family: Inter-SemiBold;
-  font-size: 24px;
+  font-size: 20px;
 }
 
-#title,
-#log {
-  margin: 0px 10px 0px 10px;
+#logo{
+  height: 40px;
+  width: 48px;
+  object-fit: contain;
 }
 
 #log {
+  height: 100%;
   display: flex;
-  gap: 16px;
   position: absolute;
   right: 0px;
 }
 
 .login {
   width: 145px;
-  height: 45px;
+  height: 100%;
   max-width: 20vw;
-  border-radius: 50px;
   color: #f0f0f0;
   font-size: 20px;
   font-family: Inter-SemiBold;
@@ -81,95 +73,48 @@ header button{
   display: flex;
   align-items: center;
   justify-content: center;
-
-  transition: box-shadow 0.1s ease-in-out;
-  transition: font-size 0.1s ease-in-out;
 }
 
 #medlem {
-  background-color: #d84797;
   border: 1px solid #d84797;
+  background-color: #d84797;
 }
 
-
-#login {
-  background-color: #b47aea;
-  border: 1px solid #b47aea;
-}
-
-@property --angle{
-  syntax: "<angle>";
-  initial-value: 0deg;
-  inherits: false;
-}
-
-.login::after, .login::before{
+.login::after{
   content: '';
+  height: 1.5px;
   position: absolute;
-  z-index: -1;
-  width: 146px;
-  height: 100%;
-  padding: 2px 2px 2px 2px;
-  border-radius: 25px;
-  background-image: conic-gradient(from var(--angle), rgb(255, 71, 71, 0.8), rgb(0, 255, 153, 0.8), rgb(0, 106, 255, 0.8), rgb(255, 0, 149, 0.8), rgb(255, 71, 71, 0.8));
-  animation: spin 3s linear infinite;
+  bottom: 10px;
+  background-color: white;
+  transition: opacity 100ms, transform 100ms;
+  transform: scale(0);
+  transform-origin: center;
 }
 
-.login::before{
-  filter: blur(20px);
-  opacity: 0.8;
+#login::after{
+  width: 32%;
 }
 
-@keyframes spin{
-  from{
-    --angle: 0deg
-  }
-  to{
-    --angle: 360deg
-  }
+#medlem::after{
+  width: 40%;
 }
 
-#medlem:hover{
-  box-shadow: 8px 8px 8px hsl(0, 0%, 0%), -6px -6px 8px hsl(0, 0%, 18%);
-  box-shadow: 6px 6px 8px hsl(327, 65%, 62%) inset,
-    -6px -6px 8px hsl(327, 65%, 46%) inset;
-  font-size: 1.32em;
-}
-
-#medlem:active {
-  box-shadow: 6px 6px 8px hsl(327, 65%, 46%) inset,
-    -6px -6px 8px hsl(327, 65%, 62%) inset;
-  font-size: 1.2em;
-}
-
-#login:hover {
-  box-shadow: 8px 8px 8px hsl(0, 0%, 0%), -6px -6px 8px hsl(0, 0%, 18%);
-  box-shadow: 6px 6px 8px hsl(271, 73%, 75%) inset,
-    -6px -6px 8px hsl(271, 73%, 60%) inset;
-  font-size: 1.32em;
-
-}
-
-#login:active {
-  box-shadow: 6px 6px 8px hsl(271, 73%, 60%) inset,
-    -6px -6px 8px hsl(271, 73%, 75%) inset;
-  font-size: 1.2em;
+.login:hover::after,
+.login:focus::after{
+  transform: scale(1);
 }
 
 /*Sidebar*/
-nav {
-  height: calc(100vh - 64px);
+nav{
+  height: calc(100vh - 48px);
   width: 48px;
-  margin-top: 64px;
-
   display: flex;
   flex-direction: column;
-
-  position: fixed;
+  position: sticky;
+  top: 48px;
   z-index: 1;
   background-color: hsl(0, 0%, 0%);
   color: #f0f0f0;
-
   overflow: hidden;
   transition: width 0.3s;
 }
@@ -240,7 +185,6 @@ nav:hover .page_icon_text {
 #extra img{
   display: flex;
   position: absolute;
-  z-index: 2;
   left: 7px;
   width: 24px;
   height: 24px;
@@ -289,8 +233,6 @@ nav:hover .page_icon_text {
 
 /*Main*/
 main{
-  padding-top: 64px;
-  margin-left: 48px;
   color: #f0f0f0;
 }
 
