@@ -44,7 +44,6 @@ header {
   width: 100vw;
   height: 48px;
   color: #f0f0f0;
-  box-sizing: border-box;
   background-color: hsl(0, 0%, 0%);
   border-bottom: 1px solid white;
   align-items: center;
@@ -59,6 +58,10 @@ header {
   align-items: center;
   font-family: Inter-SemiBold;
   font-size: 20px;
+}
+
+#title:hover{
+  cursor: default;
 }
 
 #logo{
@@ -105,13 +108,17 @@ header {
 }
 
 #contact:hover{
-  background-color: hsl(0, 0%, 10%);
+  background-color: hsl(0, 0%, 5%);
+}
+
+header button:hover, header a:hover{
+  cursor: pointer;
 }
 
 /*Sidebar*/
 nav{
   grid-area: navbar;
-  height: calc(100vh - 48px);
+  height: calc(100vh - 49px); /*1 more pixel than height of header because of border*/
   width: 48px;
   display: flex;
   flex-direction: column;
@@ -133,6 +140,7 @@ nav:hover{
 nav:hover > a{
   border-top: 1px solid rgb(255, 255, 255, 0.1);
   border-bottom: 1px solid rgb(255, 255, 255, 0.1);
+  cursor: pointer;
 }
 
 nav > a{
@@ -151,7 +159,7 @@ nav > a:hover{
 }
 
 .page_icon{
-  padding: 3px 0px 3px 0px;
+  padding: 6px 0px 6px 0px;
   width: 32px;           
   height: 20px;          
   object-fit: contain;
@@ -215,6 +223,14 @@ nav:hover .page_icon_text {
 #extra span{
   text-wrap: nowrap;
   font-size: 12px;
+}
+
+#extra:hover{
+  cursor: default;
+}
+
+#extra img:hover{
+  cursor: pointer; 
 }
 
 #instagram{
@@ -283,7 +299,7 @@ footer {
   grid-area: footer;
   align-content: center;
   background-color: hsl(0, 0%, 3%);
-  border-top: 1px solid white;
+  border-top: 1px solid rgb(255, 255, 255, 0.5);
 }
 
 .important_text {
