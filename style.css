@@ -2,12 +2,6 @@
   margin: 0;
 }
 
-button{
-  padding: 0;
-  border: none;
-  background: none;
-}
-
 /*Fonts*/
 @font-face {
   font-family: Inter-SemiBold;
@@ -24,21 +18,39 @@ button{
   src: url(fonts/static/Inter_18pt-Medium.ttf);
 }
 
-body{
+button{
+  padding: 0;
+  border: none;
+  background: none;
+}
+
+body {
+  background-color: hsl(0, 0%, 3%);
+  overflow-x: hidden;
   display: grid;
+  grid-template-columns: 48px 1fr; /* 48px for navbar, rest for content/footer */
+  grid-template-rows: 48px 1fr 200px; /* header, main, footer heights */
+  grid-template-areas:
+    "header header"
+    "navbar main"
+    "navbar footer";
+  min-height: 100vh;
 }
 
 /*Header*/
 header {
+  grid-area: header;
   display: flex;
-  width: 100%;
+  width: 100vw;
   height: 48px;
   color: #f0f0f0;
+  box-sizing: border-box;
   background-color: hsl(0, 0%, 0%);
+  border-bottom: 1px solid white;
   align-items: center;
   position: sticky;
   top: 0;
-  z-index: 2;
+  z-index: 1;
 }
 
 #title {
@@ -86,33 +98,28 @@ header {
   position: absolute;
   bottom: 10px;
   background-color: white;
-  transition: opacity 100ms, transform 100ms;
-  transform: scale(0);
-  transform-origin: center;
 }
 
-#login::after{
-  width: 32%;
+#medlem:hover{
+  background-color: hsl(327, 65%, 60%);
 }
 
-#medlem::after{
-  width: 40%;
-}
-
-.login:hover::after,
-.login:focus::after{
-  transform: scale(1);
+#contact:hover{
+  background-color: hsl(0, 0%, 10%);
 }
 
 /*Sidebar*/
 nav{
+  grid-area: navbar;
   height: calc(100vh - 48px);
   width: 48px;
   display: flex;
   flex-direction: column;
   position: sticky;
   top: 48px;
-  z-index: 1;
+  z-index: 2;
+  box-sizing: border-box;
+  border-right: 1px solid white;
   background-color: hsl(0, 0%, 0%);
   color: #f0f0f0;
   overflow: hidden;
@@ -134,7 +141,6 @@ nav > a{
   height: 64px;
   width: 100%;
   box-sizing: border-box;
-  border-right: grey solid 2px;
   transition: background-color 0.15s;
   transition: border-right 0.1s;
 }
@@ -144,16 +150,18 @@ nav > a:hover{
   border-right: #f0f0f0 solid 2px;
 }
 
-.active{
-  border-color: white;
-}
-
 .page_icon{
+  padding: 3px 0px 3px 0px;
   width: 32px;           
   height: 20px;          
   object-fit: contain;
   position: absolute;
   left: 7px;
+}
+
+#active{
+  margin-top: 1px;
+  border-bottom: 1px solid white;
 }
 
 .page_icon_text{
@@ -233,6 +241,7 @@ nav:hover .page_icon_text {
 
 /*Main*/
 main{
+  grid-area: main;
   color: #f0f0f0;
 }
 
@@ -269,16 +278,19 @@ main{
 
 /*Footer*/
 footer {
-  display: flex;
+  width: 100vw;
+  height: 200px;
+  grid-area: footer;
+  align-content: center;
   background-color: hsl(0, 0%, 3%);
-  margin-left: 48px;
+  border-top: 1px solid white;
 }
 
 .important_text {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  margin: 30px 0px 30px 50px;
+  margin-left: 50px;
   color: #bababa;
   font-family: Inter-Medium;
   font-size: 14px;
