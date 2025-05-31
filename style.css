@@ -25,11 +25,12 @@ button{
 }
 
 body {
-  background-color: hsl(0, 0%, 3%);
+  background-color: hsl(0, 0%, 6%);
   overflow-x: hidden;
   display: grid;
-  grid-template-columns: 48px 1fr; /* 48px for navbar, rest for content/footer */
-  grid-template-rows: 48px 1fr 200px; /* header, main, footer heights */
+  /*Grid area +1 because of border except for title*/
+  grid-template-columns: 49px 1fr; 
+  grid-template-rows: 48px 1fr 201px; 
   grid-template-areas:
     "header header"
     "navbar main"
@@ -50,13 +51,13 @@ header {
   position: sticky;
   top: 0;
   z-index: 1;
+  user-select: none;
 }
 
 #title {
   display: flex;
-  gap: 0px;
   align-items: center;
-  font-family: Inter-SemiBold;
+  font-family: Inter-Medium;
   font-size: 20px;
 }
 
@@ -104,12 +105,21 @@ header {
 }
 
 #medlem:hover{
-  background-color: hsl(327, 65%, 60%);
+  background-color: hsl(327, 65%, 58%);
 }
 
 #contact:hover{
-  background-color: hsl(0, 0%, 5%);
+  background-color: hsl(0, 0%, 10%);
 }
+
+#medlem:active{
+  background-color: hsl(327, 65%, 56%);
+}
+
+#contact:active{
+  background-color: hsl(0, 0%, 0%);
+}
+
 
 header button:hover, header a:hover{
   cursor: pointer;
@@ -120,16 +130,20 @@ nav{
   grid-area: navbar;
   height: calc(100vh - 49px); /*1 more pixel than height of header because of border*/
   width: 48px;
+  
   display: flex;
   flex-direction: column;
   position: sticky;
   top: 48px;
   z-index: 2;
+  
   box-sizing: border-box;
   border-right: 1px solid white;
   background-color: hsl(0, 0%, 0%);
   color: #f0f0f0;
+  
   overflow: hidden;
+  user-select: none;
   transition: width 0.3s;
 }
 
@@ -154,8 +168,13 @@ nav > a{
 }
 
 nav > a:hover{
-  background-color: rgb(255, 255, 255, 0.12);
+  background-color: rgba(255, 255, 255, 0.12);
   border-right: #f0f0f0 solid 2px;
+}
+
+nav > a:active{
+  background-color: rgba(255, 255, 255, 0.16);
+  border-right: #f0f0f0 solid 4px;
 }
 
 .page_icon{
@@ -221,6 +240,7 @@ nav:hover .page_icon_text {
 }
 
 #extra span{
+  font-family: Inter-Medium;
   text-wrap: nowrap;
   font-size: 12px;
 }
@@ -252,8 +272,23 @@ nav:hover .page_icon_text {
 }
 
 #view_mode:hover {
+  filter: saturate(0);
   background-color: rgb(255, 255, 255, 0.25);
 }
+
+#instagram:active{
+  background-color: hsl(316, 59%, 46%);
+} 
+
+#discord:active{
+  background-color: hsl(235, 86%, 60%);
+}
+
+#view_mode:active {
+  background-color: hsla(0, 0%, 15%);
+}
+
+
 
 /*Main*/
 main{
@@ -283,13 +318,13 @@ main{
   gap: 16px;
   margin: 0px 0px 36px 48px;
   width: 512px;
-  font-size: 24px;
+  font-size: 20px;
   font-family: Inter-Regular;
 }
 
 #banner_title span{
-  font-family: Inter-SemiBold;
-  font-size: 36px;
+  font-family: Inter-Medium;
+  font-size: 32px;
 }
 
 /*Footer*/
@@ -298,7 +333,7 @@ footer {
   height: 200px;
   grid-area: footer;
   align-content: center;
-  background-color: hsl(0, 0%, 3%);
+  background-color: hsl(0, 0%, 4%);
   border-top: 1px solid rgb(255, 255, 255, 0.5);
 }
 
