@@ -96,28 +96,16 @@ header {
   background-color: #d84797;
 }
 
-.login::after{
-  content: '';
-  height: 1.5px;
-  position: absolute;
-  bottom: 10px;
-  background-color: white;
-}
-
-#medlem:hover{
-  background-color: hsl(327, 65%, 58%);
-}
-
-#contact:hover{
-  background-color: hsl(0, 0%, 10%);
+.login:hover{
+  text-decoration: underline;
 }
 
 #medlem:active{
-  background-color: hsl(327, 65%, 56%);
+  background-color: hsl(327, 65%, 60%);
 }
 
 #contact:active{
-  background-color: hsl(0, 0%, 0%);
+  background-color: hsl(0, 0%, 10%);
 }
 
 
