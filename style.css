@@ -108,10 +108,37 @@ header {
   background-color: hsl(0, 0%, 10%);
 }
 
-
 header button:hover, header a:hover{
   cursor: pointer;
 }
+
+/*Login Window*/
+
+#login_window {
+  position: fixed;
+  z-index: 10;
+  align-self: center;
+  justify-self: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  color: #f0f0f0;
+  width: 100vw;
+  height: 100vh;
+  
+  background-image: linear-gradient(to right, rgb(10, 10, 10, 0.2), rgb(10, 10, 10, 0.6));
+}
+
+#login_overlay {  
+  background-color: orange;
+  color: #f0f0f0;
+  width: 30vw;
+  height: 75vh;
+}
+
+
 
 /*Sidebar*/
 nav{
@@ -230,7 +257,7 @@ nav:hover .page_icon_text {
 #extra span{
   font-family: Inter-Medium;
   text-wrap: nowrap;
-  font-size: 12px;
+  font-size: 0.75rem;
 }
 
 #extra:hover{
@@ -306,13 +333,13 @@ main{
   gap: 16px;
   margin: 0px 0px 36px 48px;
   width: 512px;
-  font-size: 20px;
+  font-size: 1.25rem;
   font-family: Inter-Regular;
 }
 
 #banner_title span{
   font-family: Inter-Medium;
-  font-size: 32px;
+  font-size: 2rem;
 }
 
 /*Footer*/
@@ -332,7 +359,7 @@ footer {
   margin-left: 50px;
   color: #bababa;
   font-family: Inter-Medium;
-  font-size: 14px;
+  font-size: 0.875em;
 }
 
 #integritetspolicy a {
