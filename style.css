@@ -29,6 +29,7 @@ button {
 }
 
 body{
+  color: hsl(0, 0%, 90%);
   background: var(--background-colour);
 }
 
@@ -37,21 +38,23 @@ header {
   height: 48px;
   width: 100%;
   background: var(--background-colour);
-  color: hsl(0, 0%, 90%);
   box-shadow: 0px 4px 12px hsl(0, 0%, 8%);
-
+  user-select: none;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  z-index: 1;
 
   font-family: Inter-Regular;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 }
 
 #title {
   display: flex;
+  gap: 4px;
   align-items: center;
-
+  pointer-events: none;
   font-family: Inter-Medium;
   font-weight: bold;
   font-size: 2.5rem;
@@ -61,7 +64,7 @@ header {
   }
 }
 
-nav{
+header nav{
   display: flex;
   height: 48px;
   gap: 64px;
@@ -77,6 +80,7 @@ nav{
     align-items: center;
     justify-content: center;
     gap: 8px;
+    cursor: pointer;
   }
 
   #active::after{
@@ -86,7 +90,16 @@ nav{
     background: #b47aea;
     position: absolute;
     bottom: 0px;
-    border-radius: 2px 2px 0px 0px;
+    border-radius: 10px 10px 0px 0px;
+    transition: height 180ms, border-radius 0.1s;
+  }
+
+  a:hover#active::after{
+    height: 4px;
+  }
+
+  a:active#active::after{
+    height: 6px;
   }
 }
 
@@ -108,6 +121,30 @@ nav{
     background: hsl(0, 0%, 16%);
     padding: 3px 12px 3px 12px;
     border-radius: 4px;
+  }
+}
+
+/*Main*/
+#hero_section{
+  #valkommen{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-family: Inter-Regular;
+    font-size: 1.5rem;
+    width: Min(50% , 600px);
+
+    span{
+      font-family: Inter-Medium;
+      font-size: 2rem;
+    }
+  }
+
+  #hero_image{
+    position: absolute;
+    right: 0px;
+    top: 48px;
+    max-width: 50%;
   }
 
 }
