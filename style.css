@@ -2,7 +2,7 @@
   margin: 0;
 }
 
-:root{
+:root {
   --background-colour: hsl(0, 0%, 10%);
 }
 
@@ -28,7 +28,12 @@ button {
   background: none;
 }
 
-body{
+a {
+  cursor: pointer;
+  user-select: none;
+}
+
+body {
   color: hsl(0, 0%, 90%);
   background: var(--background-colour);
 }
@@ -64,27 +69,26 @@ header {
   }
 }
 
-header nav{
+header nav {
   display: flex;
   height: 48px;
   gap: 64px;
   position: absolute;
   left: 64px;
 
-  img{
+  img {
     height: 20px;
   }
 
-  a{
+  a {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 8px;
-    cursor: pointer;
   }
 
-  #active::after{
-    content: '';
+  #active::after {
+    content: "";
     width: 128px;
     height: 2px;
     background: #b47aea;
@@ -94,30 +98,30 @@ header nav{
     transition: height 180ms, border-radius 0.1s;
   }
 
-  a:hover#active::after{
+  a:hover#active::after {
     height: 4px;
   }
 
-  a:active#active::after{
+  a:active#active::after {
     height: 6px;
   }
 }
 
-#extra{
+#extra {
   position: absolute;
   right: 64px;
   display: flex;
   gap: 40px; /*64px gap - padding*/
   font-weight: bold;
 
-  & :first-child{
+  & :first-child {
     background: hsl(0, 0%, 90%);
     color: black;
     padding: 3px 12px 3px 12px;
     border-radius: 4px;
   }
 
-  & :nth-child(2){
+  & :nth-child(2) {
     background: hsl(0, 0%, 16%);
     padding: 3px 12px 3px 12px;
     border-radius: 4px;
@@ -125,27 +129,57 @@ header nav{
 }
 
 /*Main*/
-#hero_section{
-  #valkommen{
+#hero_section {
+  margin-left: 64px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+
+  #valkommen {
     display: flex;
     flex-direction: column;
     gap: 8px;
     font-family: Inter-Regular;
     font-size: 1.5rem;
-    width: Min(50% , 600px);
+    width: Min(50%, 600px);
 
-    span{
+    span {
       font-family: Inter-Medium;
       font-size: 2rem;
     }
   }
 
-  #hero_image{
+  #hero_image {
     position: absolute;
     right: 0px;
     top: 48px;
     max-width: 50%;
   }
 
-}
+  nav {
+    margin-top: 32px;
+    display: flex;
+    align-items: center;
+    gap: 28px;
 
+    > :nth-child(1) {
+      font-family: Inter-Medium;
+      font-size: 1.5rem;
+      margin-right: 12px;
+      border-radius: 4px;
+      padding: 12px 36px 12px 36px;
+      background-color: #d84797;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+
+      img {
+        height: 16px;
+      }
+    }
+
+    img {
+      height: 36px;
+    }
+  }
+}
