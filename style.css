@@ -160,14 +160,14 @@ header nav {
     margin-top: 32px;
     display: flex;
     align-items: center;
-    gap: 28px;
+    gap: 24px;
 
     > :nth-child(1) {
       font-family: Inter-Medium;
       font-size: 1.5rem;
       margin-right: 12px;
       border-radius: 4px;
-      padding: 12px 36px 12px 36px;
+      padding: 12px 28px 12px 28px;
       background-color: #d84797;
       display: flex;
       align-items: center;
@@ -178,29 +178,70 @@ header nav {
       }
     }
 
-    img {
+    #instagram, #discord {
       display: flex;
-      padding: 8px;
+      justify-content: center;
+      padding: 12px;
+      height: 32px;
+      width: 32px;
+      border-radius: 8px;
+      transition: background 0.1s;
+    }
+
+    #instagram{
       height: 36px;
+      padding: 10px;
     }
 
-    #instagram:active{
+    #instagram:hover{
       background: #d62976;
-      border-radius: 8px;
     }
 
-    #discord:active{
+    #discord:hover{
       background: #5865F2;
-      border-radius: 8px;
     }
   }
 }
 
 #kommande_event{
   margin-left: 64px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: "title title title"
+  "poster text calender";
+  gap: 16px;
 
   & :first-child{
+    grid-area: title;
     font-family: Inter-Medium;
     font-size: 1.5rem;
+  }
+
+  img{
+    grid-area: poster;
+    height: 360px;
+    border-radius: 8px;
+    margin-left: -8px;
+  }
+
+  #poster_context{
+    grid-area: text;
+    font-family: Inter-Regular;
+    font-size: 1.25rem;
+  }
+}
+
+/*Notification*/
+#notification{
+  position: fixed;
+  bottom: 12px;
+  right: 12px;
+  background: hsl(0, 0%, 8%);
+  border-radius: 8px;
+
+  img{
+    width: 30px;
+    height: 30px;
+    padding: 12px;
   }
 }
