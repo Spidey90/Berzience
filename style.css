@@ -29,6 +29,7 @@ button {
 }
 
 a {
+  text-decoration: none;
   cursor: pointer;
   user-select: none;
 }
@@ -126,116 +127,6 @@ header nav {
     padding: 3px 12px 3px 12px;
     border-radius: 4px;
   }
-}
-
-/*Main*/
-#hero_section {
-  margin-left: 64px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center; 
-
-  #valkommen {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    font-family: Inter-Regular;
-    font-size: 1.5rem;
-    width: Min(50%, 600px);
-
-    span {
-      font-family: Inter-Medium;
-      font-size: 2rem;
-    }
-  }
-
-  #hero_image {
-    position: absolute;
-    right: 0px;
-    top: 48px;
-    max-width: 50%;
-  }
-
-  nav {
-    margin-top: 32px;
-    display: flex;
-    align-items: center;
-    gap: 24px;
-
-    > :nth-child(1) {
-      font-family: Inter-Medium;
-      font-size: 1.5rem;
-      margin-right: 12px;
-      border-radius: 4px;
-      padding: 12px 28px 12px 28px;
-      background-color: #d84797;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-
-      img {
-        height: 16px;       
-      }
-    }
-
-    #instagram, #discord {
-      display: flex;
-      justify-content: center;
-      padding: 12px;
-      height: 32px;
-      width: 32px;
-      border-radius: 10px;
-      transition: background 0.1s;
-    }
-
-    #instagram{
-      height: 36px;
-      padding: 10px ;
-    }
-
-    #instagram:hover{
-      background: #d62976;
-    }
-
-    #discord:hover{
-      background: #5865F2;
-    }
-  }
-}
-
-#kommande_event{
-  margin-left: 64px;
-  margin-right: 64px;
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  grid-template-areas: "title title title"
-  "poster text calender";
-  gap: 16px;
-
-  & :first-child{
-    grid-area: title;
-    font-family: Inter-Medium;
-    font-size: 1.5rem;
-  }
-
-  #poster{
-    grid-area: poster;
-    height: 360px;
-    border-radius: 8px;
-    margin-left: -8px;
-  }
-
-  #poster_context{
-    grid-area: text;
-    font-family: Inter-Regular;
-    font-size: 1.25rem;
-  }
-
-  #calender{
-    grid-area: calender;
-    height: 360px;
-  }
-
 }
 
 /*Notification*/

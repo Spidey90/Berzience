@@ -1,0 +1,82 @@
+main{
+    position: absolute;
+    top: calc(50% + 24px); /*hälften av header*/
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30vw;
+    height: 60vh;
+    background-color: hsl(0, 0%, 8%);
+    border-radius: 16px;
+    padding: 5vw 5vh 5vw 5vh;
+   
+    display: grid;
+    grid-template-columns: repeat(6, auto);
+    grid-template-rows: repeat(12, 32px);
+    grid-template-areas:
+        ". . medlem medlem . ."
+        "förnamn förnamn förnamn efternamn efternamn efternamn"
+        "email email email email email email"
+        "klass klass födelseår födelseår kön kön"
+        "telefon telefon telefon postort postort postort"
+        "discord discord discord discord discord discord";
+    gap: 12px;
+}
+
+input{
+    height: 32px;
+    object-fit: cover;
+    width: 100%;           
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 2px solid hsl(0, 0%, 24%);
+    background: none;
+    color: hsl(0, 0%, 80%);
+    
+}
+
+#förnamn{
+    grid-area: förnamn;
+}
+
+#efternamn{
+    grid-area: efternamn;
+}
+
+#email{
+    grid-area: email;
+}
+
+#klass{
+    grid-area: klass;
+}
+
+#år{
+    grid-area: födelseår;
+}
+
+#kön{
+    grid-area: kön;
+}
+
+#tel{
+    grid-area: telefon;
+}
+
+#post{
+    grid-area: postort;
+}
+
+#username{
+    grid-area: discord;
+}
+
+#medlem{
+    text-align: center;
+    grid-area: medlem;
+    font-family: Inter-Medium;
+    font-size: 2rem;
+    position: relative;
+    bottom: 48px;
+}
+
+
