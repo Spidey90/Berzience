@@ -1,4 +1,5 @@
 #hero_section {
+  position: relative;
   margin-left: 64px;
   display: flex;
   flex-direction: column;
@@ -21,7 +22,6 @@
   #hero_image {
     position: absolute;
     right: 0px;
-    top: 48px;
     max-width: 50%;
   }
 
