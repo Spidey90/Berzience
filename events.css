@@ -1,7 +1,7 @@
 main {
   margin-top: 36px;
   color: white;
-  width: 100%;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -10,9 +10,9 @@ main {
   .events {
     font-size: 1rem;
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: auto auto auto;
     gap: 24px;
-    width: 88%;
+    width: 72%;
     border: 16px solid hsl(0, 0%, 8%);
     background-color: hsl(0, 0%, 8%);
     border-radius: 16px;
@@ -37,10 +37,15 @@ main {
   }
 
   & :nth-child(odd){
+    justify-content: left;
     grid-template-areas: "poster event_context";
   }
 
   & :nth-child(even){
+    justify-content: right;
     grid-template-areas: "event_context poster";
   }
+  
+  
+
 }
