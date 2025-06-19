@@ -157,7 +157,7 @@ main{
   img {
     width: 24px;
     height: 32px;
-    padding: 12px;
+    padding: 12px 12px;
   }
 }
 
@@ -169,22 +169,22 @@ footer {
   margin-top: 64px;
   background-color: hsl(0, 0%, 6%);
   border-top: 1px solid hsl(0, 0%, 16%);
-  display: grid;
-  grid-template-columns: 1fr 1fr;
   min-height: 192px;
-  align-items: center;
   font-family: Inter-Regular;
   color: hsl(0, 0%, 50%);
+  display: flex;
+  align-items: center;
 
-  img{
+  img {
     height: 64px;
     position: absolute;
     top: calc(-32px - 4px);
     left: calc(50vw - 32px - 4px);
-    border: 8px solid var(--background-colour);
+    padding: 8px;
+    background-color: var(--background-colour);
     border-radius: 50px;
   }
-
+  
   #address {
     margin-left: 64px;
 
