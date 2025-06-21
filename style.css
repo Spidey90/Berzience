@@ -38,9 +38,10 @@ a {
 body {
   display: grid;
   grid-template-rows: auto 1fr 192px;
-  grid-template-areas: "header"
-  "main"
-  "footer";
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
   color: hsl(0, 0%, 90%);
   background: var(--background-colour);
 }
@@ -80,12 +81,66 @@ header {
 header nav {
   display: flex;
   height: 48px;
-  gap: 64px;
   position: absolute;
   left: 64px;
 
   img {
     height: 20px;
+  }
+
+  > ul{
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 64px;
+  }
+
+  #dropdown{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    width: 80px;
+
+    img{
+      height: 5px;
+      position: absolute;
+      top: calc(50% - 1px);
+      margin-left: 8px;
+      filter: invert(90%);
+    }
+  }
+
+  #dropdown-menu{
+    display: none;
+    padding: 0;
+    border-radius: 0px 0px 8px 8px;
+    position: absolute;
+    top: 100%;
+    list-style-type: none;
+    background-color: hsl(0, 0%, 8%);
+    overflow: hidden;
+    
+    li{
+      padding: 16px 24px;
+
+      a{
+        display: flex;
+        justify-content: left;
+      }
+    }
+
+    li:hover{
+      background-color: hsl(0, 0%, 12%);
+    }
+
+    li:active{
+      background-color: hsl(0, 0%, 16%);
+    }
+  }
+
+  #dropdown:hover #dropdown-menu, #dropdown:focus-within #dropdown-menu{
+    display: block;
   }
 
   a {
@@ -115,11 +170,10 @@ header nav {
   }
 }
 
+
 #extra {
   position: absolute;
   right: 64px;
-  display: flex;
-  gap: 40px; /*64px gap - padding*/
   font-weight: bold;
 
   & :first-child {
@@ -128,37 +182,11 @@ header nav {
     padding: 3px 12px 3px 12px;
     border-radius: 4px;
   }
-
-  & :nth-child(2) {
-    background: hsl(0, 0%, 16%);
-    padding: 3px 12px 3px 12px;
-    border-radius: 4px;
-  }
 }
 
 /*Main*/
-main{
+main {
   grid-area: main;
-}
-
-/*Notification*/
-#notification {
-  position: fixed;
-  right: 8px;
-  bottom: 12px;
-  z-index: 1;
-  background: hsl(0, 0%, 8%);
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 54px;
-
-  img {
-    width: 24px;
-    height: 32px;
-    padding: 12px 12px;
-  }
 }
 
 /*footer*/
@@ -184,11 +212,11 @@ footer {
     background-color: var(--background-colour);
     border-radius: 50px;
   }
-  
+
   #address {
     margin-left: 64px;
 
-    a{
+    a {
       text-decoration: underline;
     }
   }

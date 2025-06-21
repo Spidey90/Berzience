@@ -13,11 +13,22 @@
   <body>
     <header>
       <nav>
-        <a id="active"><img src="Icons/home.png" alt="home icon" />Hem</a>
-        <a href="events.html"
-          ><img src="Icons/calender.png" alt="calender icon" />Events</a
-        >
-        <a><img src="Icons/lightbulb.png" alt="lightbulb icon" />Tips</a>
+        <ul>
+          <li>
+            <a id="active"><img src="Icons/home.png" alt="home icon" />Hem</a>
+          </li>
+          <li>
+            <a href="events.html"><img src="Icons/calender.png" alt="calender icon" />Events</a>
+          </li>
+          <li id="dropdown">
+            <span>Övrigt <img src="Icons/dropdown icon.png" alt="triangel" /></span>
+            <ul id="dropdown-menu">
+              <li><a href="">Organisation</a></li>
+              <li><a href="">Årsmöte</a></li>
+              <li><a href="">Styrelsen</a></li>
+            </ul>
+          </li>
+        </ul>
       </nav>
 
       <div id="title">
@@ -26,11 +37,7 @@
       </div>
 
       <div id="extra">
-        <a
-          href="https://docs.google.com/forms/d/e/1FAIpQLSfdHJQUIJ_1zNwo3tKn1qC0o9uPzKXtirmRmc5elRNLblE-ng/viewform"
-          >Kontakta oss</a
-        >
-        <span>Övrigt</span>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfdHJQUIJ_1zNwo3tKn1qC0o9uPzKXtirmRmc5elRNLblE-ng/viewform">Kontakta oss</a>
       </div>
     </header>
 
@@ -38,51 +45,26 @@
       <div id="hero_section">
         <div id="valkommen">
           <span>Välkommen till Berzience</span>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis, hic
-          voluptatibus consectetur quae nesciunt facere molestias eos aliquam
-          suscipit doloribus sed blanditiis maxime, molestiae deleniti aliquid
-          unde fuga exercitationem. Deserunt.
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis, hic voluptatibus consectetur quae nesciunt facere molestias eos aliquam
+          suscipit doloribus sed blanditiis maxime, molestiae deleniti aliquid unde fuga exercitationem. Deserunt.
         </div>
-        <img
-          id="hero_image"
-          src="pics/Hero_Image_1.png"
-          alt="Bild på medlemmarna i Berzience"
-        />
+        <img id="hero_image" src="pics/Hero_Image_1.png" alt="Bild på medlemmarna i Berzience" />
         <nav>
-          <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLSfpAc-UsS9sqeANXZhXKN_Rc-HTjM51qnhpbOT2Z6E_9w3_rA/viewform"
-            >Bli medlem
-          </a>
-          <a
-            href="https://www.instagram.com/berzienceclub/"
-            target="_blank"
-            id="instagram"
-            ><img src="Icons/instagram.svg" alt="instagram logo"
-          /></a>
-          <a
-            href="https://discord.com/invite/wEyJ6QBaPk"
-            target="_blank"
-            id="discord"
-            ><img src="Icons/discord.svg" alt="discord logo"
-          /></a>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSfpAc-UsS9sqeANXZhXKN_Rc-HTjM51qnhpbOT2Z6E_9w3_rA/viewform">Bli medlem </a>
+          <a href="https://www.instagram.com/berzienceclub/" target="_blank" id="instagram"><img src="Icons/instagram.svg" alt="instagram logo" /></a>
+          <a href="https://discord.com/invite/wEyJ6QBaPk" target="_blank" id="discord"><img src="Icons/discord.svg" alt="discord logo" /></a>
         </nav>
-        <span>Antal medlemmar: 500</span>
+        <span>Antal medlemmar: 48</span>
       </div>
 
       <div id="kommande_event">
         <span>Kommande Events</span>
         <img src="pics/Exempel.jpg" id="poster" />
         <span id="poster_context"
-          >Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum,
-          veniam harum. Sed maxime incidunt ea illo, quam doloribus expedita,
-          quidem, animi pariatur facere cumque reiciendis voluptatem officiis
-          soluta possimus reprehenderit.</span
+          >Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, veniam harum. Sed maxime incidunt ea illo, quam doloribus expedita,
+          quidem, animi pariatur facere cumque reiciendis voluptatem officiis soluta possimus reprehenderit.</span
         >
         <img src="pics/calendar.jpg" id="calender" />
-      </div>
-
-      <div id="notification">
-        <img src="Icons/yesNotification.svg" alt="notification icon" />
       </div>
     </main>
 
