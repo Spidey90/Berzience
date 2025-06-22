@@ -1,5 +1,6 @@
 * {
   margin: 0;
+  padding: 0;
 }
 
 :root {
@@ -23,7 +24,6 @@
 }
 
 button {
-  padding: 0;
   border: none;
   background: none;
 }
@@ -88,59 +88,68 @@ header nav {
     height: 20px;
   }
 
-  > ul{
-    padding: 0;
+  > ul {
     list-style: none;
     display: flex;
     align-items: center;
     gap: 64px;
   }
 
-  #dropdown{
+  #dropdown {
     height: 100%;
     display: flex;
     align-items: center;
     width: 80px;
 
-    img{
+    img {
       height: 5px;
       position: absolute;
       top: calc(50% - 1px);
       margin-left: 8px;
       filter: invert(90%);
+      transition: transform 0.1s;
     }
   }
 
-  #dropdown-menu{
+  #dropdown-menu {
     display: none;
-    padding: 0;
+    opacity: 0;
     border-radius: 0px 0px 8px 8px;
     position: absolute;
     top: 100%;
+    font-size: 1.1rem;
     list-style-type: none;
     background-color: hsl(0, 0%, 8%);
     overflow: hidden;
-    
-    li{
+    transition: opacity 1s;
+
+    li {
       padding: 16px 24px;
 
-      a{
+      a {
         display: flex;
         justify-content: left;
       }
     }
 
-    li:hover{
+    li:hover {
       background-color: hsl(0, 0%, 12%);
     }
 
-    li:active{
+    li:active {
       background-color: hsl(0, 0%, 16%);
     }
   }
 
-  #dropdown:hover #dropdown-menu, #dropdown:focus-within #dropdown-menu{
+  #dropdown:hover #dropdown-menu,
+  #dropdown:focus-within #dropdown-menu {
     display: block;
+    opacity: 1;
+  }
+
+  #dropdown:hover img,
+  #dropdown:focus-within img {
+    transform: rotateZ(-180deg);
   }
 
   a {
@@ -169,7 +178,6 @@ header nav {
     height: 6px;
   }
 }
-
 
 #extra {
   position: absolute;

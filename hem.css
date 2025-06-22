@@ -1,31 +1,39 @@
+
 #hero_section {
   position: relative;
-  margin-left: 64px;
   display: flex;
   flex-direction: column;
   justify-content: center; 
 
   #valkommen {
+    margin-left: 64px;
     display: flex;
     flex-direction: column;
     gap: 8px;
     font-family: Inter-Regular;
-    font-size: 1.5rem;
-    width: Min(50%, 600px);
+    font-size: 1.25rem;
+    width: Min(40%, 600px);
 
     span {
       font-family: Inter-Medium;
-      font-size: 2rem;
+      font-size: 1.5rem;
     }
   }
 
-  #hero_image {
+  #hero_image{
     position: absolute;
-    right: 0px;
-    max-width: 50%;
+    z-index: -1;
+    width: 100%; 
+  }
+
+  #filter{
+    position: absolute;
+    z-index: -1;
+    width: 100%;
   }
 
   nav {
+    margin-left: 64px;
     margin-top: 32px;
     display: flex;
     align-items: center;
@@ -33,7 +41,7 @@
 
     > :nth-child(1) {
       font-family: Inter-Medium;
-      font-size: 1.5rem;
+      font-size: 1.25rem;
       margin-right: 8px;
       border-radius: 4px;
       padding: 12px 36px;
@@ -42,24 +50,20 @@
       align-items: center;
       gap: 12px;
       color: white;
-
-      img {
-        height: 16px;       
-      }
     }
 
     #instagram, #discord {
       display: flex;
       justify-content: center;
       padding: 12px;
-      height: 32px;
-      width: 32px;
+      height: 28px;
+      width: 28px;
       border-radius: 16px;
       transition: background 0.1s;
     }
 
     #instagram{
-      height: 36px;
+      height: 32px;
       padding: 10px ;
     }
 
@@ -74,6 +78,8 @@
 
   > span{
     position: relative;
+    left: 64px;
+    width: fit-content;
     top: 12px;
     font-family: Inter-Regular;
 
@@ -113,5 +119,4 @@
     grid-area: calender;
     height: 360px;
   }
-
 }

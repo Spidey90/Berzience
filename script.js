@@ -7,3 +7,5 @@ function syncHeroHeight() {
 
 window.addEventListener("load", syncHeroHeight);
 window.addEventListener("resize", syncHeroHeight);
+
+const dropdownMenu = document.getElementById("dropdown-menu")
