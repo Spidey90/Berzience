@@ -1,51 +1,9 @@
 main {
-  margin-top: 36px;
+  box-sizing: border-box;
+  padding: 36px 64px;
+  background-color: var(--secondary-background-colour);
   color: white;
-  width: 100vw;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 32px;
-
-  .events {
-    font-size: 1rem;
-    display: grid;
-    grid-template-columns: auto auto auto;
-    gap: 24px;
-    width: 72%;
-    border: 16px solid hsl(0, 0%, 8%);
-    background-color: hsl(0, 0%, 8%);
-    border-radius: 16px;
-
-    img {
-      grid-area: poster;
-      border-radius: 8px;
-      height: 256px;
-    }
-
-    .context {
-      grid-area: event_context;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      font-family: Inter-Regular;
-      span {
-        font-weight: bold;
-        font-size: 1.25rem;
-      }
-    }
-  }
-
-  & :nth-child(odd){
-    justify-content: left;
-    grid-template-areas: "poster event_context";
-  }
-
-  & :nth-child(even){
-    justify-content: right;
-    grid-template-areas: "event_context poster";
-  }
-  
-  
+  width: 100%;
+  font-family: Inter-Regular;
 
 }

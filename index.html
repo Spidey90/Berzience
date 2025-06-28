@@ -11,7 +11,8 @@
   </head>
 
   <body>
-    <header>
+    <header id="header">
+      <button id="menu" onclick="menubar()"><img src="Icons/menu.svg" /></button>
       <nav>
         <ul>
           <li>
@@ -41,37 +42,58 @@
       </div>
     </header>
 
-    <main>
-      <div id="hero_section">
-        <div id="valkommen">
-          <span>Välkommen till Berzience</span>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis, hic voluptatibus consectetur quae nesciunt facere molestias eos aliquam
-          suscipit doloribus sed blanditiis maxime, molestiae deleniti aliquid unde fuga exercitationem. Deserunt.
+    <nav id="phone_menu">
+      <ul id="navLinks">
+        <li>
+          <a><img src="Icons/home.png" />Hem</a>
+        </li>
+        <li>
+          <a href="events.html"><img src="Icons/calender.png" />Events</a>
+        </li>
+        <li id="dropdown">
+          <span>Övrigt <img src="Icons/dropdown icon.png" /></span>
+          <ul id="dropdown-menu">
+            <li><a href="">Organisation</a></li>
+            <li><a href="">Årsmöte</a></li>
+            <li><a href="">Styrelsen</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <div id="filter"></div>
+
+    <main id="main">
+      <div id="heroSectionContainer">
+        <div id="heroSection">
+          <div id="valkommen">
+            <span>Välkommen till Berzience</span>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis, hic voluptatibus consectetur quae nesciunt facere molestias eos aliquam
+            suscipit doloribus sed blanditiis maxime, molestiae deleniti aliquid unde fuga exercitationem. Deserunt.
+          </div>
+          <nav>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfpAc-UsS9sqeANXZhXKN_Rc-HTjM51qnhpbOT2Z6E_9w3_rA/viewform">Bli medlem </a>
+            <a href="https://www.instagram.com/berzienceclub/" target="_blank" id="instagram"
+              ><img src="Icons/instagram.svg" alt="instagram logo"
+            /></a>
+            <a href="https://discord.com/invite/wEyJ6QBaPk" target="_blank" id="discord"><img src="Icons/discord.svg" alt="discord logo" /></a>
+          </nav>
         </div>
-        <img id="hero_image" src="pics/test.png" alt="Bild på medlemmarna i Berzience" />
-        <img id="filter" src="pics/Filter.png">
-        <nav>
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSfpAc-UsS9sqeANXZhXKN_Rc-HTjM51qnhpbOT2Z6E_9w3_rA/viewform">Bli medlem </a>
-          <a href="https://www.instagram.com/berzienceclub/" target="_blank" id="instagram"><img src="Icons/instagram.svg" alt="instagram logo" /></a>
-          <a href="https://discord.com/invite/wEyJ6QBaPk" target="_blank" id="discord"><img src="Icons/discord.svg" alt="discord logo" /></a>
-        </nav>
-        <span>Antal medlemmar: 48</span>
+        <img id="hero_image" src="pics/Hero_Image_1.jpg" alt="Bild på medlemmarna i Berzience" />
       </div>
 
       <div id="kommande_event">
-        <span>Kommande Events</span>
         <img src="pics/Exempel.jpg" id="poster" />
-        <span id="poster_context"
-          >Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, veniam harum. Sed maxime incidunt ea illo, quam doloribus expedita,
-          quidem, animi pariatur facere cumque reiciendis voluptatem officiis soluta possimus reprehenderit.</span
-        >
-        <img src="pics/calendar.jpg" id="calender" />
+        <div id="poster_context">
+          <span>kommande event: Pluggfika</span>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, veniam harum. Sed maxime incidunt ea illo, quam doloribus expedita,
+          quidem, animi pariatur facere cumque reiciendis voluptatem officiis soluta possimus reprehenderit. Lorem ipsum, dolor sit amet consectetur
+          adipisicing elit. Aliquam, illum debitis. Deserunt porro sapiente esse a nobis recusandae cupiditate maiores alias nesciunt, fugit ratione
+          quaerat officia et iusto ea! Eaque.
+        </div>
       </div>
     </main>
 
-    <footer>
-      <img src="pics/Berzience.png" alt="Berzience logo" />
-
+    <footer id="footer">
       <div id="address">
         Berzans Elevkår<br />
         Org. nr. 802453-8616 <br /><br />

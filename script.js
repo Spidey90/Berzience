@@ -1,11 +1,13 @@
-const heroSection = document.getElementById("hero_section");
-const heroImage = document.getElementById("hero_image");
+const mainHeight = document.getElementById("main");
+const sidebar = document.getElementById("phone_menu");
+const filter = document.getElementById("filter");
+const sidebarList = document.getElementById("navLinks");
+const header = document.getElementById("header")
 
-function syncHeroHeight() {
-  heroSection.style.height = heroImage.offsetHeight + "px";
+
+
+function menubar() {
+  sidebar.style.width = sidebar.style.width == "0vw" ? "72vw" : "0vw";
+  sidebarList.classList[sidebar.style.width == "0vw" ? "remove" : "add"]("active");
+  filter.style.opacity = sidebar.style.width == "0vw" ? "0" : "1";
 }
-
-window.addEventListener("load", syncHeroHeight);
-window.addEventListener("resize", syncHeroHeight);
-
-const dropdownMenu = document.getElementById("dropdown-menu")
