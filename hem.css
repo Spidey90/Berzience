@@ -1,6 +1,5 @@
-
 #heroSectionContainer {
-  height: calc(564px + 128px);
+  min-height: calc(564px + 128px);
   background-color: inherit;
   box-sizing: border-box;
   display: flex;
@@ -21,23 +20,27 @@
     }
   }
 
-  #hero_image{
-    max-width: 48%;
+  #hero_image {
+    width: 48%;
   }
 
-  #heroSection{
+  #heroSection {
     gap: 24px;
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
   }
 
   nav {
-    width: fit-content;
-    display: flex;
+    display: grid;
+    grid-template-columns: min-content min-content min-content;
+    grid-template-areas: "signup insta discord";
+    justify-items: center;
     align-items: center;
     gap: 24px;
 
-    > :nth-child(1) {
+    #signup {
+      grid-area: signup;
       font-family: Inter-Medium;
       font-size: 1.25rem;
       margin-right: 8px;
@@ -45,12 +48,14 @@
       padding: 12px 36px;
       background-color: #d84797;
       display: flex;
+      text-wrap: nowrap;
       align-items: center;
       gap: 12px;
       color: white;
     }
 
-    #instagram, #discord {
+    #instagram,
+    #discord {
       display: flex;
       justify-content: center;
       padding: 12px;
@@ -60,33 +65,38 @@
       transition: background 0.1s;
     }
 
-    #instagram{
-      height: 32px;
-      padding: 10px ;
+    #discord {
+      grid-area: discord;
     }
 
-    #instagram:hover{
+    #instagram {
+      grid-area: insta;
+      height: 32px;
+      padding: 10px;
+    }
+
+    #instagram:hover {
       background: #d62976;
     }
 
-    #discord:hover{
-      background: #5865F2;
+    #discord:hover {
+      background: #5865f2;
     }
   }
 }
 
-#kommande_event{
+#kommande_event {
   background-color: var(--secondary-background-colour);
   padding: 64px;
   color: black;
   display: flex;
 
-  #poster_context span{
+  #poster_context span {
     font-family: Inter-SemiBold;
     font-size: 1.5rem;
   }
 
-  #poster{
+  #poster {
     grid-area: poster;
     min-width: 360px;
     max-width: 30%;
@@ -94,7 +104,7 @@
     margin-left: -8px;
   }
 
-  #poster_context{
+  #poster_context {
     margin: 0 auto 0 auto;
     width: 50%;
     text-align: center;
@@ -109,29 +119,40 @@
 }
 
 @media screen and (max-width: 1200px) {
-  #kommande_event{
+  #kommande_event {
     flex-direction: column;
     align-items: center;
     gap: 32px;
   }
 
-  #poster_context{
+  #hero_image {
+    width: 100vw !important;
+  }
+
+  #poster_context {
     margin: 0 !important;
     width: 80vw !important;
   }
 
-  #heroSectionContainer{
+  #heroSectionContainer {
+    min-height: fit-content;
+    height: max-content;
+    padding: 0px 0px 32px 0px;
+    justify-content: start;
     flex-direction: column-reverse;
-    justify-content: center;
-    gap: 64px;
+    gap: 32px;
 
-    #valkommen{
-      align-items: center;
+    #valkommen {
+      width: 88vw;
     }
 
-    #heroSection{
-      align-items: center;
+    #heroSection {
+      align-items: flex-start;
+      gap: 24px;
+
+      #signup{
+        padding: 12px 48px;
+      }
     }
   }
-
 }

@@ -1,13 +1,18 @@
-const mainHeight = document.getElementById("main");
 const sidebar = document.getElementById("phone_menu");
 const filter = document.getElementById("filter");
 const sidebarList = document.getElementById("navLinks");
-const header = document.getElementById("header")
-
-
+const dropdownMenu = document.getElementById("dropdownMenu");
 
 function menubar() {
-  sidebar.style.width = sidebar.style.width == "0vw" ? "72vw" : "0vw";
-  sidebarList.classList[sidebar.style.width == "0vw" ? "remove" : "add"]("active");
-  filter.style.opacity = sidebar.style.width == "0vw" ? "0" : "1";
+  const isClosed = Boolean(sidebar.style.width == "0vw");
+  sidebar.style.width = isClosed ? "72vw" : "0vw";
+  sidebarList.style.opacity = isClosed ? "1" : "0";
+  sidebarList.style.marginLeft = isClosed ? "32px" : "0";
+  document.body.style.overflow = isClosed ? "hidden" : "scroll";
+  filter.style.opacity = isClosed ? "1" : "0";
+}
+
+function dropdown() {
+  dropdownMenu.style.height = dropdownMenu.style.height == "0px" ? "120px" : "0px";
+  dropdownMenu.style.opacity = dropdownMenu.style.height == "0px" ? "0" : "1";
 }
