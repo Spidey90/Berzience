@@ -16,3 +16,11 @@ function dropdown() {
   dropdownMenu.style.height = dropdownMenu.style.height == "0px" ? "120px" : "0px";
   dropdownMenu.style.opacity = dropdownMenu.style.height == "0px" ? "0" : "1";
 }
+
+/*
+All font sizes
+herosection default: 1.25 rem
+
+
+
+*/ 
