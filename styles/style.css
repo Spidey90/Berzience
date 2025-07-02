@@ -11,17 +11,17 @@
 /*Fonts*/
 @font-face {
   font-family: Inter-SemiBold;
-  src: url(fonts/static/Inter_18pt-SemiBold.ttf);
+  src: url(/fonts/static/Inter_18pt-SemiBold.ttf);
 }
 
 @font-face {
   font-family: Inter-Regular;
-  src: url(fonts/static/Inter_18pt-Regular.ttf);
+  src: url(/fonts/static/Inter_18pt-Regular.ttf);
 }
 
 @font-face {
   font-family: Inter-Medium;
-  src: url(fonts/static/Inter_18pt-Medium.ttf);
+  src: url(/fonts/static/Inter_18pt-Medium.ttf);
 }
 
 button {
@@ -34,6 +34,13 @@ a {
   cursor: pointer;
   user-select: none;
   color: inherit;
+  transition: transform 0.2s;
+}
+
+a:hover,
+#dropdown:hover > span,
+#dropdown:focus-within > span {
+  transform: scale(1.1) !important;
 }
 
 body {
@@ -120,6 +127,11 @@ header nav {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: transform 0.2s;
+
+    span {
+      transition: transform 0.2s;
+    }
 
     img {
       height: 4px;
@@ -156,12 +168,8 @@ header nav {
       }
     }
 
-    li:hover {
-      background-color: hsl(0, 0%, 92%);
-    }
-
     li:active {
-      background-color: hsl(0, 0%, 16%);
+      background-color: hsl(0, 0%, 80%);
     }
   }
 
@@ -189,19 +197,21 @@ header nav {
       height: 1.1em;
     }
   }
+
+  #dropdown #active img {
+    height: 5px !important;
+  }
 }
 
-#extra {
+#kontaktaOss {
   font-size: 1.2rem;
   position: absolute;
   right: 64px;
   font-family: Inter-Medium;
-  & :first-child {
-    background: hsl(0, 0%, 90%);
-    color: black;
-    padding: 3px 12px 3px 12px;
-    border-radius: 4px;
-  }
+  background: hsl(0, 0%, 90%);
+  color: black;
+  padding: 3px 12px 3px 12px;
+  border-radius: 4px;
 }
 
 /*Main*/
@@ -283,21 +293,21 @@ footer {
       position: relative;
       bottom: 3px;
       margin-left: 4px;
-      transition: transform 0.1s;
+      transition: rotate 0.2s;
     }
 
     #dropdownMenu {
       opacity: inherit;
       position: absolute;
-      top: 120%;
+      top: 112%;
       left: 16px;
       height: 0px;
       opacity: 0;
       overflow: hidden;
-      transition: height 0.5s, opacity 0.3s;
-      li{
-        border: solid 1px red;
-        height: 24px;
+      transition: height 0.5s, opacity 0.5s;
+      li {
+        height: fit-content;
+        padding: 5px 0px;
       }
     }
   }
@@ -321,6 +331,7 @@ footer {
   width: 100%;
   height: calc(100dvh - 56px);
   position: fixed;
+  z-index: 1;
   top: 56px;
   pointer-events: none;
   background-color: hsla(0, 0%, 0%, 0.5);
@@ -333,7 +344,7 @@ footer {
     left: 32px;
   }
 
-  #extra {
+  #kontaktaOss {
     right: 32px;
   }
 }
@@ -344,7 +355,7 @@ footer {
   }
 
   header nav,
-  #extra {
+  #kontaktaOss {
     display: none;
   }
 }

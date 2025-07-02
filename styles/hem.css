@@ -62,7 +62,7 @@
       height: 28px;
       width: 28px;
       border-radius: 14px;
-      transition: background 0.1s;
+      transition: background 0.1s, transform 0.2s;
     }
 
     #discord {

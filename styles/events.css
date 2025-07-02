@@ -1,0 +1,33 @@
+main {
+  box-sizing: border-box;
+  padding: 36px 64px;
+  background-color: var(--secondary-background-colour);
+  font-family: Inter-Regular;
+  color: black;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10vh;
+}
+
+.mediaContainer {
+  max-width: 100%;
+  min-width: 326px;
+  width: 440px;
+
+  h2 {
+    font-size: 1.25rem;
+    line-height: 48px;
+  }
+}
+
+.instagram-media {
+  max-width: 440px !important;
+  min-width: 326px !important;
+}
+
+@media screen and (max-width: 1000px) {
+  main {
+    padding: 32px;
+  }
+}

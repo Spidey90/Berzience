@@ -1,7 +1,7 @@
 const sidebar = document.getElementById("phone_menu");
-const filter = document.getElementById("filter");
 const sidebarList = document.getElementById("navLinks");
 const dropdownMenu = document.getElementById("dropdownMenu");
+const carret = document.getElementById("carret");
 
 function menubar() {
   const isClosed = Boolean(sidebar.style.width == "0vw");
@@ -15,12 +15,5 @@ function menubar() {
 function dropdown() {
   dropdownMenu.style.height = dropdownMenu.style.height == "0px" ? "120px" : "0px";
   dropdownMenu.style.opacity = dropdownMenu.style.height == "0px" ? "0" : "1";
+  carret.style.rotate = dropdownMenu.style.height == "0px" ? "0deg" : "-180deg";
 }
-
-/*
-All font sizes
-herosection default: 1.25 rem
-
-
-
-*/ 
