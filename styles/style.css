@@ -10,22 +10,22 @@
 
 /*Fonts*/
 @font-face {
-  font-family: Inter-SemiBold;
+  font-family: Inter-SemiBold, Verdana, Geneva, Tahoma, sans-serif;
   src: url(/fonts/static/Inter_18pt-SemiBold.ttf);
 }
 
 @font-face {
-  font-family: Inter-Regular;
+  font-family: Inter-Regular, Verdana, Geneva, Tahoma, sans-serif;
   src: url(/fonts/static/Inter_18pt-Regular.ttf);
 }
 
 @font-face {
-  font-family: Inter-Medium;
+  font-family: Inter-Medium, Verdana, Geneva, Tahoma, sans-serif;
   src: url(/fonts/static/Inter_18pt-Medium.ttf);
 }
 
 @font-face {
-  font-family: Inter-Bold;
+  font-family: Inter-Bold, Verdana, Geneva, Tahoma, sans-serif;
   src: url(/fonts/static/Inter_18pt-Bold.ttf);
 }
 
