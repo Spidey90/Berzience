@@ -10,23 +10,23 @@
 
 /*Fonts*/
 @font-face {
-  font-family: Inter-SemiBold, Verdana, Geneva, Tahoma, sans-serif;
-  src: url(/fonts/static/Inter_18pt-SemiBold.ttf);
+  font-family: Inter-SemiBold;
+  src: url(/fonts/static/Inter_18pt-SemiBold.ttf), local(Arial), local(Helvetica);
 }
 
 @font-face {
-  font-family: Inter-Regular, Verdana, Geneva, Tahoma, sans-serif;
-  src: url(/fonts/static/Inter_18pt-Regular.ttf);
+  font-family: Inter-Regular;
+  src: url(/fonts/static/Inter_18pt-Regular.ttf), local(Arial), local(Helvetica);
 }
 
 @font-face {
-  font-family: Inter-Medium, Verdana, Geneva, Tahoma, sans-serif;
-  src: url(/fonts/static/Inter_18pt-Medium.ttf);
+  font-family: Inter-Medium;
+  src: url(/fonts/static/Inter_18pt-Medium.ttf), local(Arial), local(Helvetica);
 }
 
 @font-face {
-  font-family: Inter-Bold, Verdana, Geneva, Tahoma, sans-serif;
-  src: url(/fonts/static/Inter_18pt-Bold.ttf);
+  font-family: Inter-Bold;
+  src: url(/fonts/static/Inter_18pt-Bold.ttf), local(Arial), local(Helvetica);
 }
 
 button {
