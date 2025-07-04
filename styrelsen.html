@@ -10,7 +10,7 @@
   </head>
   <body>
     <header id="header">
-      <button id="menu" onclick="menubar()"><img src="Icons/menu.svg" /></button>
+      <button id="hamburger" onclick="menubar()"><div id="nav-toggle"></div></button>
       <nav>
         <ul>
           <li>
@@ -60,7 +60,7 @@
         </li>
       </ul>
     </nav>
-    <div id="filter"></div>
+    <button onclick="menubar()" id="filter"></button>
 
     <main id="styrelsen">
       <div class="styrelsen">
@@ -123,5 +123,7 @@
         <a>Integritetspolicy</a>
       </div>
     </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>
