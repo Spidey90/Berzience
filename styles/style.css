@@ -83,7 +83,7 @@ header {
 
   #nav-toggle {
     height: 2.5px;
-    width: 32px;
+    width: 16px;
     border-radius: 4px;
     background-color: white;
     transition: width 0.3s;
@@ -92,12 +92,19 @@ header {
     &::before {
       content: "";
       height: inherit;
-      width: 32px;
       border-radius: inherit;
       background-color: inherit;
       position: absolute;
       left: 0px;
       transition: transform 0.35s, top 0.2s, bottom 0.2s, width 0.4s;
+    }
+
+    &::after {
+      width: 32px;
+    }
+
+    &::before {
+      width: 8px;
     }
 
     &::after {
@@ -114,7 +121,8 @@ header {
   #nav-toggle {
     width: 0 !important;
 
-    &::after, &::before{
+    &::after,
+    &::before {
       width: 24px !important;
     }
 
