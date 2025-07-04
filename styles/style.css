@@ -72,17 +72,63 @@ header {
   font-size: 1rem;
 }
 
-#menu {
+#hamburger {
   display: none !important;
   height: 100%;
-  width: 48px;
+  width: fit-content;
   align-content: center;
   position: absolute;
   left: 20px; /* 32 - width/2 - imgHeight/2*/
   z-index: 10;
 
-  img {
-    height: 20px;
+  #nav-toggle {
+    height: 2.5px;
+    width: 32px;
+    border-radius: 4px;
+    background-color: white;
+    transition: width 0.3s;
+
+    &::after,
+    &::before {
+      content: "";
+      height: inherit;
+      width: 32px;
+      border-radius: inherit;
+      background-color: inherit;
+      position: absolute;
+      left: 0px;
+      transition: transform 0.35s, top 0.2s, bottom 0.2s, width 0.4s;
+    }
+
+    &::after {
+      top: 16px;
+    }
+
+    &::before {
+      bottom: 16px;
+    }
+  }
+}
+
+.menu-active {
+  #nav-toggle {
+    width: 0 !important;
+
+    &::after, &::before{
+      width: 24px !important;
+    }
+
+    &::after {
+      top: 48% !important;
+      transform: rotate(45deg);
+      transform-origin: center;
+    }
+
+    &::before {
+      bottom: 48% !important;
+      transform: rotate(-45deg);
+      transform-origin: center;
+    }
   }
 }
 
@@ -354,7 +400,6 @@ footer {
   transition: opacity 1000ms;
 }
 
-
 @media screen and (max-width: 1200px) {
   header nav {
     left: 32px;
@@ -366,7 +411,7 @@ footer {
 }
 
 @media screen and (max-width: 1080px) {
-  #menu {
+  #hamburger {
     display: block !important;
   }
 
