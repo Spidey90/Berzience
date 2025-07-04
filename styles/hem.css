@@ -1,6 +1,6 @@
 #heroSectionContainer {
   min-height: calc(564px + 128px);
-  background-color: inherit;
+  background-color: var(--primary-background-colour);
   box-sizing: border-box;
   display: flex;
   align-items: center;
@@ -58,11 +58,10 @@
     #discord {
       display: flex;
       justify-content: center;
-      padding: 12px;
-      height: 28px;
+      height: 32px;
       width: 28px;
       border-radius: 14px;
-      transition: background 0.1s, transform 0.2s;
+      transition: transform 0.2s;
     }
 
     #discord {
@@ -70,17 +69,18 @@
     }
 
     #instagram {
+      margin-left: 16px;
+      margin-right: 16px;
       grid-area: insta;
-      height: 32px;
-      padding: 10px;
+      height: 36px;
     }
 
     #instagram:hover {
-      background: #d62976;
+      filter: brightness(0) saturate(100%) invert(29%) sepia(27%) saturate(6105%) hue-rotate(313deg) brightness(86%) contrast(95%);
     }
 
     #discord:hover {
-      background: #5865f2;
+      filter: brightness(0) saturate(100%) invert(38%) sepia(30%) saturate(2803%) hue-rotate(214deg) brightness(97%) contrast(96%);
     }
   }
 }

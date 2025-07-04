@@ -6,6 +6,7 @@
     <title>Årsmöte</title>
     <link rel="icon" type="image/png" href="pics/Berzience.png" />
     <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/övrigt.css" />
   </head>
   <body>
     <header id="header">
@@ -21,9 +22,9 @@
           <li id="dropdown">
             <span id="active">Övrigt <img src="Icons/dropdown icon.png" alt="triangel" /></span>
             <ul id="dropdown-menu">
-              <li><a href="">Organisation</a></li>
+              <li><a href="organisation.html">Organisation</a></li>
               <li><a href="">Årsmöte</a></li>
-              <li><a href="">Styrelsen</a></li>
+              <li><a href="styrelsen.html">Styrelsen</a></li>
             </ul>
           </li>
         </ul>
@@ -43,14 +44,14 @@
           <a href="index.html"><img src="Icons/home.png" />Hem</a>
         </li>
         <li>
-          <a><img src="Icons/calender.png" />Events</a>
+          <a href="events.html"><img src="Icons/calender.png" />Events</a>
         </li>
         <li id="dropdown">
           <button onclick="dropdown()">Övrigt <img id="carret" src="Icons/dropdown icon.png" /></button>
           <ul id="dropdownMenu">
-            <li><a href=""></a>Hello</li>
-            <li><a href=""></a>Hello</li>
-            <li><a href=""></a>Hello</li>
+            <li><a href="organisation.html">Organisation</a></li>
+            <li><a href="årsmöte.html">Årsmöte</a></li>
+            <li><a href="styrelsen.html">Styrelse</a></li>
           </ul>
         </li>
 
@@ -62,7 +63,45 @@
     <div id="filter"></div>
 
     <main>
-      
+      <div>
+        <h2>Årsmötet 2025</h2>
+        Den 2 april 15:00 hölls årsmötet 2025, vilket är elevkårens högst beslutande organ. Nedan finner ni relevant information om årsmötet samt
+        årsmötesprotokollet!
+      </div>
+
+      <div class="files">
+        <h2>Handlingar</h2>
+        <a href="https://www.berzanelevkar.com/media/files/arsmote/am25.pdf"
+          ><img src="Icons/fileIcon.webp" alt="" />
+          Handlingar
+        </a>
+        <a href="https://www.berzanelevkar.com/media/files/arsmote/kallelse2025.pdf"
+          ><img src="Icons/fileIcon.webp" alt="" />
+          Kallelse
+        </a>
+      </div>
+
+      <div class="files"">
+        <h2>Protokoll</h2>
+        <a href="https://www.berzanelevkar.com/media/files/arsmote/protokoll_25.pdf"
+          ><img src="Icons/fileIcon.webp" alt="" />
+          Kallelse
+        </a>
+      </div>
     </main>
+
+    <footer id="footer">
+      <div id="address">
+        Berzans Elevkår<br />
+        Org. nr. 802453-8616 <br /><br />
+
+        Gustav Adolfsgatan 25, Box 3129 <br />
+        580 03 Linköping <br /><br />
+
+        <a>Integritetspolicy</a>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>

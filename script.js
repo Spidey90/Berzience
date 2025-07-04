@@ -4,16 +4,17 @@ const dropdownMenu = document.getElementById("dropdownMenu");
 const carret = document.getElementById("carret");
 
 function menubar() {
-  const isClosed = Boolean(sidebar.style.width == "0vw");
+  const isClosed = sidebar.style.width == "0vw";
   sidebar.style.width = isClosed ? "72vw" : "0vw";
   sidebarList.style.opacity = isClosed ? "1" : "0";
   sidebarList.style.marginLeft = isClosed ? "32px" : "0";
   document.body.style.overflow = isClosed ? "hidden" : "scroll";
   filter.style.opacity = isClosed ? "1" : "0";
+  filter.style.pointerEvents = isClosed ? "all" : "none";
 }
 
 function dropdown() {
-  dropdownMenu.style.height = dropdownMenu.style.height == "0px" ? "120px" : "0px";
+  dropdownMenu.style.height = dropdownMenu.style.height == "0px" ? "160px" : "0px";
   dropdownMenu.style.opacity = dropdownMenu.style.height == "0px" ? "0" : "1";
   carret.style.rotate = dropdownMenu.style.height == "0px" ? "0deg" : "-180deg";
 }

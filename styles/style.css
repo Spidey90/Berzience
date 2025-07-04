@@ -4,7 +4,7 @@
 }
 
 :root {
-  --primary-background-colour: hsl(0, 0%, 0%);
+  --primary-background-colour: hsl(0, 0%, 4%);
   --secondary-background-colour: hsl(0, 0%, 100%);
 }
 
@@ -24,6 +24,11 @@
   src: url(/fonts/static/Inter_18pt-Medium.ttf);
 }
 
+@font-face {
+  font-family: Inter-Bold;
+  src: url(/fonts/static/Inter_18pt-Bold.ttf);
+}
+
 button {
   border: none;
   background: none;
@@ -32,7 +37,7 @@ button {
 a {
   text-decoration: none;
   cursor: pointer;
-  user-select: none;
+  user-select: none !important;
   color: inherit;
   transition: transform 0.2s;
 }
@@ -45,15 +50,17 @@ a:hover,
 
 body {
   color: hsl(0, 0%, 90%);
-  background: var(--primary-background-colour);
+  background: var(--secondary-background-colour);
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
 }
 
 /*Header*/
 header {
-  grid-area: header;
   height: 48px;
   width: 100%;
-  background: inherit;
+  background: var(--primary-background-colour);
   user-select: none;
   display: flex;
   justify-content: center;
@@ -84,8 +91,7 @@ header {
   gap: 4px;
   align-items: center;
   pointer-events: none;
-  font-family: Inter-Medium;
-  font-weight: bold;
+  font-family: Inter-Bold;
   font-size: 2rem;
 
   img {
@@ -190,6 +196,10 @@ header nav {
     gap: 8px;
   }
 
+  a:hover {
+    transform: scale(1.05) !important;
+  }
+
   #active {
     font-family: Inter-SemiBold;
     font-size: 1.2em;
@@ -214,6 +224,10 @@ header nav {
   border-radius: 4px;
 }
 
+#kontaktaOss:hover {
+  transform: scale(1.08) !important;
+}
+
 /*Main*/
 main {
   width: 100%;
@@ -221,7 +235,8 @@ main {
 
 /*footer*/
 footer {
-  background-color: inherit;
+  margin-top: auto;
+  background-color: var(--primary-background-colour);
   height: 192px;
   box-sizing: border-box;
   width: 100%;
@@ -299,15 +314,15 @@ footer {
     #dropdownMenu {
       opacity: inherit;
       position: absolute;
-      top: 112%;
+      top: calc(100% + 4px);
       left: 16px;
       height: 0px;
       opacity: 0;
       overflow: hidden;
       transition: height 0.5s, opacity 0.5s;
       li {
-        height: fit-content;
-        padding: 5px 0px;
+        height: fit-content !important;
+        padding: 10px 0px;
       }
     }
   }
@@ -338,6 +353,7 @@ footer {
   opacity: 0;
   transition: opacity 1000ms;
 }
+
 
 @media screen and (max-width: 1200px) {
   header nav {
