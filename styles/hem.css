@@ -3,7 +3,7 @@
   background-color: var(--primary-background-colour);
   box-sizing: border-box;
   display: grid;
-  gap: 80px;
+  gap: 64px;
   justify-items: center;
   padding: 128px 64px;
 
@@ -24,6 +24,7 @@
 
   #hero_image {
     min-width: 48%;
+    max-width: 100%;
   }
 
   #heroSection {
@@ -33,10 +34,11 @@
   }
 
   nav {
+    width: 100%;
     display: grid;
     grid-template-columns: min-content min-content min-content;
     grid-template-areas: "signup insta discord";
-    justify-items: center;
+    justify-content: center !important;
     align-items: center;
     gap: 24px;
 
@@ -139,13 +141,18 @@
   #heroSectionContainer {
     min-height: fit-content;
     height: max-content;
-    padding: 0px 0px 32px 0px;
+    padding: 28px 24px 64px 24px;
     justify-content: start;
     flex-direction: column-reverse;
     gap: 32px;
 
     #valkommen {
-      width: 88vw;
+      width: 100%;
+      font-size: 1rem;
+
+      span{
+        font-size: 3rem;
+      }
     }
 
     #signup {
