@@ -2,21 +2,23 @@
   min-height: calc(564px + 128px);
   background-color: var(--primary-background-colour);
   box-sizing: border-box;
-  display: flex;
-  align-items: center;
-  padding: 16px 64px;
+  display: grid;
+  gap: 80px;
+  justify-items: center;
+  padding: 128px 64px;
 
   #valkommen {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 12px;
     font-family: Inter-Regular;
+    text-align: center;
     font-size: 1.1rem;
     width: 75%;
 
     span {
       font-family: Inter-Medium;
-      font-size: 1.4rem;
+      font-size: 4rem;
     }
   }
 
@@ -25,10 +27,9 @@
   }
 
   #heroSection {
-    gap: 24px;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+    gap: 48px;
+    display: grid;
+    justify-items: center;
   }
 
   nav {
@@ -51,7 +52,7 @@
       text-wrap: nowrap;
       align-items: center;
       gap: 12px;
-      color: white;
+      color: var(--primary-font-colour);
     }
 
     #instagram,
@@ -88,7 +89,7 @@
 #kommande_event {
   background-color: var(--secondary-background-colour);
   padding: 64px;
-  color: black;
+  color: var(--secondary-font-colour);
   display: flex;
 
   #poster_context span {

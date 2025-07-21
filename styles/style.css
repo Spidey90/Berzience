@@ -4,14 +4,17 @@
 }
 
 :root {
-  --primary-background-colour: hsl(0, 0%, 4%);
+  --primary-background-colour: hsl(0, 0%, 10%);
   --secondary-background-colour: hsl(0, 0%, 100%);
+  --primary-font-colour: hsl(0, 0%, 100%);
+  --secondary-font-colour: hsl(0, 0%, 0%);
 }
 
 /*Fonts*/
 @font-face {
   font-family: Inter-SemiBold;
-  src: url(/fonts/static/Inter_18pt-SemiBold.ttf), local(Arial), local(Helvetica);
+  src: url(/fonts/static/Inter_18pt-SemiBold.ttf), local(Arial),
+    local(Helvetica);
 }
 
 @font-face {
@@ -49,7 +52,7 @@ a:hover,
 }
 
 body {
-  color: hsl(0, 0%, 90%);
+  color: var(--primary-font-colour);
   background: var(--secondary-background-colour);
   display: flex;
   flex-direction: column;
@@ -66,7 +69,7 @@ header {
   justify-content: center;
   align-items: center;
   position: relative;
-  padding: 4px 0px;
+  padding: 16px 0px;
   z-index: 1;
   font-family: Inter-Regular;
   font-size: 1rem;
@@ -145,7 +148,7 @@ header {
   gap: 4px;
   align-items: center;
   pointer-events: none;
-  font-family: Inter-Bold;
+  font-family: Inter-SemiBold;
   font-size: 2rem;
 
   img {
@@ -211,7 +214,7 @@ header nav {
     top: 100%;
     list-style-type: none;
     background-color: hsl(0, 0%, 100%);
-    color: black;
+    color: var(--secondary-font-colour);
     overflow: hidden;
     box-shadow: 2px 2px 12px -4px black;
 
@@ -273,7 +276,7 @@ header nav {
   right: 64px;
   font-family: Inter-Medium;
   background: hsl(0, 0%, 90%);
-  color: black;
+  color: var(--secondary-font-colour);
   padding: 3px 12px 3px 12px;
   border-radius: 4px;
 }
@@ -295,7 +298,7 @@ footer {
   box-sizing: border-box;
   width: 100%;
   font-family: Inter-Regular;
-  color: hsl(0, 0%, 50%);
+  color: var(--primary-font-colour);
   display: flex;
   align-items: center;
   padding: 0px 64px;
@@ -316,7 +319,7 @@ footer {
   overflow: hidden;
   font-size: 1.2rem;
   font-family: Inter-Medium;
-  color: black;
+  color: var(--secondary-background-colour);
 
   ul {
     margin-left: 0px;
@@ -389,7 +392,7 @@ footer {
     position: absolute;
     bottom: 16px;
     background-color: black;
-    color: white;
+    color: var(--primary-font-colour);
     border-radius: 8px;
     width: calc(100% - 64px);
     justify-content: center;

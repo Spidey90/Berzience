@@ -3,7 +3,7 @@ main {
   padding: 36px 64px;
   background-color: var(--secondary-background-colour);
   font-family: Inter-Regular;
-  color: black;
+  color: var(--secondary-font-colour);
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
