@@ -13,17 +13,24 @@
 
   <body>
     <header id="header">
-      <button id="hamburger" onclick="menubar()"><div id="nav-toggle"></div></button>
+      <button id="hamburger" onclick="menubar()">
+        <div id="nav-toggle"></div>
+      </button>
+
       <nav>
         <ul>
           <li>
             <a id="active"><img src="Icons/home.png" alt="home icon" />Hem</a>
           </li>
           <li>
-            <a href="events.html"><img src="Icons/calender.png" alt="calender icon" />Events</a>
+            <a href="events.html"
+              ><img src="Icons/calender.png" alt="calender icon" />Events</a
+            >
           </li>
           <li id="dropdown">
-            <span>Övrigt <img src="Icons/dropdown icon.png" alt="triangel" /></span>
+            <span
+              >Övrigt <img src="Icons/dropdown icon.png" alt="triangel"
+            /></span>
             <ul id="dropdown-menu">
               <li><a href="organisation.html">Organisation</a></li>
               <li><a href="årsmöte.html">Årsmöte</a></li>
@@ -38,7 +45,19 @@
         Berzience
       </div>
 
-      <a id="kontaktaOss" href="https://docs.google.com/forms/d/e/1FAIpQLSfdHJQUIJ_1zNwo3tKn1qC0o9uPzKXtirmRmc5elRNLblE-ng/viewform">Kontakta oss</a>
+      <div class="kontakt">
+        <a
+          href="https://www.instagram.com/berzienceclub/"
+          target="_blank"
+          id="instagram"
+          ><img src="Icons/instagram.svg"
+        /></a>
+        <a
+          id="kontaktaOss"
+          href="https://docs.google.com/forms/d/e/1FAIpQLSfdHJQUIJ_1zNwo3tKn1qC0o9uPzKXtirmRmc5elRNLblE-ng/viewform"
+          >Kontakta oss</a
+        >
+      </div>
     </header>
 
     <nav id="phone_menu">
@@ -50,7 +69,9 @@
           <a href="events.html"><img src="Icons/calender.png" />Events</a>
         </li>
         <li id="dropdown">
-          <button onclick="dropdown()">Övrigt <img id="carret" src="Icons/dropdown icon.png" /></button>
+          <button onclick="dropdown()">
+            Övrigt <img id="carret" src="Icons/dropdown icon.png" />
+          </button>
           <ul id="dropdownMenu">
             <li><a href="organisation.html">Organisation</a></li>
             <li><a href="årsmöte.html">Årsmöte</a></li>
@@ -59,37 +80,53 @@
         </li>
 
         <li id="kontaktaOss1">
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSfdHJQUIJ_1zNwo3tKn1qC0o9uPzKXtirmRmc5elRNLblE-ng/viewform">Kontakta oss</a>
+          <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLSfdHJQUIJ_1zNwo3tKn1qC0o9uPzKXtirmRmc5elRNLblE-ng/viewform"
+            >Kontakta oss</a
+          >
         </li>
       </ul>
     </nav>
     <button onclick="menubar()" id="filter"></button>
 
     <main id="main">
-      <div id="heroSectionContainer">
-        <div id="heroSection">
-          <div id="valkommen">
-            <span>Välkommen till Berzience</span>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam quasi odit reiciendis illum nam incidunt aspernatur a laborum temporibus, molestiae mollitia voluptatum similique esse? Corporis sunt autem ipsum maxime. Illo?
-          </div>
-          <nav>
-            <a id="signup" href="https://docs.google.com/forms/d/e/1FAIpQLSfpAc-UsS9sqeANXZhXKN_Rc-HTjM51qnhpbOT2Z6E_9w3_rA/viewform">Bli medlem </a>
-            <a href="https://www.instagram.com/berzienceclub/" target="_blank" id="instagram"
-              ><img src="Icons/instagram.svg" alt="instagram logo"
-            /></a>
-            <a href="https://discord.com/invite/wEyJ6QBaPk" target="_blank" id="discord"><img src="Icons/discord.svg" alt="discord logo" /></a>
-          </nav>
+      <div id="landingPage">
+        <div id="valkommen">
+          <span>Välkommen till Berzience</span>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam quasi
+          odit reiciendis illum nam incidunt aspernatur a laborum temporibus,
+          molestiae mollitia voluptatum similique esse? Corporis sunt autem
+          ipsum maxime. Illo?
         </div>
-        <img id="hero_image" src="pics/Hero_Image_1.jpg" alt="Bild på medlemmarna i Berzience" />
+        <nav>
+          <a
+            id="signup"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSfpAc-UsS9sqeANXZhXKN_Rc-HTjM51qnhpbOT2Z6E_9w3_rA/viewform"
+            >Bli medlem
+          </a>
+          <a
+            href="https://discord.com/invite/wEyJ6QBaPk"
+            id="discord"
+            ><img src="Icons/discord.svg"
+          />Discord</a>
+        </nav>
+        <img
+          id="hero_image"
+          src="pics/Hero_Image_1.jpg"
+          alt="Bild på medlemmarna i Berzience"
+        />
       </div>
 
       <div id="kommande_event">
         <img src="pics/Exempel.jpg" id="poster" />
         <div id="poster_context">
           <span>kommande event: Pluggfika</span>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, veniam harum. Sed maxime incidunt ea illo, quam doloribus expedita,
-          quidem, animi pariatur facere cumque reiciendis voluptatem officiis soluta possimus reprehenderit. Lorem ipsum, dolor sit amet consectetur
-          adipisicing elit. Aliquam, illum debitis. Deserunt porro sapiente esse a nobis recusandae cupiditate maiores alias nesciunt, fugit ratione
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum,
+          veniam harum. Sed maxime incidunt ea illo, quam doloribus expedita,
+          quidem, animi pariatur facere cumque reiciendis voluptatem officiis
+          soluta possimus reprehenderit. Lorem ipsum, dolor sit amet consectetur
+          adipisicing elit. Aliquam, illum debitis. Deserunt porro sapiente esse
+          a nobis recusandae cupiditate maiores alias nesciunt, fugit ratione
           quaerat officia et iusto ea! Eaque.
         </div>
       </div>
@@ -102,8 +139,6 @@
 
         Gustav Adolfsgatan 25, Box 3129 <br />
         580 03 Linköping <br /><br />
-
-        <a>Integritetspolicy</a>
       </div>
     </footer>
 

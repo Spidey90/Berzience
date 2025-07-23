@@ -10,7 +10,6 @@
   --secondary-font-colour: hsl(0, 0%, 0%);
 }
 
-/*Fonts*/
 @font-face {
   font-family: Inter-SemiBold;
   src: url(/fonts/static/Inter_18pt-SemiBold.ttf), local(Arial),
@@ -27,9 +26,8 @@
   src: url(/fonts/static/Inter_18pt-Medium.ttf), local(Arial), local(Helvetica);
 }
 
-@font-face {
-  font-family: Inter-Bold;
-  src: url(/fonts/static/Inter_18pt-Bold.ttf), local(Arial), local(Helvetica);
+ul {
+  list-style: none;
 }
 
 button {
@@ -39,7 +37,6 @@ button {
 
 a {
   text-decoration: none;
-  cursor: pointer;
   user-select: none !important;
   color: inherit;
   transition: transform 0.2s;
@@ -48,22 +45,17 @@ a {
 a:hover,
 #dropdown:hover > span,
 #dropdown:focus-within > span {
-  transform: scale(1.1) !important;
-}
-
-body {
-  color: var(--primary-font-colour);
-  background: var(--secondary-background-colour);
-  display: flex;
-  flex-direction: column;
-  min-height: 100dvh;
+  transform: scale(1.1);
 }
 
 /*Header*/
 header {
   height: 48px;
-  width: 100%;
+  max-width: 100dvw;
   background: var(--primary-background-colour);
+  color: var(--primary-font-colour);
+  font-family: Inter-Regular;
+  font-size: 1rem;
   user-select: none;
   display: flex;
   justify-content: center;
@@ -71,17 +63,15 @@ header {
   position: relative;
   padding: 16px 0px;
   z-index: 1;
-  font-family: Inter-Regular;
-  font-size: 1rem;
 }
 
 #hamburger {
   display: none !important;
   height: 100%;
-  width: fit-content;
+
   align-content: center;
   position: absolute;
-  left: 20px; /* 32 - width/2 - imgHeight/2*/
+  left: 20px;
   z-index: 10;
 
   #nav-toggle {
@@ -141,7 +131,6 @@ header {
   display: flex;
   gap: 4px;
   align-items: center;
-  pointer-events: none;
   font-family: Inter-SemiBold;
   font-size: 2rem;
 
@@ -153,7 +142,7 @@ header {
 header nav {
   display: flex;
   align-items: center;
-  height: 48px;
+  height: 100%;
   position: absolute;
   left: 64px;
 
@@ -163,7 +152,6 @@ header nav {
 
   > ul {
     height: 100%;
-    list-style: none;
     display: flex;
     align-items: center;
     gap: 32px;
@@ -206,7 +194,6 @@ header nav {
     border-radius: 8px 8px 8px 8px;
     position: absolute;
     top: 100%;
-    list-style-type: none;
     background-color: hsl(0, 0%, 100%);
     color: var(--secondary-font-colour);
     overflow: hidden;
@@ -266,12 +253,10 @@ header nav {
 
 #kontaktaOss {
   font-size: 1.2rem;
-  position: absolute;
-  right: 64px;
   font-family: Inter-Medium;
   background: hsl(0, 0%, 90%);
   color: var(--secondary-font-colour);
-  padding: 3px 12px 3px 12px;
+  padding: 3px 12px;
   border-radius: 4px;
 }
 
@@ -279,9 +264,19 @@ header nav {
   transform: scale(1.08) !important;
 }
 
-/*Main*/
-main {
-  width: 100%;
+.kontakt {
+  width: max-content;
+  height: 100%;
+  display: flex;
+  gap: 12px;
+  align-items: center; 
+  position: absolute;
+  right: 64px;
+
+  img{
+    display: flex;
+    height: 28px;
+  }
 }
 
 /*footer*/
@@ -320,7 +315,6 @@ footer {
     margin-left: 0px;
     opacity: 0;
     transition: margin 0.5s, opacity 0.5s;
-    list-style: none;
     display: flex;
     flex-direction: column;
     gap: 12px;
@@ -420,7 +414,7 @@ footer {
   }
 
   header nav,
-  #kontaktaOss {
+  .kontakt {
     display: none;
   }
 }

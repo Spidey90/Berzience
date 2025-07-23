@@ -1,11 +1,16 @@
-#heroSectionContainer {
+main {
+  color: var(--primary-font-colour);
+}
+
+#landingPage {
+  min-width: 100dvw;
+  padding: 128px 64px;
   min-height: calc(564px + 128px);
-  background-color: var(--primary-background-colour);
   box-sizing: border-box;
+  background-color: var(--primary-background-colour);
   display: grid;
   gap: 64px;
   justify-items: center;
-  padding: 128px 64px;
 
   #valkommen {
     display: flex;
@@ -27,63 +32,39 @@
     max-width: 100%;
   }
 
-  #heroSection {
-    gap: 48px;
-    display: grid;
-    justify-items: center;
-  }
-
   nav {
-    width: 100%;
-    display: grid;
-    grid-template-columns: min-content min-content min-content;
-    grid-template-areas: "signup insta discord";
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center !important;
-    align-items: center;
     gap: 24px;
 
     #signup {
-      grid-area: signup;
+      min-height: 48px;
+      box-sizing: border-box;
       font-family: Inter-Medium;
       font-size: 1.2rem;
-      margin-right: 8px;
       border-radius: 4px;
       padding: 12px 36px;
       background-color: #d84797;
-      display: flex;
-      text-wrap: nowrap;
-      align-items: center;
-      gap: 12px;
       color: var(--primary-font-colour);
     }
 
-    #instagram,
     #discord {
+      min-height: 48px;
+      box-sizing: border-box;
       display: flex;
-      justify-content: center;
-      height: 32px;
-      width: 28px;
-      border-radius: 14px;
-      transition: transform 0.2s;
-    }
+      gap: 12px;
+      align-items: center;
+      font-family: Inter-Medium;
+      font-size: 1.2rem;
+      border-radius: 4px;
+      padding: 12px 24px;
+      width: max-content;
+      background-color: #5865f2;
 
-    #discord {
-      grid-area: discord;
-    }
-
-    #instagram {
-      margin-left: 16px;
-      margin-right: 16px;
-      grid-area: insta;
-      height: 36px;
-    }
-
-    #instagram:hover {
-      filter: brightness(0) saturate(100%) invert(29%) sepia(27%) saturate(6105%) hue-rotate(313deg) brightness(86%) contrast(95%);
-    }
-
-    #discord:hover {
-      filter: brightness(0) saturate(100%) invert(38%) sepia(30%) saturate(2803%) hue-rotate(214deg) brightness(97%) contrast(96%);
+      img {
+        height: 24px;
+      }
     }
   }
 }
@@ -138,7 +119,7 @@
     text-align: left !important;
   }
 
-  #heroSectionContainer {
+  #landingPage {
     min-height: fit-content;
     height: max-content;
     padding: 28px 24px 64px 24px;
@@ -150,7 +131,7 @@
       width: 100%;
       font-size: 1rem;
 
-      span{
+      span {
         font-size: 3rem;
       }
     }
