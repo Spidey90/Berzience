@@ -61,14 +61,14 @@ header {
   justify-content: center;
   align-items: center;
   position: relative;
-  padding: 16px 0px;
+  padding: 12px 0px;
   z-index: 1;
 }
 
 #hamburger {
   display: none !important;
   height: 100%;
-
+  width: 28px;
   align-content: center;
   position: absolute;
   left: 20px;
@@ -93,7 +93,7 @@ header {
     }
 
     &::after {
-      width: 32px;
+      width: 28px;
       top: 28px;
     }
 
@@ -140,11 +140,19 @@ header {
 }
 
 header nav {
-  display: flex;
-  align-items: center;
-  height: 100%;
   position: absolute;
   left: 64px;
+
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  a:hover {
+    transform: scale(1.05) !important;
+  }
 
   img {
     height: 20px;
@@ -153,7 +161,6 @@ header nav {
   > ul {
     height: 100%;
     display: flex;
-    align-items: center;
     gap: 32px;
 
     li {
@@ -168,11 +175,9 @@ header nav {
 
   #dropdown {
     position: relative;
-    height: 48px;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: transform 0.2s;
 
     span {
       transition: transform 0.2s;
@@ -183,31 +188,26 @@ header nav {
       position: relative;
       bottom: 3px;
       margin-left: 4px;
-      filter: invert(90%);
+      filter: invert(1);
       transition: transform 0.1s;
     }
   }
 
   #dropdown-menu {
+    overflow: hidden;
     font-family: Inter-Medium;
-    display: none;
+    display: block;
     border-radius: 8px 8px 8px 8px;
+    box-shadow: 2px 2px 12px -4px black;
     position: absolute;
     top: 100%;
     background-color: hsl(0, 0%, 100%);
     color: var(--secondary-font-colour);
-    overflow: hidden;
-    box-shadow: 2px 2px 12px -4px black;
 
     li {
-      justify-self: left;
-      text-align: left;
-      height: 100%;
-      width: 100%;
       padding: 0px 16px;
 
       a {
-        display: flex;
         justify-content: left;
       }
     }
@@ -227,27 +227,28 @@ header nav {
     transform: rotateZ(-180deg);
   }
 
-  a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-  }
-
-  a:hover {
-    transform: scale(1.05) !important;
-  }
-
   #active {
     font-family: Inter-SemiBold;
     font-size: 1.2em;
-    img {
-      height: 1.1em;
-    }
   }
 
   #dropdown #active img {
     height: 5px !important;
+  }
+}
+
+.kontakt {
+  width: max-content;
+  height: 100%;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  position: absolute;
+  right: 64px;
+
+  img {
+    display: flex;
+    height: 32px;
   }
 }
 
@@ -256,7 +257,7 @@ header nav {
   font-family: Inter-Medium;
   background: hsl(0, 0%, 90%);
   color: var(--secondary-font-colour);
-  padding: 3px 12px;
+  padding: 4px 12px;
   border-radius: 4px;
 }
 
@@ -264,28 +265,12 @@ header nav {
   transform: scale(1.08) !important;
 }
 
-.kontakt {
-  width: max-content;
-  height: 100%;
-  display: flex;
-  gap: 12px;
-  align-items: center; 
-  position: absolute;
-  right: 64px;
-
-  img{
-    display: flex;
-    height: 28px;
-  }
-}
-
 /*footer*/
 footer {
-  margin-top: auto;
   background-color: var(--primary-background-colour);
   height: 192px;
-  box-sizing: border-box;
   width: 100%;
+  box-sizing: border-box;
   font-family: Inter-Regular;
   color: var(--primary-font-colour);
   display: flex;
@@ -294,34 +279,38 @@ footer {
 }
 
 /*Phone nav bar*/
-#phone_menu {
-  height: calc(100dvh - 48px - 16px * 2);
-  display: flex;
+#phone_menu,
+#filter {
+  height: calc(100dvh - 48px - 12px * 2);
   position: fixed;
-  z-index: 2;
-  padding-top: 16px;
+  top: calc(48px + 12px * 2);
+  z-index: 1;
+}
+
+#phone_menu {
+  width: 0dvw;
   box-sizing: border-box;
-  top: calc(48px + 16px * 2);
-  background-color: var(--primary-background-colour);
   border-top: 2px solid #480ca8;
-  width: 0vw;
-  transition: width 0.5s;
+  padding-top: 12px;
+  background-color: var(--primary-background-colour);
   overflow: hidden;
   font-size: 1.2rem;
   font-family: Inter-Medium;
   color: var(--primary-font-colour);
+  transition: width 0.5s;
+
+  img {
+    height: 24px;
+  }
 
   ul {
-    margin-left: 0px;
     opacity: 0;
-    transition: margin 0.5s, opacity 0.5s;
-    display: flex;
-    flex-direction: column;
+    display: grid;
     gap: 12px;
+    transition: margin 0.5s, opacity 0.5s;
 
     li {
       display: flex;
-      align-items: center;
       text-wrap: nowrap;
       height: 48px !important;
     }
@@ -335,10 +324,7 @@ footer {
 
   #dropdown {
     position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
+
     button {
       color: inherit;
       text-align: left;
@@ -356,30 +342,24 @@ footer {
     }
 
     #dropdownMenu {
-      opacity: inherit;
       position: absolute;
       top: calc(100% + 4px);
       left: 16px;
-      height: 0px;
       opacity: 0;
       overflow: hidden;
       transition: height 0.5s, opacity 0.5s;
       li {
         height: fit-content !important;
-        padding: 10px 0px;
+        padding: 12px 0px;
       }
     }
-  }
-
-  img {
-    height: 24px;
   }
 
   #kontaktaOss1 {
     position: absolute;
     bottom: 16px;
-    background-color: var(--secondary-background-colour);
-    color: var(--secondary-font-colour);
+    background-color: hsl(0, 0%, 100%);
+    color: black;
     border-radius: 8px;
     width: calc(100% - 64px);
     justify-content: center;
@@ -388,10 +368,6 @@ footer {
 
 #filter {
   width: 100%;
-  height: calc(100dvh - 48px - 16px * 2);
-  position: fixed;
-  z-index: 1;
-  top: calc(48px + 16px * 2);
   pointer-events: none;
   background-color: hsla(0, 0%, 0%, 0.5);
   opacity: 0;
