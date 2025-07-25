@@ -35,6 +35,10 @@ button {
   background: none;
 }
 
+button:hover{
+  cursor: pointer;
+}
+
 a {
   text-decoration: none;
   user-select: none !important;
@@ -196,7 +200,7 @@ header nav {
   #dropdown-menu {
     overflow: hidden;
     font-family: Inter-Medium;
-    display: block;
+    display: none;
     border-radius: 8px 8px 8px 8px;
     box-shadow: 2px 2px 12px -4px black;
     position: absolute;
@@ -363,6 +367,7 @@ footer {
     border-radius: 8px;
     width: calc(100% - 64px);
     justify-content: center;
+    overflow: hidden;
   }
 }
 
