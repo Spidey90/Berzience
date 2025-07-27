@@ -83,13 +83,15 @@
     "eventTitle eventTitle"
     "list poster";
 
-  span {
+  > span {
     grid-area: eventTitle;
     font-size: 1.6rem;
     font-family: fontSemiBold;
   }
 
   ul {
+    margin-top: 12px;
+    margin-bottom: 12px;
     grid-area: list;
     align-self: center;
     display: flex;
@@ -98,14 +100,23 @@
 
     li {
       width: 80%;
-      border-radius: 8px;
       overflow: hidden;
+      border-radius: 8px;
+
+      img {
+        height: 8px;
+        position: absolute;
+        bottom: calc(50% - 4px);
+        right: 24px;
+        display: none;
+      }
     }
   }
 
   button {
     width: 100%;
     padding: 12px;
+    border-radius: 8px;
     font-size: 1.25rem;
     font-family: fontBold;
     text-align: left;
@@ -125,30 +136,30 @@
     font-size: 1.1rem;
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    gap: 8px;
 
-    span {
+    .eventDate {
       font-size: 1.1rem;
-      font-family: fontSemiBold;
-    }
-
-    #obs {
-      margin-top: 12px;
-      font-size: 0.8rem;
       font-family: fontSemiBold;
     }
   }
 
-  #eventInfo {
-    font-size: 1.12rem;
-    width: 60%;
+  .obs {
+    margin-top: 12px;
+    font-size: 0.8rem;
+    font-family: fontSemiBold;
   }
 
   #eventPoster {
     justify-self: center;
+    align-self: center;
     grid-area: poster;
     height: 500px;
     border-radius: 4px;
+  }
+
+  .eventInfo {
+    display: none;
   }
 }
 
@@ -169,5 +180,78 @@
 
   #events {
     padding: 52px 32px;
+
+    li {
+      width: 90% !important;
+    }
+  }
+
+  #eventPoster {
+    height: 600px !important;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  #events {
+    grid-template-areas:
+      "eventTitle"
+      "list"
+      "poster";
+
+    li {
+      position: relative;
+      right: 12px;
+      width: calc(100% + 24px) !important;
+    }
+
+    #eventPoster {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 570px) {
+  #events {
+    padding: 32px 8px;
+
+    > span {
+      padding: 0px 10px;
+    }
+
+    ul {
+      position: relative;
+      gap: 8px;
+
+      li {
+        position: static;
+        width: 100% !important;
+        height: 75.33px;
+        transition: height 1s;
+
+        button {
+          position: relative;
+          background-color: hsla(235, 86%, 65%, 0.2);
+
+          span:not(.eventDate) {
+            display: none !important;
+          }
+
+          img {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+
+  .eventInfo {
+    display: grid !important;
+    font-family: fontRegular;
+    margin: 16px 12px;
+  }
+
+  .activeEvent{
+    background-color: transparent !important;
+    height: max-content !important;
   }
 }
