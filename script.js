@@ -3,8 +3,7 @@ const sidebar = document.getElementById("phone_menu");
 const sidebarList = document.getElementById("navLinks");
 const dropdownMenu = document.getElementById("dropdownMenu");
 const carret = document.getElementById("carret");
-const eventsList = document.getElementById("eventsList");
-const events = eventsList.children;
+const eventsList = document.getElementById("eventsList").children;
 
 function menubar() {
   const isClosed = sidebar.style.width == "0vw";
@@ -24,8 +23,9 @@ function dropdown() {
   carret.style.rotate = dropdownMenu.style.height == "0px" ? "0deg" : "-180deg";
 }
 
-function eventExpand(x) {
-  events[0].classList.remove("activeEvent");
-  events[1].classList.remove("activeEvent");
-  events[x].classList.add("activeEvent")
+function activeEventSwitch(x) {
+  eventsList[x].classList.add("activeEvent")
+  eventsList[Number(!x)].classList.remove("activeEvent")
 }
+
+

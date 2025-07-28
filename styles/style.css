@@ -389,7 +389,7 @@ footer {
   transition: opacity 1000ms;
 }
 
-@media screen and (max-width: 1200px) {
+@media (max-width: 1200px) {
   header nav {
     left: 32px;
   }
@@ -399,7 +399,7 @@ footer {
   }
 }
 
-@media screen and (max-width: 1080px) {
+@media (max-width: 1080px) {
   #hamburger {
     display: block !important;
   }
