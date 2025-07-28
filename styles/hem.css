@@ -189,8 +189,25 @@
 
     .eventInfo{
       margin-top: -8px;
-      padding: 20px 16px;
+      height: 0px;
+      opacity: 0;
+      padding: 0px;
       background-color: #dfe0fc;
+      transition: all 0.5s;
+    }
+
+    .activeEvent img{
+      transform: none !important;
+    }
+
+    .activeEventBttn img{
+      transform: rotateZ(-180deg);
+    }
+
+    .activeEventBttn .eventInfo {
+      padding: 20px 16px;
+      height: 300px;
+      opacity: 1;
     }
   }
 }

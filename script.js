@@ -24,8 +24,11 @@ function dropdown() {
 }
 
 function activeEventSwitch(x) {
-  eventsList[x].classList.add("activeEvent")
-  eventsList[Number(!x)].classList.remove("activeEvent")
+  Array.from(eventsList).forEach((el) => (el.className = ""));
+  if (window.innerWidth < 560) {
+    console.log(500);
+    eventsList[x].classList.add("activeEventBttn");
+  } else {
+    eventsList[x].classList.add("activeEvent");
+  }
 }
-
-
