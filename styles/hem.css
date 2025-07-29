@@ -98,6 +98,7 @@
       transition: background-color 0.3s;
 
       img {
+        display: none;
         height: 8px;
         position: absolute;
         right: 16px;
@@ -176,24 +177,39 @@
 
 @media (max-width: 560px) {
   #events {
+    ul{
+      gap: 8px;
+    }
+
     li {
       padding: 0 !important;
       background-color: transparent !important;
     }
 
     button {
+      position: relative;
+      z-index: 1;
       padding: 8px 16px;
       border-radius: 8px;
-      background-color: #cfd3f9;
+      background-color: #dfe0fc;
+      
+      img{
+        display: block !important;
+      }
     }
 
     .eventInfo{
+      background-color: #eeeefc;
       margin-top: -8px;
       height: 0px;
-      opacity: 0;
-      padding: 0px;
-      background-color: #dfe0fc;
-      transition: all 0.5s;
+      overflow: hidden;
+      padding: 4px 16px;
+      transition: height 0.5s, padding 0.5s, background-color 0.2s;
+
+      span{
+        opacity: 0;
+        transition: opacity 0.5s;
+      }
     }
 
     .activeEvent img{
@@ -207,7 +223,10 @@
     .activeEventBttn .eventInfo {
       padding: 20px 16px;
       height: 300px;
-      opacity: 1;
+      
+      span{
+        opacity: 1;
+      }
     }
   }
 }

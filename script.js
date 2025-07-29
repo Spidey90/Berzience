@@ -18,17 +18,23 @@ function menubar() {
 
 function dropdown() {
   dropdownMenu.style.height =
-    dropdownMenu.style.height == "0px" ? "160px" : "0px";
+  dropdownMenu.style.height == "0px" ? "160px" : "0px";
   dropdownMenu.style.opacity = dropdownMenu.style.height == "0px" ? "0" : "1";
   carret.style.rotate = dropdownMenu.style.height == "0px" ? "0deg" : "-180deg";
 }
 
 function activeEventSwitch(x) {
-  Array.from(eventsList).forEach((el) => (el.className = ""));
-  if (window.innerWidth < 560) {
-    console.log(500);
-    eventsList[x].classList.add("activeEventBttn");
-  } else {
+  if (window.innerWidth >= 560) {
+    eventsList[0].classList.remove("activeEvent");
+    eventsList[1].classList.remove("activeEvent");
     eventsList[x].classList.add("activeEvent");
+    return
+  }
+
+  if (eventsList[x].classList.contains("activeEventBttn")) {
+    eventsList[x].classList.remove("activeEventBttn");
+  } else {
+    Array.from(eventsList).forEach(el => el.className = "")
+    eventsList[x].classList.add("activeEventBttn")
   }
 }
