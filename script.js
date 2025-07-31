@@ -4,6 +4,7 @@ const sidebarList = document.getElementById("navLinks");
 const dropdownMenu = document.getElementById("dropdownMenu");
 const carret = document.getElementById("carret");
 const eventsList = document.getElementById("eventsList").children;
+const eventPoster = document.getElementById("eventPoster");
 
 function menubar() {
   const isClosed = sidebar.style.width == "0vw";
@@ -18,7 +19,7 @@ function menubar() {
 
 function dropdown() {
   dropdownMenu.style.height =
-  dropdownMenu.style.height == "0px" ? "160px" : "0px";
+    dropdownMenu.style.height == "0px" ? "160px" : "0px";
   dropdownMenu.style.opacity = dropdownMenu.style.height == "0px" ? "0" : "1";
   carret.style.rotate = dropdownMenu.style.height == "0px" ? "0deg" : "-180deg";
 }
@@ -28,13 +29,19 @@ function activeEventSwitch(x) {
     eventsList[0].classList.remove("activeEvent");
     eventsList[1].classList.remove("activeEvent");
     eventsList[x].classList.add("activeEvent");
-    return
+    eventPoster.src = `pics/Exempel${x}.jpg`;
+    return;
   }
 
   if (eventsList[x].classList.contains("activeEventBttn")) {
     eventsList[x].classList.remove("activeEventBttn");
+    eventsList[x].children[1].style.height = "0px";
   } else {
-    Array.from(eventsList).forEach(el => el.className = "")
-    eventsList[x].classList.add("activeEventBttn")
+    Array.from(eventsList).forEach((el) => (el.className = ""));
+    eventsList[0].children[1].style.height = "0px";
+    eventsList[1].children[1].style.height = "0px";
+    eventsList[x].classList.add("activeEventBttn");
+    eventsList[x].children[1].style.height =
+      eventsList[x].children[1].scrollHeight - 12 + "px";
   }
 }
