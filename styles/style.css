@@ -62,30 +62,32 @@ a:hover,
   transform: scale(1.1);
 }
 
+body {
+  background-color: var(--primary-background-colour);
+}
+
 /*Header*/
 header {
-  height: 48px;
-  max-width: 100dvw;
-  background: var(--primary-background-colour);
-  color: var(--primary-font-colour);
-  font-family: fontRegular;
-  font-size: 1rem;
-  user-select: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
+  height: 60px;
+  max-width: 1280px;
+  width: 100dvw;
   padding: 12px 0px;
-  z-index: 1;
+  margin: 0 auto;
+  box-sizing: border-box;
+  background: var(--primary-background-colour);
+  user-select: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-content: center;
 }
 
 #hamburger {
+  margin-left: 12px;
   display: none !important;
   height: 100%;
   width: 28px;
   align-content: center;
-  position: absolute;
-  left: 20px;
+  position: relative;
   z-index: 10;
 
   #nav-toggle {
@@ -108,12 +110,12 @@ header {
 
     &::after {
       width: 28px;
-      top: 28px;
+      top: 16px;
     }
 
     &::before {
       width: 8px;
-      bottom: 28px;
+      bottom: 16px;
     }
   }
 }
@@ -142,11 +144,13 @@ header {
 }
 
 #title {
+  justify-self: center;
+  color: var(--primary-font-colour);
   display: flex;
   gap: 4px;
   align-items: center;
   font-family: fontBold;
-  font-size: 2rem;
+  font-size: 2.4rem;
 
   img {
     height: 36px;
@@ -154,14 +158,16 @@ header {
 }
 
 header nav {
-  position: absolute;
-  left: 64px;
+  color: var(--primary-font-colour);
+  font-family: fontRegular;
+  font-size: 1.2rem;
 
   a {
     display: flex;
     align-items: center;
-    justify-content: center;
+    height: 48px;
     gap: 8px;
+    padding: 0px 8px;
   }
 
   a:hover {
@@ -180,15 +186,12 @@ header nav {
     li {
       width: max-content;
       height: 48px;
-
-      > a {
-        padding: 0px 8px;
-      }
     }
 
-    a {
-      height: 48px;
-    }
+    > #active {
+      font-family: fontSemiBold;
+      font-size: 1.2em;
+    }   
   }
 
   #dropdown {
@@ -215,7 +218,7 @@ header nav {
     overflow: hidden;
     font-family: fontMedium;
     display: none;
-    border-radius: 8px 8px 8px 8px;
+    border-radius: 8px;
     box-shadow: 2px 2px 12px -4px black;
     position: absolute;
     top: 100%;
@@ -223,7 +226,7 @@ header nav {
     color: var(--secondary-font-colour);
 
     li {
-      padding: 0px 16px;
+      padding: 4px 8px;
 
       a {
         justify-content: left;
@@ -245,24 +248,21 @@ header nav {
     transform: rotateZ(-180deg);
   }
 
-  #active {
-    font-family: fontSemiBold;
-    font-size: 1.2em;
-  }
-
-  #dropdown #active img {
-    height: 5px !important;
+  #dropdown #active {
+    img {
+      height: 5px !important;
+    }
   }
 }
 
 .kontakt {
+  justify-self: end;
+  margin-right: 8px;
   width: max-content;
   height: 100%;
   display: flex;
   gap: 12px;
   align-items: center;
-  position: absolute;
-  right: 72px;
 
   img {
     display: flex;
@@ -285,15 +285,17 @@ header nav {
 
 /*footer*/
 footer {
-  background-color: var(--primary-background-colour);
-  height: 192px;
-  width: 100%;
+  width: 100dvw;
+  padding: 48px;
   box-sizing: border-box;
+  background-color: var(--primary-background-colour);
   font-family: fontRegular;
   color: var(--primary-font-colour);
-  display: flex;
-  align-items: center;
-  padding: 0px 64px;
+
+  div {
+    max-width: 1280px;
+    margin: 0 auto;
+  }
 }
 
 /*Phone nav bar*/

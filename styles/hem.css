@@ -1,7 +1,9 @@
 #landingPage {
   color: var(--primary-font-colour);
-  max-width: 100dvw;
-  padding: 96px 64px;
+  max-width: 1376px;
+  width: 100dvw;
+  padding: 96px 48px;
+  margin: 0 auto;
   box-sizing: border-box;
   background-color: var(--primary-background-colour);
   display: grid;
@@ -15,7 +17,6 @@
     font-family: fontRegular;
     text-align: center;
     font-size: 1.1rem;
-    width: 75%;
     height: fit-content;
 
     span {
@@ -72,13 +73,24 @@
   }
 }
 
-#events {
+#eventBackground {
+  padding: 0px 48px;
+  box-sizing: border-box;
+  max-width: 100dvw;
   background-color: var(--secondary-background-colour);
-  padding: 52px;
+}
+
+#events {
+  width: 100%;
+  max-width: 1280px;
+  padding: 52px 0px;
+  margin: auto;
+  box-sizing: border-box;
+  background-color: var(--secondary-background-colour);
   font-family: fontMedium;
   color: var(--secondary-font-colour);
   display: grid;
-  column-gap: 144px;
+  column-gap: 32px;
   grid-template-areas: "title title" "list poster";
 
   > span {
@@ -155,14 +167,8 @@
     grid-area: poster;
   }
 
-  #eventListPoster{
+  #eventListPoster {
     display: none;
-  }
-}
-
-@media (max-width: 1400px) {
-  #events {
-    column-gap: 24px;
   }
 }
 
@@ -177,6 +183,10 @@
 }
 
 @media (max-width: 1000px) {
+  #eventBackground{
+    padding: 0px 24px;
+  }
+  
   #landingPage {
     padding: 28px 24px 64px 24px;
     gap: 32px;
@@ -197,6 +207,10 @@
 }
 
 @media (max-width: 560px) {
+  #eventBackground{
+    padding: 0px;
+  }
+
   #events {
     ul {
       gap: 8px;
@@ -250,10 +264,16 @@
       }
     }
 
-    #eventListPoster{
+    #eventListPoster {
       margin-top: 24px;
       display: block !important;
       width: 100%;
     }
+  }
+}
+
+@media (max-width:390px) {
+  #events{
+    padding: 32px 12px;
   }
 }
