@@ -11,7 +11,7 @@ function menubar() {
   //hamburger.classList[isClosed ? "add" : "remove"]("menu-active");
   sidebar.style.width = isClosed ? "72vw" : "0vw";
   sidebarList.style.opacity = isClosed ? "1" : "0";
-  sidebarList.style.marginLeft = isClosed ? "32px" : "0";
+  sidebarList.style.marginLeft = isClosed ? "20px" : "0";
   document.body.style.overflow = isClosed ? "hidden" : "scroll";
   filter.style.opacity = isClosed ? "1" : "0";
   filter.style.pointerEvents = isClosed ? "all" : "none";

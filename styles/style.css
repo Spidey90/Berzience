@@ -191,7 +191,7 @@ header nav {
     > #active {
       font-family: fontSemiBold;
       font-size: 1.2em;
-    }   
+    }
   }
 
   #dropdown {
@@ -301,9 +301,8 @@ footer {
 /*Phone nav bar*/
 #phone_menu,
 #filter {
-  height: calc(100dvh - 48px - 12px * 2);
+  height: calc(100dvh - 60px);
   position: fixed;
-  top: calc(48px + 12px * 2);
   z-index: 2;
 }
 
@@ -375,15 +374,36 @@ footer {
     }
   }
 
-  #kontaktaOss1 {
+  #kontakta1 {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    column-gap: 16px;
+    align-content: center;
     position: absolute;
     bottom: 16px;
-    background-color: hsl(0, 0%, 100%);
-    color: black;
-    border-radius: 8px;
-    width: calc(100% - 64px);
-    justify-content: center;
-    overflow: hidden;
+    width: 100%;
+
+    #kontaktaOss1 {
+      background-color: hsl(0, 0%, 100%);
+      color: black;
+      border-radius: 8px;
+      width: calc(100% - 48px);
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    #instagram1 {
+      height: fit-content;
+      background-color: white;
+      border-radius: 8px;
+      padding: 8px;
+
+      img {
+        margin: 0 auto;
+        filter: invert(1);
+        height: 32px;
+      }
+    }
   }
 }
 

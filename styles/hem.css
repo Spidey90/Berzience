@@ -159,15 +159,22 @@
       margin-top: 16px;
       font-size: 0.8rem;
       font-family: fontSemiBold;
+
+      a{
+        color: rgb(72, 108, 249);
+        text-decoration: underline;
+      }
     }
   }
 
   #eventPoster {
     height: 600px;
     grid-area: poster;
+    border-radius: 8px;
   }
 
   #eventListPoster {
+    border-radius: 4px;
     display: none;
   }
 }

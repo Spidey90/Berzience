@@ -1,9 +1,11 @@
-#mainBackground{
+#mainBackground {
   background-color: white;
   width: 100dvw;
+  box-sizing: border-box;
+  padding: 0px 16px;
 }
 
-main{
+main {
   min-height: 76dvh;
   width: 1280px;
   max-width: 100dvw;
@@ -20,18 +22,18 @@ main{
   flex-wrap: wrap;
   gap: 32px;
 
-  div{
+  div {
     width: 100%;
   }
 
-  h2{
+  h2 {
     font-size: 1.25rem;
     font-family: fontSemiBold;
     padding: 4px 0px;
     font-weight: lighter;
   }
 
-  a{
+  a {
     display: flex;
     align-items: center;
     border: 1px solid hsl(0, 0%, 60%);
@@ -39,49 +41,52 @@ main{
     overflow: hidden;
   }
 
-  a:hover{
+  a:hover {
     transform: scale(1.02) !important;
-  }
-
-  img{
-    height: 36px;
-    border-right: 1px solid hsl(0, 0%, 60%);
-    margin-right: 12px
   }
 }
 
-.files{
+.files {
   font-family: fontSemiBold;
   display: flex;
   flex-direction: column;
   gap: 16px;
+
+  img {
+    height: 36px;
+    box-sizing: border-box;
+    border-right: 1px solid hsl(0, 0%, 60%);
+    margin-right: 12px;
+    padding: 4px;
+    background-color: #b4b7ff;
+  }
 }
 
-.styrelsen{
+.styrelsen {
   display: flex;
   flex-direction: column;
   border: 1px solid hsl(0, 0%, 80%);
   width: fit-content;
   height: fit-content;
   border-radius: 4px;
-  
-  h2{
+
+  h2 {
     padding: 8px;
   }
 
-  span{
+  span {
     font-size: 1.12rem;
     padding: 12px 8px;
   }
 
-  img{
+  img {
     margin: 0;
     height: 420px;
   }
 }
 
 @media (max-width: 1000px) {
-  main{
+  main {
     padding: 32px 0px;
   }
 }
