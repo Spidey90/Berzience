@@ -4,7 +4,7 @@
 }
 
 :root {
-  --primary-background-colour: #3a0ca3;
+  --primary-background-colour: #010663;
   --secondary-background-colour: hsl(0, 0%, 100%);
   --primary-font-colour: hsl(0, 0%, 100%);
   --secondary-font-colour: hsl(0, 0%, 0%);
@@ -266,15 +266,18 @@ header nav {
 
   img {
     display: flex;
-    height: 32px;
+    background-color: #cc39a4;
+    padding: 4.5px 5px;
+    border-radius: 10px;
+    height: 28px;
   }
 }
 
 #kontaktaOss {
   font-size: 1.2rem;
   font-family: fontMedium;
-  background: hsl(0, 0%, 90%);
-  color: var(--secondary-font-colour);
+  background:#00b4d8;
+  color: var(--primary-font-colour);
   padding: 4px 12px;
   border-radius: 4px;
 }
@@ -384,25 +387,21 @@ footer {
     width: 100%;
 
     #kontaktaOss1 {
-      background-color: hsl(0, 0%, 100%);
+      background-color: #00b4d8;
       color: black;
       border-radius: 8px;
-      width: calc(100% - 48px);
+      width: calc(100% - 40px);
       justify-content: center;
       overflow: hidden;
     }
 
-    #instagram1 {
+    #instagram1 img {
       height: fit-content;
-      background-color: white;
-      border-radius: 8px;
+      background-color: #cc39a4;
+      border-radius: 14px;
       padding: 8px;
-
-      img {
-        margin: 0 auto;
-        filter: invert(1);
-        height: 32px;
-      }
+      margin: 0 auto;
+      height: 32px;
     }
   }
 }
