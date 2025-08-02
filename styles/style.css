@@ -265,11 +265,9 @@ header nav {
   align-items: center;
 
   img {
+    filter: brightness(0) saturate(100%) invert(16%) sepia(100%) saturate(3384%) hue-rotate(323deg) brightness(102%) contrast(117%);
     display: flex;
-    background-color: #cc39a4;
-    padding: 4.5px 5px;
-    border-radius: 10px;
-    height: 28px;
+    height: 32px;
   }
 }
 
