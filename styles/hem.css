@@ -34,7 +34,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center !important;
-    gap: 24px;
+    gap: 20px;
 
     #signup,
     #discord {
