@@ -30,11 +30,6 @@ main {
   }
 }
 
-.instagram-media {
-  max-width: 440px !important;
-  min-width: 326px !important;
-}
-
 @media (max-width: 1000px) {
   main {
     padding: 32px;

@@ -19,7 +19,7 @@ function menubar() {
 
 function dropdown() {
   dropdownMenu.style.height =
-    dropdownMenu.style.height == "0px" ? "160px" : "0px";
+    dropdownMenu.style.height == "0px" ? "164px" : "0px";
   dropdownMenu.style.opacity = dropdownMenu.style.height == "0px" ? "0" : "1";
   carret.style.rotate = dropdownMenu.style.height == "0px" ? "0deg" : "-180deg";
 }

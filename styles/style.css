@@ -71,7 +71,7 @@ header {
   height: 60px;
   max-width: 1280px;
   width: 100dvw;
-  padding: 12px 0px;
+  padding: 12px 24px;
   margin: 0 auto;
   box-sizing: border-box;
   background: var(--primary-background-colour);
@@ -82,7 +82,6 @@ header {
 }
 
 #hamburger {
-  margin-left: 12px;
   display: none !important;
   height: 100%;
   width: 28px;
@@ -265,7 +264,8 @@ header nav {
   align-items: center;
 
   img {
-    filter: brightness(0) saturate(100%) invert(16%) sepia(100%) saturate(3384%) hue-rotate(323deg) brightness(102%) contrast(117%);
+    filter: brightness(0) saturate(100%) invert(16%) sepia(100%) saturate(3384%)
+      hue-rotate(323deg) brightness(102%) contrast(117%);
     display: flex;
     height: 32px;
   }
@@ -333,6 +333,14 @@ footer {
       display: flex;
       text-wrap: nowrap;
       height: 48px !important;
+      width: calc(100% - 20px);
+      border-radius: 8px;
+    }
+
+    & > li:not(#kontakta1) {
+      box-sizing: border-box;
+      padding: 0px 16px;
+      background-color: #0a1191;
     }
 
     a {
@@ -369,8 +377,10 @@ footer {
       overflow: hidden;
       transition: height 0.5s, opacity 0.5s;
       li {
+        box-shadow: none;
+        background-color: transparent;
         height: fit-content !important;
-        padding: 12px 0px;
+        padding: 12px 8px;
       }
     }
   }
@@ -386,7 +396,6 @@ footer {
 
     #kontaktaOss1 {
       background-color: #00b4d8;
-      color: black;
       border-radius: 8px;
       width: calc(100% - 40px);
       justify-content: center;
@@ -410,16 +419,6 @@ footer {
   background-color: hsla(0, 0%, 0%, 0.5);
   opacity: 0;
   transition: opacity 1000ms;
-}
-
-@media (max-width: 1200px) {
-  header nav {
-    left: 32px;
-  }
-
-  #kontaktaOss {
-    right: 32px;
-  }
 }
 
 @media (max-width: 1080px) {
