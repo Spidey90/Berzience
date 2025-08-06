@@ -30,6 +30,11 @@ function activeEventSwitch(x) {
     eventsList[1].classList.remove("activeEvent");
     eventsList[x].classList.add("activeEvent");
     eventPoster.src = `pics/Exempel${x}.jpg`;
+  }
+}
+
+function eventExpander(x) {
+  if (window.innerWidth >= 560) {
     return;
   }
 
