@@ -248,8 +248,6 @@ header nav {
   margin-right: 8px;
 
   img {
-    filter: brightness(0) invert(16%) sepia(100%) saturate(3384%)
-      hue-rotate(323deg);
     display: flex;
     height: 32px;
   }
@@ -279,15 +277,16 @@ footer {
 }
 
 /*Phone nav bar*/
-#phone_menu,
+#menu,
 #filter {
   height: calc(100dvh - 60px);
   position: fixed;
   z-index: 2;
 }
 
-#phone_menu {
-  width: 0dvw;
+#menu {
+  width: 32dvw;
+  left: -32dvw;
   box-sizing: border-box;
   border-top: 2px solid #480ca8;
   padding-top: 12px;
@@ -296,7 +295,7 @@ footer {
   font-size: 1.2rem;
   font-family: fontMedium;
   color: var(--primary-font-colour);
-  transition: width 0.5s;
+  transition: width 0.6s ease-out, left 0.5s;
 
   img {
     height: 24px;
@@ -350,7 +349,7 @@ footer {
 
     #dropdownMenu {
       position: absolute;
-      top: calc(100% + 4px);
+      top: calc(100% + 8px);
       left: 16px;
       opacity: 0;
       overflow: hidden;
@@ -383,11 +382,8 @@ footer {
 
     #instagram1 img {
       height: fit-content;
-      background-color: #cc39a4;
-      border-radius: 14px;
-      padding: 8px;
       margin: 0 auto;
-      height: 32px;
+      height: 36px;
     }
   }
 }
@@ -426,11 +422,6 @@ footer {
       font-family: fontMedium;
       font-size: 4rem;
     }
-  }
-
-  #hero_image {
-    min-width: 48%;
-    max-width: 100%;
   }
 
   nav {
@@ -590,6 +581,7 @@ footer {
 
 #eventMain {
   max-width: 1280px;
+  width: 100dvw;
   padding: 36px 0px;
   margin: 0 auto;
   box-sizing: border-box;
@@ -598,20 +590,18 @@ footer {
   font-family: fontRegular;
   color: var(--secondary-font-colour);
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
   gap: 32px;
+  flex-direction: column;
 }
 
 .mediaContainer {
   margin: 0 auto;
   max-width: 100%;
-  min-width: 326px;
   width: 440px;
 
   h2 {
     font-size: 1.25rem;
-    line-height: 48px;
+    margin-bottom: 8px;
   }
 }
 
@@ -720,6 +710,10 @@ footer {
 @media (max-width: 1100px) {
   #events {
     grid-template-areas: "title" "list";
+
+    li{
+      background-color: #d1e7fa;
+    }
   }
 
   #eventPoster {
@@ -824,5 +818,9 @@ footer {
 @media (max-width: 390px) {
   #events {
     padding: 32px 12px;
+  }
+  
+  #eventMain{
+    padding: 32px 8px;
   }
 }

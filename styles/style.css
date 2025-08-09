@@ -218,7 +218,6 @@ header nav #dropdown #active img {
   margin-right: 8px;
 }
 .kontakt img {
-  filter: brightness(0) invert(16%) sepia(100%) saturate(3384%) hue-rotate(323deg);
   display: flex;
   height: 32px;
 }
@@ -246,15 +245,16 @@ footer div {
 }
 
 /*Phone nav bar*/
-#phone_menu,
+#menu,
 #filter {
   height: calc(100dvh - 60px);
   position: fixed;
   z-index: 2;
 }
 
-#phone_menu {
-  width: 0dvw;
+#menu {
+  width: 32dvw;
+  left: -32dvw;
   box-sizing: border-box;
   border-top: 2px solid #480ca8;
   padding-top: 12px;
@@ -263,44 +263,44 @@ footer div {
   font-size: 1.2rem;
   font-family: fontMedium;
   color: var(--primary-font-colour);
-  transition: width 0.5s;
+  transition: width 0.6s ease-out, left 0.5s;
 }
-#phone_menu img {
+#menu img {
   height: 24px;
 }
-#phone_menu ul {
+#menu ul {
   opacity: 0;
   display: grid;
   gap: 12px;
   transition: margin 0.5s, opacity 0.5s;
 }
-#phone_menu ul li {
+#menu ul li {
   display: flex;
   text-wrap: nowrap;
   height: 48px !important;
   width: calc(100% - 20px);
   border-radius: 8px;
 }
-#phone_menu ul > li:not(#kontakta1) {
+#menu ul > li:not(#kontakta1) {
   box-sizing: border-box;
   padding: 0px 16px;
   background-color: #0a1191;
 }
-#phone_menu ul a {
+#menu ul a {
   display: flex;
   gap: 8px;
   align-items: center;
 }
-#phone_menu #dropdown {
+#menu #dropdown {
   position: relative;
 }
-#phone_menu #dropdown button {
+#menu #dropdown button {
   color: inherit;
   text-align: left;
   font-size: inherit;
   font-family: inherit;
 }
-#phone_menu #dropdown img {
+#menu #dropdown img {
   height: 4px;
   position: relative;
   bottom: 3px;
@@ -308,21 +308,21 @@ footer div {
   transition: rotate 0.2s;
   filter: invert(1);
 }
-#phone_menu #dropdown #dropdownMenu {
+#menu #dropdown #dropdownMenu {
   position: absolute;
-  top: calc(100% + 4px);
+  top: calc(100% + 8px);
   left: 16px;
   opacity: 0;
   overflow: hidden;
   transition: height 0.5s, opacity 0.5s;
 }
-#phone_menu #dropdown #dropdownMenu li {
+#menu #dropdown #dropdownMenu li {
   box-shadow: none;
   background-color: transparent;
   height: fit-content !important;
   padding: 12px 8px;
 }
-#phone_menu #kontakta1 {
+#menu #kontakta1 {
   display: grid;
   grid-template-columns: min-content 1fr;
   column-gap: 16px;
@@ -331,20 +331,17 @@ footer div {
   bottom: 16px;
   width: 100%;
 }
-#phone_menu #kontakta1 #kontaktaOss1 {
+#menu #kontakta1 #kontaktaOss1 {
   background-color: #00b4d8;
   border-radius: 8px;
   width: calc(100% - 40px);
   justify-content: center;
   overflow: hidden;
 }
-#phone_menu #kontakta1 #instagram1 img {
+#menu #kontakta1 #instagram1 img {
   height: fit-content;
-  background-color: #cc39a4;
-  border-radius: 14px;
-  padding: 8px;
   margin: 0 auto;
-  height: 32px;
+  height: 36px;
 }
 
 #filter {
@@ -380,10 +377,6 @@ footer div {
 #landingPage #valkommen span {
   font-family: fontMedium;
   font-size: 4rem;
-}
-#landingPage #hero_image {
-  min-width: 48%;
-  max-width: 100%;
 }
 #landingPage nav {
   display: flex;
@@ -523,6 +516,7 @@ footer div {
 
 #eventMain {
   max-width: 1280px;
+  width: 100dvw;
   padding: 36px 0px;
   margin: 0 auto;
   box-sizing: border-box;
@@ -530,20 +524,18 @@ footer div {
   font-family: fontRegular;
   color: var(--secondary-font-colour);
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
   gap: 32px;
+  flex-direction: column;
 }
 
 .mediaContainer {
   margin: 0 auto;
   max-width: 100%;
-  min-width: 326px;
   width: 440px;
 }
 .mediaContainer h2 {
   font-size: 1.25rem;
-  line-height: 48px;
+  margin-bottom: 8px;
 }
 
 /*övrigt.css*/
@@ -641,6 +633,9 @@ footer div {
   #events {
     grid-template-areas: "title" "list";
   }
+  #events li {
+    background-color: #d1e7fa;
+  }
   #eventPoster {
     display: none;
   }
@@ -722,6 +717,9 @@ footer div {
 @media (max-width: 390px) {
   #events {
     padding: 32px 12px;
+  }
+  #eventMain {
+    padding: 32px 8px;
   }
 }
 
