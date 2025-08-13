@@ -248,18 +248,23 @@ header nav {
   margin-right: 8px;
 
   img {
+    filter: invert(100%);
+    background-color: hsl(0, 0%, 10%);
     display: flex;
-    height: 32px;
+    height: 24px;
+    overflow: hidden;
+    padding: 5.2px;
+    border-radius: 9px;
   }
-}
 
-#kontaktaOss {
-  font-family: fontMedium;
-  font-size: 1.2rem;
-  color: var(--primary-font-colour);
-  background: #00b4d8;
-  padding: 4px 12px;
-  border-radius: 4px;
+  #kontaktaOss {
+    font-family: fontSemiBold;
+    font-size: 1.2rem;
+    color: hsl(0, 0%, 12%);
+    background: hsl(0, 0%, 90%);
+    padding: 4px 8px;
+    border-radius: 4px;
+  }
 }
 
 /*footer*/
@@ -319,9 +324,12 @@ footer {
       box-sizing: border-box;
       padding: 0px 16px;
       background-color: #0a1191;
+      box-shadow: 2px 2px 8px hsla(237, 98%, 12%),
+        -2px -2px 8px hsla(237, 98%, 28%);
     }
 
     a {
+      width: 100%;
       display: flex;
       gap: 8px;
       align-items: center;
@@ -370,20 +378,26 @@ footer {
     align-content: center;
     position: absolute;
     bottom: 16px;
-    width: 100%;
+    width: calc(80dvw - 40px);
 
     #kontaktaOss1 {
-      background-color: #00b4d8;
+      font-family: fontSemiBold;
+      font-size: 1.4rem;
+      color: hsl(0, 0%, 12%);
+      background: hsl(0, 0%, 90%);
       border-radius: 8px;
-      width: calc(100% - 40px);
+      width: 100%;
       justify-content: center;
       overflow: hidden;
     }
 
     #instagram1 img {
-      height: fit-content;
       margin: 0 auto;
-      height: 36px;
+      height: 28px;
+      padding: 10px;
+      border-radius: 12px;
+      filter: invert(100%);
+      background-color: hsl(0, 0%, 10%);
     }
   }
 }
@@ -447,9 +461,9 @@ footer {
 
     #signup {
       font-size: 1.25rem;
-      padding: 16px 36px;
+      padding: 16px 32px;
       background-color: #0a85ed;
-      gap: 4px;
+      gap: 8px;
 
       img {
         filter: invert(1);
@@ -634,9 +648,14 @@ footer {
   }
 
   h2 {
+    width: 100%;
     font-size: 1.25rem;
     font-family: fontSemiBold;
     font-weight: lighter;
+  }
+
+  .fileTitle{
+    margin-bottom: -28px;
   }
 
   a {
@@ -645,6 +664,7 @@ footer {
     border: 1px solid hsl(0, 0%, 60%);
     border-radius: 4px;
     overflow: hidden;
+    flex: 1;
   }
 
   a:hover {
@@ -655,8 +675,9 @@ footer {
 .files {
   font-family: fontSemiBold;
   display: flex;
-  flex-direction: column;
+  flex-wrap: 1;
   gap: 8px;
+  width: 100%;
 
   img {
     height: 36px;
@@ -711,7 +732,7 @@ footer {
   #events {
     grid-template-areas: "title" "list";
 
-    li{
+    li {
       background-color: #d1e7fa;
     }
   }
@@ -746,6 +767,12 @@ footer {
 
   #eventMain {
     padding: 32px;
+  }
+}
+
+@media (max-width: 640px) {
+  .files {
+    flex-direction: column;
   }
 }
 
@@ -819,8 +846,8 @@ footer {
   #events {
     padding: 32px 12px;
   }
-  
-  #eventMain{
+
+  #eventMain {
     padding: 32px 8px;
   }
 }

@@ -10,7 +10,7 @@ function menubar() {
   const widthClosed = "32dvw";
   const isClosed = sidebar.style.width == widthClosed;
   //hamburger.classList[isClosed ? "add" : "remove"]("menu-active");
-  sidebar.style.width = isClosed ? "72dvw" : widthClosed;
+  sidebar.style.width = isClosed ? "80dvw" : widthClosed;
   sidebar.style.left = isClosed ? "0dvw" : `-${widthClosed}`;
   sidebarList.style.opacity = isClosed ? "1" : "0";
   sidebarList.style.marginLeft = isClosed ? "20px" : "0";
