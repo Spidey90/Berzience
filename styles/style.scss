@@ -167,7 +167,9 @@ header nav {
     gap: 8px;
 
     img {
-      height: 20px;
+      height: 18px;
+      position: relative;
+      bottom: 0.5px;
     }
   }
 
@@ -654,7 +656,7 @@ footer {
     font-weight: lighter;
   }
 
-  .fileTitle{
+  .fileTitle {
     margin-bottom: -28px;
   }
 

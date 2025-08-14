@@ -152,7 +152,8 @@ header nav a {
   gap: 8px;
 }
 header nav a img {
-  height: 20px;
+  height: 18px;
+  position: relative;
 }
 header nav > ul {
   height: 100%;
