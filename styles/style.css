@@ -63,6 +63,21 @@ body {
   background-color: var(--primary-background-colour);
 }
 
+#active {
+  position: relative;
+  justify-content: center;
+}
+
+#active::after {
+  content: "";
+  position: absolute;
+  width: calc(100% + 8px);
+  height: 2px;
+  background-color: white;
+  border-radius: 4px;
+  bottom: 0px;
+}
+
 /*Header*/
 header {
   height: 60px;
@@ -110,23 +125,6 @@ header {
   bottom: 16px;
 }
 
-.menu-active #nav-toggle {
-  width: 0 !important;
-}
-.menu-active #nav-toggle::after, .menu-active #nav-toggle::before {
-  width: 24px !important;
-}
-.menu-active #nav-toggle::after {
-  top: 48% !important;
-  transform: rotate(45deg);
-  transform-origin: center;
-}
-.menu-active #nav-toggle::before {
-  bottom: 48% !important;
-  transform: rotate(-45deg);
-  transform-origin: center;
-}
-
 #title {
   display: flex;
   gap: 4px;
@@ -154,13 +152,16 @@ header nav a {
 header nav a img {
   height: 18px;
   position: relative;
+  bottom: 0.5px;
 }
 header nav > ul {
   height: 100%;
   display: flex;
+  align-items: center;
   gap: 32px;
 }
 header nav > ul li {
+  height: fit-content;
   padding: 0px 8px;
 }
 header nav #dropdown {
@@ -220,7 +221,7 @@ header nav #dropdown #active img {
 }
 .kontakt img {
   filter: invert(100%);
-  background-color: hsl(0, 0%, 10%);
+  background-color: hsl(0, 0%, 8%);
   display: flex;
   height: 24px;
   overflow: hidden;
@@ -230,8 +231,8 @@ header nav #dropdown #active img {
 .kontakt #kontaktaOss {
   font-family: fontSemiBold;
   font-size: 1.2rem;
-  color: hsl(0, 0%, 12%);
-  background: hsl(0, 0%, 90%);
+  color: hsl(0, 0%, 10%);
+  background: hsl(0, 0%, 92%);
   padding: 4px 8px;
   border-radius: 4px;
 }
@@ -249,7 +250,7 @@ footer div {
   margin: 0 auto;
 }
 
-/*Phone nav bar*/
+/*mobil nav bar*/
 #menu,
 #filter {
   height: calc(100dvh - 60px);
@@ -258,8 +259,8 @@ footer div {
 }
 
 #menu {
-  width: 32dvw;
-  left: -32dvw;
+  width: 80dvw;
+  left: -80dvw;
   box-sizing: border-box;
   border-top: 2px solid #480ca8;
   padding-top: 12px;
@@ -268,10 +269,10 @@ footer div {
   font-size: 1.2rem;
   font-family: fontMedium;
   color: var(--primary-font-colour);
-  transition: width 0.6s ease-out, left 0.5s;
+  transition: left 0.5s;
 }
 #menu img {
-  height: 24px;
+  height: 20px;
 }
 #menu ul {
   opacity: 0;
@@ -341,8 +342,8 @@ footer div {
 #menu #kontakta1 #kontaktaOss1 {
   font-family: fontSemiBold;
   font-size: 1.4rem;
-  color: hsl(0, 0%, 12%);
-  background: hsl(0, 0%, 90%);
+  color: hsl(0, 0%, 10%);
+  background: hsl(0, 0%, 92%);
   border-radius: 8px;
   width: 100%;
   justify-content: center;
@@ -354,7 +355,7 @@ footer div {
   padding: 10px;
   border-radius: 12px;
   filter: invert(100%);
-  background-color: hsl(0, 0%, 10%);
+  background-color: hsl(0, 0%, 8%);
 }
 
 #filter {
@@ -476,9 +477,10 @@ footer div {
   top: 50%;
   transition: transform 0.2s;
 }
-#events ul li:hover:not(.activeEvent),
+#events ul li:hover,
 #events ul .activeEvent {
   background-color: #d1e7fa;
+  cursor: pointer;
 }
 #events ul .activeEvent img {
   transform: rotateZ(-180deg);

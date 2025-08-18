@@ -7,11 +7,9 @@ const eventsList = document.getElementById("eventsList").children;
 const eventPoster = document.getElementById("eventPoster");
 
 function menubar() {
-  const widthClosed = "32dvw";
-  const isClosed = sidebar.style.width == widthClosed;
-  //hamburger.classList[isClosed ? "add" : "remove"]("menu-active");
-  sidebar.style.width = isClosed ? "80dvw" : widthClosed;
-  sidebar.style.left = isClosed ? "0dvw" : `-${widthClosed}`;
+  const widthClosed = "-80dvw";
+  const isClosed = sidebar.style.left == widthClosed;
+  sidebar.style.left = isClosed ? "0dvw" : `${widthClosed}`;
   sidebarList.style.opacity = isClosed ? "1" : "0";
   sidebarList.style.marginLeft = isClosed ? "20px" : "0";
   document.body.style.overflow = isClosed ? "hidden" : "scroll";
