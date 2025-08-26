@@ -636,8 +636,8 @@ footer div {
   padding: 12px 8px;
 }
 .styrelsen img {
-  width: fit-content;
-  height: 420px !important;
+  max-width: 92dvw;
+  max-height: 420px !important;
 }
 
 /*Media*/
