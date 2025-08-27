@@ -17,13 +17,6 @@ function menubar() {
   filter.style.pointerEvents = isClosed ? "all" : "none";
 }
 
-function dropdown() {
-  dropdownMenu.style.height =
-    dropdownMenu.style.height == "0px" ? "164px" : "0px";
-  dropdownMenu.style.opacity = dropdownMenu.style.height == "0px" ? "0" : "1";
-  carret.style.rotate = dropdownMenu.style.height == "0px" ? "0deg" : "-180deg";
-}
-
 function activeEventSwitch(x) {
   if (window.innerWidth >= 560) {
     eventsList[0].classList.remove("activeEvent");
@@ -36,9 +29,7 @@ function activeEventSwitch(x) {
 function eventExpander(x) {
   if (window.innerWidth >= 560) {
     return;
-  }
-
-  if (eventsList[x].classList.contains("activeEventBttn")) {
+  } else if (eventsList[x].classList.contains("activeEventBttn")) {
     eventsList[x].classList.remove("activeEventBttn");
     eventsList[x].children[1].style.height = "0px";
   } else {

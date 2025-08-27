@@ -53,12 +53,6 @@ a {
   transition: transform 0.2s;
 }
 
-a:hover,
-#dropdown:hover > span,
-#dropdown:focus-within > span {
-  transform: scale(1.08);
-}
-
 body {
   background-color: var(--primary-background-colour);
 }
@@ -90,6 +84,11 @@ header {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   align-content: center;
+}
+header a:hover,
+header #dropdown:hover > span,
+header #dropdown:focus-within > span {
+  transform: scale(1.08);
 }
 
 #hamburger {
@@ -262,7 +261,6 @@ footer div {
   width: 80dvw;
   left: -80dvw;
   box-sizing: border-box;
-  border-top: 2px solid #480ca8;
   padding-top: 12px;
   background-color: var(--primary-background-colour);
   overflow: hidden;
@@ -289,46 +287,12 @@ footer div {
 }
 #menu ul > li:not(#kontakta1) {
   box-sizing: border-box;
-  padding: 0px 16px;
-  background-color: #0a1191;
-  box-shadow: 2px 2px 8px hsl(237, 98%, 12%), -2px -2px 8px hsl(237, 98%, 28%);
 }
 #menu ul a {
   width: 100%;
   display: flex;
   gap: 8px;
   align-items: center;
-}
-#menu #dropdown {
-  position: relative;
-}
-#menu #dropdown button {
-  color: inherit;
-  text-align: left;
-  font-size: inherit;
-  font-family: inherit;
-}
-#menu #dropdown img {
-  height: 4px;
-  position: relative;
-  bottom: 3px;
-  margin-left: 4px;
-  transition: rotate 0.2s;
-  filter: invert(1);
-}
-#menu #dropdown #dropdownMenu {
-  position: absolute;
-  top: calc(100% + 8px);
-  left: 16px;
-  opacity: 0;
-  overflow: hidden;
-  transition: height 0.5s, opacity 0.5s;
-}
-#menu #dropdown #dropdownMenu li {
-  box-shadow: none;
-  background-color: transparent;
-  height: fit-content !important;
-  padding: 12px 8px;
 }
 #menu #kontakta1 {
   display: grid;
@@ -428,6 +392,11 @@ footer div {
   font-size: 1.2rem;
   padding: 16px 24px;
   background-color: #5865f2;
+}
+#landingPage nav a:hover,
+#landingPage nav #dropdown:hover > span,
+#landingPage nav #dropdown:focus-within > span {
+  transform: scale(1.08);
 }
 
 #eventBackground {
@@ -674,7 +643,7 @@ footer div {
     font-size: 1rem;
   }
   #landingPage #valkommen span {
-    font-size: 3rem;
+    font-size: 2.8rem;
   }
   #events {
     padding: 32px 24px;

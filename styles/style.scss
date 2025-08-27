@@ -56,12 +56,6 @@ a {
   transition: transform 0.2s;
 }
 
-a:hover,
-#dropdown:hover > span,
-#dropdown:focus-within > span {
-  transform: scale(1.08);
-}
-
 body {
   background-color: var(--primary-background-colour);
 }
@@ -93,6 +87,12 @@ header {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   align-content: center;
+
+  a:hover,
+  #dropdown:hover > span,
+  #dropdown:focus-within > span {
+    transform: scale(1.08);
+  }
 }
 
 #hamburger {
@@ -289,7 +289,6 @@ footer {
   width: 80dvw;
   left: -80dvw;
   box-sizing: border-box;
-  border-top: 2px solid #480ca8;
   padding-top: 12px;
   background-color: var(--primary-background-colour);
   overflow: hidden;
@@ -318,10 +317,7 @@ footer {
 
     & > li:not(#kontakta1) {
       box-sizing: border-box;
-      padding: 0px 16px;
-      background-color: #0a1191;
-      box-shadow: 2px 2px 8px hsla(237, 98%, 12%),
-        -2px -2px 8px hsla(237, 98%, 28%);
+
     }
 
     a {
@@ -329,41 +325,6 @@ footer {
       display: flex;
       gap: 8px;
       align-items: center;
-    }
-  }
-
-  #dropdown {
-    position: relative;
-
-    button {
-      color: inherit;
-      text-align: left;
-      font-size: inherit;
-      font-family: inherit;
-    }
-
-    img {
-      height: 4px;
-      position: relative;
-      bottom: 3px;
-      margin-left: 4px;
-      transition: rotate 0.2s;
-      filter: invert(1);
-    }
-
-    #dropdownMenu {
-      position: absolute;
-      top: calc(100% + 8px);
-      left: 16px;
-      opacity: 0;
-      overflow: hidden;
-      transition: height 0.5s, opacity 0.5s;
-      li {
-        box-shadow: none;
-        background-color: transparent;
-        height: fit-content !important;
-        padding: 12px 8px;
-      }
     }
   }
 
@@ -473,6 +434,12 @@ footer {
       font-size: 1.2rem;
       padding: 16px 24px;
       background-color: #5865f2;
+    }
+
+    a:hover,
+    #dropdown:hover > span,
+    #dropdown:focus-within > span {
+      transform: scale(1.08);
     }
   }
 }
@@ -708,8 +675,8 @@ footer {
   }
 
   img {
-    width: fit-content;
-    height: 420px !important;
+    max-width: 92dvw;
+    max-height: 420px !important;
   }
 }
 
@@ -753,7 +720,7 @@ footer {
       font-size: 1rem;
 
       span {
-        font-size: 3rem;
+        font-size: 2.8rem;
       }
     }
   }
