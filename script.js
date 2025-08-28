@@ -1,7 +1,6 @@
 const hamburger = document.getElementById("hamburger");
 const sidebar = document.getElementById("menu");
 const sidebarList = document.getElementById("navLinks");
-const dropdownMenu = document.getElementById("dropdownMenu");
 const carret = document.getElementById("carret");
 const eventsList = document.getElementById("eventsList").children;
 const eventPoster = document.getElementById("eventPoster");
@@ -10,8 +9,6 @@ function menubar() {
   const widthClosed = "-80dvw";
   const isClosed = sidebar.style.left == widthClosed;
   sidebar.style.left = isClosed ? "0dvw" : `${widthClosed}`;
-  sidebarList.style.opacity = isClosed ? "1" : "0";
-  sidebarList.style.marginLeft = isClosed ? "20px" : "0";
   document.body.style.overflow = isClosed ? "hidden" : "scroll";
   filter.style.opacity = isClosed ? "1" : "0";
   filter.style.pointerEvents = isClosed ? "all" : "none";

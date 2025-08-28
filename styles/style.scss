@@ -290,6 +290,7 @@ footer {
   left: -80dvw;
   box-sizing: border-box;
   padding-top: 12px;
+  border-top: 1px solid hsl(0, 0%, 90%);
   background-color: var(--primary-background-colour);
   overflow: hidden;
   font-size: 1.2rem;
@@ -302,22 +303,19 @@ footer {
   }
 
   ul {
-    opacity: 0;
     display: grid;
     gap: 12px;
-    transition: margin 0.5s, opacity 0.5s;
 
     li {
       display: flex;
       text-wrap: nowrap;
       height: 48px !important;
       width: calc(100% - 20px);
-      border-radius: 8px;
     }
 
     & > li:not(#kontakta1) {
+      margin-left: 20px;
       box-sizing: border-box;
-
     }
 
     a {
@@ -335,7 +333,9 @@ footer {
     align-content: center;
     position: absolute;
     bottom: 16px;
-    width: calc(80dvw - 40px);
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0px 20px;
 
     #kontaktaOss1 {
       font-family: fontSemiBold;
