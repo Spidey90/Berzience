@@ -305,16 +305,13 @@ footer {
   ul {
     display: grid;
     gap: 12px;
+    margin-left: 20px;
 
     li {
       display: flex;
       text-wrap: nowrap;
       height: 48px !important;
       width: calc(100% - 20px);
-    }
-
-    & > li:not(#kontakta1) {
-      margin-left: 20px;
       box-sizing: border-box;
     }
 
@@ -326,35 +323,23 @@ footer {
     }
   }
 
-  #kontakta1 {
-    display: grid;
-    grid-template-columns: min-content 1fr;
-    column-gap: 16px;
-    align-content: center;
+  #instagram {
+    width: calc(100% - 40px);
     position: absolute;
     bottom: 16px;
-    width: 100%;
-    box-sizing: border-box;
-    padding: 0px 20px;
+    font-family: fontSemiBold;
+    font-size: 1.5rem;
 
-    #kontaktaOss1 {
-      font-family: fontSemiBold;
-      font-size: 1.4rem;
-      color: hsl(0, 0%, 10%);
-      background: hsl(0, 0%, 92%);
-      border-radius: 8px;
-      width: 100%;
-      justify-content: center;
-      overflow: hidden;
+    a {
+      padding-top: 16px;
+      border-top: 1px solid #ecf6ff;
+      display: grid;
+      grid-template-columns: min-content min-content;
+      gap: 16px;
     }
 
     #instagram1 img {
-      margin: 0 auto;
       height: 28px;
-      padding: 10px;
-      border-radius: 12px;
-      filter: invert(100%);
-      background-color: hsl(0, 0%, 8%);
     }
   }
 }
