@@ -245,7 +245,7 @@ header nav {
 
   img {
     filter: invert(100%);
-    background-color: hsl(0, 0%, 8%);
+    background-color: hsl(0, 0%, 0%);
     display: flex;
     height: 24px;
     overflow: hidden;
@@ -256,8 +256,8 @@ header nav {
   #kontaktaOss {
     font-family: fontSemiBold;
     font-size: 1.2rem;
-    color: hsl(0, 0%, 10%);
-    background: hsl(0, 0%, 92%);
+    color: hsl(0, 0%, 0%);
+    background: hsl(0, 0%, 100%);
     padding: 4px 8px;
     border-radius: 4px;
   }
@@ -594,6 +594,11 @@ footer {
 
   div {
     width: 100%;
+
+    a {
+      color: #486cf9;
+      text-decoration: underline;
+    }
   }
 
   h2 {
@@ -606,10 +611,19 @@ footer {
   .fileTitle {
     margin-bottom: -28px;
   }
+}
+
+.files {
+  font-family: fontSemiBold;
+  display: flex;
+  flex-wrap: 1;
+  gap: 8px;
+  width: 100%;
 
   a {
     display: flex;
     align-items: center;
+    color: black !important;
     border: 1px solid hsl(0, 0%, 60%);
     border-radius: 4px;
     overflow: hidden;
@@ -619,14 +633,6 @@ footer {
   a:hover {
     transform: scale(1.02) !important;
   }
-}
-
-.files {
-  font-family: fontSemiBold;
-  display: flex;
-  flex-wrap: 1;
-  gap: 8px;
-  width: 100%;
 
   img {
     height: 36px;

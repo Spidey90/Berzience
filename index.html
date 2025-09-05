@@ -78,8 +78,8 @@
             href="https://www.instagram.com/berzienceclub/"
             target="_blank"
             id="instagram1"
-            ><img src="Icons/instagram.svg"
-          />@BerzienceClub</a>
+            ><img src="Icons/instagram.svg" />@BerzienceClub</a
+          >
         </li>
       </ul>
     </nav>
@@ -119,6 +119,22 @@
           <ul id="eventsList">
             <li class="activeEvent" onclick="{activeEventSwitch(0)}">
               <button onclick="{eventExpander(0)}">
+                Kommande Event
+                <span class="eventDate">Fredag 19:e september, Sal A313</span>
+                <img src="Icons/dropdown icon.png" />
+              </button>
+              <div class="eventInfo">
+                <span
+                  >Pizzakvällen är en årlig återkommande event där man får baka
+                  sin egna pizza, hänga med folk, titta på film och spela
+                  sällskapsspel! Allt är helt gratis, och ni får själva önska
+                  vad ni vill ha på pizzan</span
+                >
+                <img id="eventListPoster" src="pics/event0.jpg" />
+              </div>
+            </li>
+            <li onclick="{activeEventSwitch(1)}">
+              <button onclick="{eventExpander(0)}">
                 Pluggfika
                 <span class="eventDate">Onsdagar 15:00 - 17:00, Sal A313</span>
                 <img src="Icons/dropdown icon.png" />
@@ -145,29 +161,8 @@
                 <img id="eventListPoster" src="pics/Exempel0.jpg" />
               </div>
             </li>
-            <li onclick="{activeEventSwitch(1)}">
-              <button onclick="{eventExpander(1)}">
-                Kommande Event
-                <span class="eventDate">Onsdagar 15:00 - 17:00, Sal A313</span>
-                <img src="Icons/dropdown icon.png" />
-              </button>
-              <div class="eventInfo">
-                <span
-                  >Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Quasi nam natus perspiciatis magnam ea numquam nemo asperiores
-                  eius odio recusandae dolor unde excepturi, eos minima neque
-                  cum. Maxime, autem saepe? Lorem ipsum dolor sit amet,
-                  consectetur adipisicing elit. Delectus ipsam quam porro illo
-                  eligendi veniam repudiandae! Quasi debitis deserunt, quibusdam
-                  molestias recusandae aperiam, ipsam voluptas quod, blanditiis
-                  consequuntur iusto magni?</span
-                >
-
-                <img id="eventListPoster" src="pics/Exempel1.jpg" />
-              </div>
-            </li>
           </ul>
-          <img id="eventPoster" src="pics/Exempel0.jpg" />
+          <img id="eventPoster" src="pics/event0.jpg" />
         </div>
       </div>
     </main>

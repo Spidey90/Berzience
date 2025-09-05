@@ -19,7 +19,7 @@ function activeEventSwitch(x) {
     eventsList[0].classList.remove("activeEvent");
     eventsList[1].classList.remove("activeEvent");
     eventsList[x].classList.add("activeEvent");
-    eventPoster.src = `pics/Exempel${x}.jpg`;
+    eventPoster.src = `pics/event${x}.jpg`;
   }
 }
 

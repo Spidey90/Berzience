@@ -220,7 +220,7 @@ header nav #dropdown #active img {
 }
 .kontakt img {
   filter: invert(100%);
-  background-color: hsl(0, 0%, 8%);
+  background-color: hsl(0, 0%, 0%);
   display: flex;
   height: 24px;
   overflow: hidden;
@@ -230,8 +230,8 @@ header nav #dropdown #active img {
 .kontakt #kontaktaOss {
   font-family: fontSemiBold;
   font-size: 1.2rem;
-  color: hsl(0, 0%, 10%);
-  background: hsl(0, 0%, 92%);
+  color: hsl(0, 0%, 0%);
+  background: hsl(0, 0%, 100%);
   padding: 4px 8px;
   border-radius: 4px;
 }
@@ -535,6 +535,10 @@ footer div {
 #övrigtMain div {
   width: 100%;
 }
+#övrigtMain div a {
+  color: #486cf9;
+  text-decoration: underline;
+}
 #övrigtMain h2 {
   width: 100%;
   font-size: 1.25rem;
@@ -544,17 +548,6 @@ footer div {
 #övrigtMain .fileTitle {
   margin-bottom: -28px;
 }
-#övrigtMain a {
-  display: flex;
-  align-items: center;
-  border: 1px solid hsl(0, 0%, 60%);
-  border-radius: 4px;
-  overflow: hidden;
-  flex: 1;
-}
-#övrigtMain a:hover {
-  transform: scale(1.02) !important;
-}
 
 .files {
   font-family: fontSemiBold;
@@ -562,6 +555,18 @@ footer div {
   flex-wrap: 1;
   gap: 8px;
   width: 100%;
+}
+.files a {
+  display: flex;
+  align-items: center;
+  color: black !important;
+  border: 1px solid hsl(0, 0%, 60%);
+  border-radius: 4px;
+  overflow: hidden;
+  flex: 1;
+}
+.files a:hover {
+  transform: scale(1.02) !important;
 }
 .files img {
   height: 36px;
