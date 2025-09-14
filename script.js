@@ -6,12 +6,10 @@ const eventsList = document.getElementById("eventsList").children;
 const eventPoster = document.getElementById("eventPoster");
 
 function menubar() {
-  const widthClosed = "-80dvw";
+  const widthClosed = "-100dvw";
   const isClosed = sidebar.style.left == widthClosed;
   sidebar.style.left = isClosed ? "0dvw" : `${widthClosed}`;
   document.body.style.overflow = isClosed ? "hidden" : "scroll";
-  filter.style.opacity = isClosed ? "1" : "0";
-  filter.style.pointerEvents = isClosed ? "all" : "none";
 }
 
 function activeEventSwitch(x) {
