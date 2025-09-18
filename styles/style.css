@@ -544,8 +544,8 @@ footer div {
 
 .files {
   font-family: fontSemiBold;
-  display: flex;
-  flex-wrap: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 8px;
   width: 100%;
 }
@@ -640,7 +640,7 @@ footer div {
 }
 @media (max-width: 640px) {
   .files {
-    flex-direction: column;
+    grid-template-columns: 1fr;
   }
 }
 @media (max-width: 560px) {
