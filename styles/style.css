@@ -553,6 +553,7 @@ footer div {
   display: flex;
   align-items: center;
   color: black !important;
+  text-decoration: none !important;
   border: 1px solid hsl(0, 0%, 60%);
   border-radius: 4px;
   overflow: hidden;
