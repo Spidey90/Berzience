@@ -36,3 +36,4 @@ function eventExpander(x) {
       eventsList[x].children[1].scrollHeight - 12 + "px";
   }
 }
+

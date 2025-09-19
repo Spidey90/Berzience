@@ -14,22 +14,22 @@
 @font-face {
   font-family: fontRegular;
   font-weight: 500;
-  src: url(/fonts/Nunito.ttf), local(Arial);
+  src: url(Nunito.ttf), local(Arial);
 }
 @font-face {
   font-family: fontMedium;
   font-weight: 620;
-  src: url(/fonts/Nunito.ttf), local(Arial);
+  src: url(Nunito.ttf), local(Arial);
 }
 @font-face {
   font-family: fontSemiBold;
   font-weight: 660;
-  src: url(/fonts/Nunito.ttf), local(Arial);
+  src: url(Nunito.ttf), local(Arial);
 }
 @font-face {
   font-family: fontBold;
   font-weight: 680;
-  src: url(/fonts/Nunito.ttf), local(Arial);
+  src: url(Nunito.ttf), local(Arial);
 }
 ul {
   list-style: none;
@@ -593,6 +593,14 @@ footer div {
 .styrelsen img {
   max-width: 92dvw;
   max-height: 420px !important;
+}
+
+#potential_man{
+  position: fixed;
+  bottom: 0px;
+  right: 8px;
+  mix-blend-mode:difference;
+  color: white;
 }
 
 /*Media*/
