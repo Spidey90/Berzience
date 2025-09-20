@@ -184,6 +184,7 @@ header nav #dropdown-menu {
   display: none;
   position: absolute;
   top: 100%;
+  z-index: 1;
   overflow: hidden;
   font-family: fontMedium;
   font-size: 1.12rem;
