@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Berzience</title>
     <link rel="icon" type="image/png" href="pics/Berzience.png" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css?=v6" />
   </head>
 
   <body>
@@ -83,10 +83,9 @@
       <div id="landingPage">
         <div id="valkommen">
           <span>Välkommen till Berzience</span>
-          Berzience Club är Berzeliusskolans egna STEM-förening för
-          gymnasieelever. Föreningens mål är att främja intresset inom
-          STEM-ämnena för alla elever på Berzeliusskolans gymnasium och skapa
-          ett utrymme för likasinnade att mötas.
+          Berzience Club är Berzans egna STEM-förening för gymnasieelever. Vårt
+          mål är att främja intresset inom STEM-ämnena för alla gymnasieelever
+          på berzan och skapa ett utrymme för likasinnade att mötas.
         </div>
         <nav>
           <a
@@ -101,41 +100,72 @@
         </nav>
       </div>
 
+      <div id="meddelandeBackground">
+        <div id="meddelande">
+          <span>Meddelande</span>
+          <span id="info"> Det finns inga aktuella meddelanden :( </span>
+        </div>
+      </div>
+
       <div id="eventBackground">
         <div id="events">
-          <span>Events</span>
+          <span>Kommande events</span>
           <ul id="eventsList">
             <li class="activeEvent" onclick="{activeEventSwitch(0)}">
               <button onclick="{eventExpander(0)}">
-                Kommande Event
-                <span class="eventDate">Fredag 10:e Oktober, Sal A313</span>
+                Pizzakväll 🍕
+                <span class="eventDate"
+                  >Fredag 10:e Oktober, A300 Korridoren
+                </span>
                 <img src="Icons/dropdown icon.png" />
               </button>
               <div class="eventInfo">
-                <span
-                  >Pizzakvällen är en årlig återkommande event där man får baka
-                  sin egna pizza, hänga med folk, titta på film och spela
-                  sällskapsspel! Allt är helt gratis, och ni får själva önska
-                  vad ni vill ha på pizzan</span
-                >
+                <span class="pizza">
+                  <strong>Vill du lära känna Berzience bättre?</strong>
+                  <strong>Kom på Berzience Clubs Pizzakväll!</strong> <br />
+
+                  Det här är vårt årliga event där du får:<br />
+                  🍕 Baka din egen pizza<br />
+                  🎬 Titta på film<br />
+                  🎲 Spela sällskapsspel<br />
+                  👋 Träffa nya och gamla vänner<br />
+                  🤐 Göra andra Berzience aktiviteter<br />
+
+                  <br />
+                  Allt är <strong>helt gratis</strong>, och du behöver inte vara
+                  medlem för att vara med. Pizzakvällen startar kl. 16:00 och
+                  håller på hela kvällen. Kom när du vill, stanna så länge du
+                  vill!
+                </span>
+
+                <span class="anmäl">
+                  <a
+                    href="https://docs.google.com/forms/d/e/1FAIpQLSeq6EHzIV5lpDrS0Ywdih70BUkayDNZ2VHi7fn8Xw5YnhkAig/viewform?usp=header"
+                    target="_blank"
+                    >Anmäl dig här!️</a
+                  >
+                </span>
                 <img id="eventListPoster" src="pics/event0.jpg" />
               </div>
             </li>
+
             <li onclick="{activeEventSwitch(1)}">
               <button onclick="{eventExpander(1)}">
-                Pluggfika
+                Pluggfika 🍪
                 <span class="eventDate">Onsdagar 15:00 - 17:00, Sal A313</span>
                 <img src="Icons/dropdown icon.png" />
               </button>
               <div class="eventInfo">
                 <span>
                   Pluggfika är en återkommande träff där vi pluggar tillsammans,
-                  diskuterar olika problem och hjälper varandra med skolarbetet.
-                  Det är ett tillfälle att både vara produktiv och social – och
-                  dessutom bjuds det på gratis fika för alla medlemmar! Inför
-                  särskilda tävlingar fokuserar vi extra mycket på att plugga
-                  inför dem gemensamt, så att vi kan förbereda oss på bästa
-                  sätt.
+                  diskuterar olika problem och hjälper med skolarbetet. Det är
+                  ett tillfälle att både få saker gjort och umgås. Dessutom
+                  bjuds det på
+                  <strong>gratis fika</strong> för alla medlemmar! Vi har också
+                  <strong>tema-pluggfikor</strong>, <em>inför större prov</em>,
+                  <em>särskilda tävlingar</em> eller annat, då vi fokuserar
+                  extra på att plugga gemensamt med quizzer, genomgångar och
+                  kunniga personer som kan hjälpa.
                 </span>
                 <span class="obs"
                   >(Obs. att vi ibland måste ställa in pluggfika pga. olika
@@ -160,7 +190,7 @@
         Berzience Club<br />
         Org. nr. 802545-0894 <br /><br />
 
-        Gustav Adolfsgatan 25,<br />
+        Gustav Adolfsgatan 25 <br />
         580 03 Linköping
       </div>
     </footer>

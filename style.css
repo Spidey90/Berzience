@@ -97,6 +97,7 @@ header #dropdown:focus-within > span {
   width: 28px;
   align-content: center;
   position: relative;
+  bottom: 3px;
   z-index: 10;
 }
 #hamburger #nav-toggle {
@@ -184,7 +185,6 @@ header nav #dropdown-menu {
   display: none;
   position: absolute;
   top: 100%;
-  z-index: 1;
   overflow: hidden;
   font-family: fontMedium;
   font-size: 1.12rem;
@@ -380,22 +380,43 @@ footer div {
   transform: scale(1.08);
 }
 
-#eventBackground {
+#eventBackground,
+#meddelandeBackground {
   padding: 0px 48px;
   box-sizing: border-box;
   max-width: 100dvw;
   background-color: var(--secondary-background-colour);
 }
 
+#meddelande,
 #events {
   width: 100%;
   max-width: 1280px;
-  padding: 52px 0px;
   margin: auto;
   box-sizing: border-box;
   background-color: var(--secondary-background-colour);
   font-family: fontMedium;
   color: var(--secondary-font-colour);
+}
+
+#meddelande {
+  display: flex;
+  flex-direction: column;
+  padding: 52px 0px 26px 0px;
+}
+#meddelande > span {
+  padding: 0px 12px;
+  font-size: 1.6rem;
+  font-family: fontSemiBold;
+}
+#meddelande #info {
+  margin-top: 8px;
+  font-family: fontMedium;
+  font-size: 1.1rem;
+}
+
+#events {
+  padding: 26px 0px 52px 0px;
   display: grid;
   column-gap: 32px;
   grid-template-areas: "title title" "list poster";
@@ -454,16 +475,21 @@ footer div {
   font-family: fontRegular;
   font-size: 1.1rem;
 }
-#events .eventInfo .obs {
+#events .eventInfo .obs,
+#events .eventInfo .anmäl {
   margin-top: 16px;
-  font-size: 0.8rem;
   font-family: fontSemiBold;
 }
-#events .eventInfo .obs a {
+#events .eventInfo .obs a,
+#events .eventInfo .anmäl a {
   color: #486cf9;
   text-decoration: underline;
 }
+#events .eventInfo .obs {
+  font-size: 0.8rem;
+}
 #events #eventPoster {
+  align-self: center;
   height: 600px;
   grid-area: poster;
   border-radius: 8px;
@@ -519,7 +545,7 @@ footer div {
   background-color: var(--secondary-background-colour);
   color: var(--secondary-font-colour);
   font-family: fontMedium;
-  padding: 48px 24px;
+  padding: 32px 24px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -577,6 +603,13 @@ footer div {
   flex-direction: row !important;
   justify-content: center;
 }
+.styrelsenMain #potential_man {
+  position: fixed;
+  bottom: 0px;
+  right: 8px;
+  mix-blend-mode: difference;
+  color: white;
+}
 
 .styrelsen {
   display: flex;
@@ -596,13 +629,6 @@ footer div {
   max-width: 92dvw;
   max-height: 420px !important;
 }
-#potential_man{
-  position: fixed;
-  bottom: 0px;
-  right: 8px;
-  mix-blend-mode:difference;
-  color: white;
-}
 
 /*Media*/
 @media (max-width: 1080px) {
@@ -612,12 +638,6 @@ footer div {
   header nav,
   .kontakt {
     display: none;
-  }
-}
-@media (max-width: 1200px){
-  #potential_man{
-    position: absolute;
-    bottom: 0px;
   }
 }
 @media (max-width: 1100px) {
@@ -631,8 +651,15 @@ footer div {
     display: none;
   }
 }
+@media (max-width: 1200px) {
+  #potential_man {
+    position: absolute !important;
+    bottom: 0px;
+  }
+}
 @media (max-width: 1000px) {
-  #eventBackground {
+  #eventBackground,
+  #meddelandeBackground {
     padding: 0px 24px;
   }
   #landingPage {
@@ -644,22 +671,47 @@ footer div {
     font-size: 1rem;
   }
   #landingPage #valkommen span {
-    font-size: 2.8rem;
+    font-size: 2.6rem;
   }
   #events {
-    padding: 32px 24px;
+    padding: 8px 24px 40px 16px;
+  }
+  #meddelande {
+    padding: 32px 24px 32px 16px;
   }
   #eventMain {
     padding: 32px;
   }
 }
 @media (max-width: 640px) {
+  header #title {
+    font-size: 1.9rem;
+  }
+  header #title img {
+    height: 32px;
+  }
+  #landingPage {
+    padding: 8px 24px 48px 24px !important;
+    gap: 32px;
+  }
+  #hamburger #nav-toggle::after {
+    width: 28px;
+    top: 10px !important;
+  }
+  #hamburger #nav-toggle::before {
+    width: 8px;
+    bottom: 10px !important;
+  }
   .files {
     grid-template-columns: 1fr;
   }
+  #landingPage {
+    padding: 20px 24px 48px 24px;
+  }
 }
 @media (max-width: 560px) {
-  #eventBackground {
+  #eventBackground,
+  #meddelandeBackground {
     padding: 0px;
   }
   #events ul {
@@ -711,7 +763,8 @@ footer div {
   }
 }
 @media (max-width: 390px) {
-  #events {
+  #events,
+  #meddelande {
     padding: 32px 12px;
   }
   #eventMain {
