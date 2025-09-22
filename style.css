@@ -2,6 +2,7 @@
 * {
   margin: 0;
   padding: 0;
+  -webkit-tap-highlight-color: transparent;
 }
 
 :root {
@@ -36,7 +37,6 @@ ul {
 }
 
 button {
-  -webkit-tap-highlight-color: transparent;
   border: none;
   background: none;
 }
@@ -445,7 +445,7 @@ footer div {
   height: 8px;
   position: absolute;
   right: 16px;
-  top: 50%;
+  top: 25%;
   transition: transform 0.2s;
 }
 #events ul li:hover,
@@ -726,17 +726,19 @@ footer div {
     z-index: 1;
     padding: 8px 16px;
     border-radius: 8px;
+    border: 6px solid #d1e7fa;
     background-color: #d1e7fa;
   }
   #events button img {
     display: block !important;
   }
   #events .eventInfo {
-    background-color: rgba(209, 231, 250, 0.5);
-    margin-top: -8px;
+    border: 6px solid #d1e7fa;
+    border-radius: 8px;
+    margin-top: -16px;
     height: 0px;
     overflow: hidden;
-    padding: 4px 16px;
+    padding: 0px 16px 4px 16px;
     transition: height 0.5s, padding 0.5s, background-color 0.2s;
   }
   #events .eventInfo span {
