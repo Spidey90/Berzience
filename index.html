@@ -1,201 +1,241 @@
-<!DOCTYPE html>
+<!doctype html>
 
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Berzience</title>
-    <link rel="icon" href="Icons/favicon.ico">
-    <link rel="icon" type="image/png" href="pics/Berzience.png" />
-    <link rel="stylesheet" href="style.css?=v6" />
-  </head>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Berzience</title>
+        <link rel="icon" href="Icons/favicon.ico" />
+        <link rel="icon" type="image/png" href="pics/Berzience.png" />
+        <link rel="stylesheet" href="style.css" />
+    </head>
 
-  <body>
-    <header id="header">
-      <button id="hamburger" onclick="menubar()">
-        <div id="nav-toggle"></div>
-      </button>
+    <body>
+        <header id="header">
+            <button id="hamburger" onclick="menubar()">
+                <div id="nav-toggle"></div>
+            </button>
 
-      <nav>
-        <ul>
-          <li>
-            <a id="active" href="index.html">Hem</a>
-          </li>
-          <li>
-            <a href="events/index.html">Events</a>
-          </li>
-          <li id="dropdown">
-            <span>Övrigt <img src="Icons/dropdown icon.png" /></span>
-            <ul id="dropdown-menu">
-              <li><a href="organisation/index.html">Organisation</a></li>
-              <li><a href="årsmöte/index.html">Årsmöte</a></li>
-              <li><a href="styrelsen/index.html">Styrelsen</a></li>
-            </ul>
-          </li>
-        </ul>
-      </nav>
+            <nav>
+                <ul>
+                    <li>
+                        <a id="active" href="index.html">Hem</a>
+                    </li>
+                    <li>
+                        <a href="events/index.html">Events</a>
+                    </li>
+                    <li id="dropdown">
+                        <span
+                            >Övrigt <img src="Icons/dropdown icon.png"
+                        /></span>
+                        <ul id="dropdown-menu">
+                            <li>
+                                <a href="organisation/index.html"
+                                    >Organisation</a
+                                >
+                            </li>
+                            <li><a href="årsmöte/index.html">Årsmöte</a></li>
+                            <li>
+                                <a href="styrelsen/index.html">Styrelsen</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
 
-      <div id="title">
-        <img src="pics/Berzience.png" />
-        Berzience
-      </div>
+            <div id="title">
+                <img src="pics/Berzience.png" />
+                Berzience
+            </div>
 
-      <div class="kontakt">
-        <a
-          href="https://www.instagram.com/berzienceclub/"
-          target="_blank"
-          id="instagram"
-          ><img src="Icons/instagram.svg"
-        /></a>
-        <a
-          id="kontaktaOss"
-          href="https://docs.google.com/forms/d/e/1FAIpQLSfdHJQUIJ_1zNwo3tKn1qC0o9uPzKXtirmRmc5elRNLblE-ng/viewform"
-          >Kontakta oss</a
-        >
-      </div>
-    </header>
-
-    <nav id="menu">
-      <ul id="navLinks">
-        <li><a href="index.html">Hem</a></li>
-        <li><a href="events/index.html">Events</a></li>
-        <li><a href="organisation/index.html">Organisation</a></li>
-        <li><a href="årsmöte/index.html">Årsmöte</a></li>
-        <li><a href="styrelsen/index.html">Styrelsen</a></li>
-        <li>
-          <a
-            id="kontaktaOss1"
-            href="https://docs.google.com/forms/d/e/1FAIpQLSfdHJQUIJ_1zNwo3tKn1qC0o9uPzKXtirmRmc5elRNLblE-ng/viewform"
-            >Kontakta oss</a
-          >
-        </li>
-        <li id="instagram">
-          <a
-            href="https://www.instagram.com/berzienceclub/"
-            target="_blank"
-            id="instagram1"
-            ><img src="Icons/instagram.svg" />Följ oss på @BerzienceClub!</a
-          >
-        </li>
-      </ul>
-    </nav>
-
-    <main>
-      <div id="landingPage">
-        <div id="valkommen">
-          <span>Välkommen till Berzience</span>
-          Berzience Club är Berzans egna STEM-förening för gymnasieelever. Vårt
-          mål är att främja intresset inom STEM-ämnena för alla gymnasieelever
-          på berzan och skapa ett utrymme för likasinnade att mötas.
-        </div>
-        <nav>
-          <a
-            id="signup"
-            href="https://docs.google.com/forms/d/e/1FAIpQLSfpAc-UsS9sqeANXZhXKN_Rc-HTjM51qnhpbOT2Z6E_9w3_rA/viewform"
-            >Bli medlem i Berzience
-            <img src="Icons/rightArrow.svg" />
-          </a>
-          <a href="https://discord.com/invite/wEyJ6QBaPk" id="discord"
-            ><img src="Icons/discord.svg" />Gå med i vår server</a
-          >
-        </nav>
-      </div>
-
-      <!--<div id="meddelandeBackground">
-        <div id="meddelande">
-          <span>Meddelande</span>
-          <span id="info"> Det finns inga aktuella meddelanden :( </span>
-        </div>
-      </div>-->
-
-      <div id="eventBackground">
-        <div id="events">
-          <span>Kommande events</span>
-          <ul id="eventsList">
-            <li class="activeEvent" onclick="{activeEventSwitch(0)}">
-              <button onclick="{eventExpander(0)}">
-                Pizzakväll 🍕
-                <span class="eventDate"
-                  >Fredag 10:e Oktober, A300 Korridoren
-                </span>
-                <img src="Icons/dropdown icon.png" />
-              </button>
-              <div class="eventInfo">
-                <span class="pizza">
-                  <strong>Vill du lära känna Berzience bättre?</strong>
-                  <strong>Kom på Berzience Clubs Pizzakväll!</strong> <br />
-
-                  Det här är vårt årliga event där du får:<br />
-                  🍕 Baka din egen pizza<br />
-                  🎬 Titta på film<br />
-                  🎲 Spela sällskapsspel<br />
-                  👋 Träffa nya och gamla vänner<br />
-                  🤐 Göra andra Berzience aktiviteter<br />
-
-                  <br />
-                  Allt är <strong>helt gratis</strong>, och du behöver inte vara
-                  medlem för att vara med. Pizzakvällen startar kl. 16:00 och
-                  håller på hela kvällen. Kom när du vill, stanna så länge du
-                  vill!
-                </span>
-
-                <span class="anmäl">
-                  <a
-                    href="https://docs.google.com/forms/d/e/1FAIpQLSeq6EHzIV5lpDrS0Ywdih70BUkayDNZ2VHi7fn8Xw5YnhkAig/viewform?usp=header"
+            <div class="kontakt">
+                <a
+                    href="https://www.instagram.com/berzienceclub/"
                     target="_blank"
-                    >Anmäl dig här!️</a
-                  >
-                </span>
-                <img id="eventListPoster" src="pics/event0.jpg" />
-              </div>
-            </li>
+                    id="instagram"
+                    ><img src="Icons/instagram.svg"
+                /></a>
+                <a
+                    id="kontaktaOss"
+                    href="https://docs.google.com/forms/d/e/1FAIpQLSfdHJQUIJ_1zNwo3tKn1qC0o9uPzKXtirmRmc5elRNLblE-ng/viewform"
+                    >Kontakta oss</a
+                >
+            </div>
+        </header>
 
-            <li onclick="{activeEventSwitch(1)}">
-              <button onclick="{eventExpander(1)}">
-                Pluggfika 🍪
-                <span class="eventDate">Onsdagar 15:00 - 17:00, Sal A313</span>
-                <img src="Icons/dropdown icon.png" />
-              </button>
-              <div class="eventInfo">
-                <span>
-                  Pluggfika är en återkommande träff där vi pluggar tillsammans,
-                  diskuterar olika problem och hjälper med skolarbetet. Det är
-                  ett tillfälle att både få saker gjort och umgås. Dessutom
-                  bjuds det på
-                  <strong>gratis fika</strong> för alla medlemmar! Vi har också
-                  <strong>tema-pluggfikor</strong>, <em>inför större prov</em>,
-                  <em>särskilda tävlingar</em> eller annat, då vi fokuserar
-                  extra på att plugga gemensamt med quizzer, genomgångar och
-                  kunniga personer som kan hjälpa.
-                </span>
-                <span class="obs"
-                  >(Obs. att vi ibland måste ställa in pluggfika pga. olika
-                  anledningar eller byta sal. Isåfall informerar vi på
-                  <a href="https://www.instagram.com/berzienceclub/"
-                    >Instagram</a
-                  >
-                  och
-                  <a href="https://discord.com/invite/wEyJ6QBaPk">Discord</a>)
-                </span>
-                <img id="eventListPoster" src="pics/event1.jpg" />
-              </div>
-            </li>
-          </ul>
-          <img id="eventPoster" src="pics/event0.jpg" />
-        </div>
-      </div>
-    </main>
+        <nav id="menu">
+            <ul id="navLinks">
+                <li><a href="index.html">Hem</a></li>
+                <li><a href="events/index.html">Events</a></li>
+                <li><a href="organisation/index.html">Organisation</a></li>
+                <li><a href="årsmöte/index.html">Årsmöte</a></li>
+                <li><a href="styrelsen/index.html">Styrelsen</a></li>
+                <li>
+                    <a
+                        id="kontaktaOss1"
+                        href="https://docs.google.com/forms/d/e/1FAIpQLSfdHJQUIJ_1zNwo3tKn1qC0o9uPzKXtirmRmc5elRNLblE-ng/viewform"
+                        >Kontakta oss</a
+                    >
+                </li>
+                <li id="instagram">
+                    <a
+                        href="https://www.instagram.com/berzienceclub/"
+                        target="_blank"
+                        id="instagram1"
+                        ><img src="Icons/instagram.svg" />Följ oss på
+                        @BerzienceClub!</a
+                    >
+                </li>
+            </ul>
+        </nav>
 
-    <footer id="footer">
-      <div id="address">
-        Berzience Club<br />
-        Org. nr. 802545-0894 <br /><br />
+        <main>
+            <div id="landingPage">
+                <div id="valkommen">
+                    <span>Välkommen till Berzience</span>
+                    Berzience Club är Berzans egna STEM-förening för
+                    gymnasieelever. Vårt mål är att främja intresset inom
+                    STEM-ämnena för alla gymnasieelever på berzan och skapa ett
+                    utrymme för likasinnade att mötas.
+                </div>
+                <nav>
+                    <a
+                        id="signup"
+                        href="https://docs.google.com/forms/d/e/1FAIpQLSfpAc-UsS9sqeANXZhXKN_Rc-HTjM51qnhpbOT2Z6E_9w3_rA/viewform"
+                        >Bli medlem i Berzience
+                        <img src="Icons/rightArrow.svg" />
+                    </a>
+                    <a href="https://discord.com/invite/wEyJ6QBaPk" id="discord"
+                        ><img src="Icons/discord.svg" />Gå med i vår server</a
+                    >
+                </nav>
+            </div>
 
-        Gustav Adolfsgatan 25 <br />
-        580 03 Linköping
-      </div>
-    </footer>
+            <div id="meddelandeBackground">
+                <div id="meddelande">
+                    <span>Meddelande</span>
+                    <span id="info">
+                        Det finns inga aktuella meddelanden :(
+                    </span>
+                </div>
+            </div>
 
-    <script src="./script.js"></script>
-  </body>
+            <div id="eventBackground">
+                <div id="events">
+                    <span>Kommande events</span>
+                    <ul id="eventsList">
+                        <li
+                            class="activeEvent"
+                            onclick="{activeEventSwitch(0)}"
+                        >
+                            <button onclick="{eventExpander(0)}">
+                                Pizzakväll 🍕
+                                <span class="eventDate"
+                                    >Fredag 10:e Oktober, A300 Korridoren
+                                </span>
+                                <img src="Icons/dropdown icon.png" />
+                            </button>
+                            <div class="eventInfo">
+                                <span class="pizza">
+                                    <strong
+                                        >Vill du lära känna Berzience
+                                        bättre?</strong
+                                    >
+                                    <strong
+                                        >Kom på Berzience Clubs
+                                        Pizzakväll!</strong
+                                    >
+                                    <br />
+
+                                    Det här är vårt årliga event där du får:<br />
+                                    🍕 Baka din egen pizza<br />
+                                    🎬 Titta på film<br />
+                                    🎲 Spela sällskapsspel<br />
+                                    👋 Träffa nya och gamla vänner<br />
+                                    🤐 Göra andra Berzience aktiviteter<br />
+
+                                    <br />
+                                    Allt är <strong>helt gratis</strong>, och du
+                                    behöver inte vara medlem för att vara med.
+                                    Pizzakvällen startar kl. 16:00 och håller på
+                                    hela kvällen. Kom när du vill, stanna så
+                                    länge du vill!
+                                </span>
+
+                                <span class="anmäl">
+                                    <a
+                                        href="https://docs.google.com/forms/d/e/1FAIpQLSeq6EHzIV5lpDrS0Ywdih70BUkayDNZ2VHi7fn8Xw5YnhkAig/viewform?usp=header"
+                                        target="_blank"
+                                        >Anmäl dig här!️</a
+                                    >
+                                </span>
+                                <img
+                                    id="eventListPoster"
+                                    src="pics/event0.jpg"
+                                />
+                            </div>
+                        </li>
+
+                        <li onclick="{activeEventSwitch(1)}">
+                            <button onclick="{eventExpander(1)}">
+                                Pluggfika 🍪
+                                <span class="eventDate"
+                                    >Onsdagar 15:00 - 17:00, Sal A313</span
+                                >
+                                <img src="Icons/dropdown icon.png" />
+                            </button>
+                            <div class="eventInfo">
+                                <span>
+                                    Pluggfika är en återkommande träff där vi
+                                    pluggar tillsammans, diskuterar olika
+                                    problem och hjälper med skolarbetet. Det är
+                                    ett tillfälle att både få saker gjort och
+                                    umgås. Dessutom bjuds det på
+                                    <strong>gratis fika</strong> för alla
+                                    medlemmar! Vi har också
+                                    <strong>tema-pluggfikor</strong>,
+                                    <em>inför större prov</em>,
+                                    <em>särskilda tävlingar</em> eller annat, då
+                                    vi fokuserar extra på att plugga gemensamt
+                                    med quizzer, genomgångar och kunniga
+                                    personer som kan hjälpa.
+                                </span>
+                                <span class="obs"
+                                    >(Obs. att vi ibland måste ställa in
+                                    pluggfika pga. olika anledningar eller byta
+                                    sal. Isåfall informerar vi på
+                                    <a
+                                        href="https://www.instagram.com/berzienceclub/"
+                                        >Instagram</a
+                                    >
+                                    och
+                                    <a
+                                        href="https://discord.com/invite/wEyJ6QBaPk"
+                                        >Discord</a
+                                    >)
+                                </span>
+                                <img
+                                    id="eventListPoster"
+                                    src="pics/event1.jpg"
+                                />
+                            </div>
+                        </li>
+                    </ul>
+                    <img id="eventPoster" src="pics/event0.jpg" />
+                </div>
+            </div>
+        </main>
+
+        <footer id="footer">
+            <div id="address">
+                Berzience Club<br />
+                Org. nr. 802545-0894 <br /><br />
+
+                Gustav Adolfsgatan 25 <br />
+                580 03 Linköping
+            </div>
+        </footer>
+
+        <script src="./script.js"></script>
+    </body>
 </html>

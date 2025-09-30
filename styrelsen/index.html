@@ -1,134 +1,145 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Årsmöte</title>
-    <link rel="icon" type="image/png" href="/pics/Berzience.png" />
-    <link rel="stylesheet" href="/style.css" />
-  </head>
-  <body>
-    <header id="header">
-      <button id="hamburger" onclick="menubar()">
-        <div id="nav-toggle"></div>
-      </button>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Årsmöte</title>
+        <link rel="icon" type="image/png" href="../pics/Berzience.png" />
+        <link rel="stylesheet" href="../style.css" />
+    </head>
+    <body>
+        <header id="header">
+            <button id="hamburger" onclick="menubar()">
+                <div id="nav-toggle"></div>
+            </button>
 
-      <nav>
-        <ul>
-          <li>
-            <a href="/index.html">Hem</a>
-          </li>
-          <li>
-            <a href="/events/index.html">Events</a>
-          </li>
-          <li id="dropdown">
-            <span>Övrigt <img src="/Icons/dropdown icon.png" /></span>
-            <ul id="dropdown-menu">
-              <li><a href="/organisation/index.html">Organisation</a></li>
-              <li><a href="/årsmöte/index.html">Årsmöte</a></li>
-              <li><a id="active" href="/styrelsen/index.html">Styrelsen</a></li>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="../index.html">Hem</a>
+                    </li>
+                    <li>
+                        <a href="../events/index.html">Events</a>
+                    </li>
+                    <li id="dropdown">
+                        <span
+                            >Övrigt <img src="../Icons/dropdown icon.png"
+                        /></span>
+                        <ul id="dropdown-menu">
+                            <li>
+                                <a href="../organisation/index.html"
+                                    >Organisation</a
+                                >
+                            </li>
+                            <li><a href="../årsmöte/index.html">Årsmöte</a></li>
+                            <li>
+                                <a id="active" href="../styrelsen/index.html"
+                                    >Styrelsen</a
+                                >
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+            <div id="title">
+                <img src="../pics/Berzience.png" />
+                Berzience
+            </div>
+
+            <div class="kontakt">
+                <a
+                    href="https://www.instagram.com/berzienceclub/"
+                    target="_blank"
+                    id="instagram"
+                    ><img src="../Icons/instagram.svg"
+                /></a>
+                <a
+                    id="kontaktaOss"
+                    href="https://docs.google.com/forms/d/e/1FAIpQLSfdHJQUIJ_1zNwo3tKn1qC0o9uPzKXtirmRmc5elRNLblE-ng/viewform"
+                    >Kontakta oss</a
+                >
+            </div>
+        </header>
+
+        <nav id="menu">
+            <ul id="navLinks">
+                <li><a href="../index.html">Hem</a></li>
+                <li><a href="../events/index.html">Events</a></li>
+                <li><a href="../organisation/index.html">Organisation</a></li>
+                <li><a href="../årsmöte/index.html">Årsmöte</a></li>
+                <li><a href="../styrelsen/index.html">Styrelsen</a></li>
+                <li>
+                    <a
+                        id="kontaktaOss1"
+                        href="https://docs.google.com/forms/d/e/1FAIpQLSfdHJQUIJ_1zNwo3tKn1qC0o9uPzKXtirmRmc5elRNLblE-ng/viewform"
+                        >Kontakta oss</a
+                    >
+                </li>
+                <li id="instagram">
+                    <a
+                        href="https://www.instagram.com/berzienceclub/"
+                        target="_blank"
+                        id="instagram1"
+                        ><img src="../Icons/instagram.svg" />Följ oss på
+                        @BerzienceClub!</a
+                    >
+                </li>
             </ul>
-          </li>
-        </ul>
-      </nav>
+        </nav>
 
-      <div id="title">
-        <img src="/pics/Berzience.png" />
-        Berzience
-      </div>
+        <div id="mainBackground">
+            <main id="övrigtMain" class="styrelsenMain">
+                <div class="styrelsen">
+                    <h2>Ordförande</h2>
+                    <img src="../pics/viktor.jpg" alt="" />
+                    <span>Victor</span>
+                </div>
 
-      <div class="kontakt">
-        <a
-          href="https://www.instagram.com/berzienceclub/"
-          target="_blank"
-          id="instagram"
-          ><img src="/Icons/instagram.svg"
-        /></a>
-        <a
-          id="kontaktaOss"
-          href="https://docs.google.com/forms/d/e/1FAIpQLSfdHJQUIJ_1zNwo3tKn1qC0o9uPzKXtirmRmc5elRNLblE-ng/viewform"
-          >Kontakta oss</a
-        >
-      </div>
-    </header>
+                <div class="styrelsen">
+                    <h2>Vice ordförande</h2>
+                    <img src="../pics/omar.jpg" alt="" />
+                    <span>Omar</span>
+                </div>
 
-    <nav id="menu">
-      <ul id="navLinks">
-        <li><a href="/index.html">Hem</a></li>
-        <li><a href="/events/index.html">Events</a></li>
-        <li><a href="/organisation/index.html">Organisation</a></li>
-        <li><a href="/årsmöte/index.html">Årsmöte</a></li>
-        <li><a href="/styrelsen/index.html">Styrelsen</a></li>
-        <li>
-          <a
-            id="kontaktaOss1"
-            href="https://docs.google.com/forms/d/e/1FAIpQLSfdHJQUIJ_1zNwo3tKn1qC0o9uPzKXtirmRmc5elRNLblE-ng/viewform"
-            >Kontakta oss</a
-          >
-        </li>
-        <li id="instagram">
-          <a
-            href="https://www.instagram.com/berzienceclub/"
-            target="_blank"
-            id="instagram1"
-            ><img src="/Icons/instagram.svg" />Följ oss på @BerzienceClub!</a
-          >
-        </li>
-      </ul>
-    </nav>
+                <div class="styrelsen">
+                    <h2>PR-ansvarig</h2>
+                    <img src="../pics/emmie.jpg" alt="" />
+                    <span>Emmie</span>
+                </div>
 
-    <div id="mainBackground">
-      <main id="övrigtMain" class="styrelsenMain">
-        <div class="styrelsen">
-          <h2>Ordförande</h2>
-          <img src="/pics/viktor.jpg" alt="" />
-          <span>Victor</span>
+                <div class="styrelsen">
+                    <h2>Sekreterare</h2>
+                    <img src="../pics/anton.jpg" alt="" />
+                    <span>Anton</span>
+                </div>
+
+                <div class="styrelsen">
+                    <h2>Kassör</h2>
+                    <img src="../pics/david.jpg" alt="" />
+                    <span>David</span>
+                </div>
+
+                <div class="styrelsen">
+                    <h2>Eventansvarig</h2>
+                    <img src="../pics/maja.jpg" alt="" />
+                    <span>Maja</span>
+                </div>
+
+                <p id="potential_man">IT-ansvarig: Raj</p>
+            </main>
         </div>
 
-        <div class="styrelsen">
-          <h2>Vice ordförande</h2>
-          <img src="/pics/omar.jpg" alt="" />
-          <span>Omar</span>
-        </div>
+        <footer id="footer">
+            <div id="address">
+                Berzience Club<br />
+                Org. nr. 802545-0894 <br /><br />
 
-        <div class="styrelsen">
-          <h2>PR-ansvarig</h2>
-          <img src="/pics/emmie.jpg" alt="" />
-          <span>Emmie</span>
-        </div>
+                Gustav Adolfsgatan 25,<br />
+                580 03 Linköping
+            </div>
+        </footer>
 
-        <div class="styrelsen">
-          <h2>Sekreterare</h2>
-          <img src="/pics/anton.jpg" alt="" />
-          <span>Anton</span>
-        </div>
-
-        <div class="styrelsen">
-          <h2>Kassör</h2>
-          <img src="/pics/david.jpg" alt="" />
-          <span>David</span>
-        </div>
-
-        <div class="styrelsen">
-          <h2>Eventansvarig</h2>
-          <img src="/pics/maja.jpg" alt="" />
-          <span>Maja</span>
-        </div>
-
-        <p id="potential_man">IT-ansvarig: Raj</p>
-      </main>
-    </div>
-
-    <footer id="footer">
-      <div id="address">
-        Berzience Club<br />
-        Org. nr. 802545-0894 <br /><br />
-
-        Gustav Adolfsgatan 25,<br />
-        580 03 Linköping
-      </div>
-    </footer>
-
-    <script src="/script.js"></script>
-  </body>
+        <script src="../script.js"></script>
+    </body>
 </html>

@@ -1,121 +1,135 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Årsmöte</title>
-    <link rel="icon" type="image/png" href="/pics/Berzience.png" />
-    <link rel="stylesheet" href="/style.css" />
-  </head>
-  <body>
-    <header id="header">
-      <button id="hamburger" onclick="menubar()">
-        <div id="nav-toggle"></div>
-      </button>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Årsmöte</title>
+        <link rel="icon" type="image/png" href="../pics/Berzience.png" />
+        <link rel="stylesheet" href="../style.css" />
+    </head>
+    <body>
+        <header id="header">
+            <button id="hamburger" onclick="menubar()">
+                <div id="nav-toggle"></div>
+            </button>
 
-      <nav>
-        <ul>
-          <li>
-            <a href="/index.html">Hem</a>
-          </li>
-          <li>
-            <a href="/events/index.html">Events</a>
-          </li>
-          <li id="dropdown">
-            <span>Övrigt <img src="/Icons/dropdown icon.png" /></span>
-            <ul id="dropdown-menu">
-              <li><a href="/organisation/index.html">Organisation</a></li>
-              <li><a href="/årsmöte/index.html">Årsmöte</a></li>
-              <li><a id="active" href="/styrelsen/index.html">Styrelsen</a></li>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="../index.html">Hem</a>
+                    </li>
+                    <li>
+                        <a href="../events/index.html">Events</a>
+                    </li>
+                    <li id="dropdown">
+                        <span
+                            >Övrigt <img src="../Icons/dropdown icon.png"
+                        /></span>
+                        <ul id="dropdown-menu">
+                            <li>
+                                <a href="../organisation/index.html"
+                                    >Organisation</a
+                                >
+                            </li>
+                            <li><a href="../årsmöte/index.html">Årsmöte</a></li>
+                            <li>
+                                <a id="active" href="../styrelsen/index.html"
+                                    >Styrelsen</a
+                                >
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+            <div id="title">
+                <img src="../pics/Berzience.png" />
+                Berzience
+            </div>
+
+            <div class="kontakt">
+                <a
+                    href="https://www.instagram.com/berzienceclub/"
+                    target="_blank"
+                    id="instagram"
+                    ><img src="../Icons/instagram.svg"
+                /></a>
+                <a
+                    id="kontaktaOss"
+                    href="https://docs.google.com/forms/d/e/1FAIpQLSfdHJQUIJ_1zNwo3tKn1qC0o9uPzKXtirmRmc5elRNLblE-ng/viewform"
+                    >Kontakta oss</a
+                >
+            </div>
+        </header>
+
+        <nav id="menu">
+            <ul id="navLinks">
+                <li><a href="../index.html">Hem</a></li>
+                <li><a href="../events/index.html">Events</a></li>
+                <li><a href="../organisation/index.html">Organisation</a></li>
+                <li><a href="../årsmöte/index.html">Årsmöte</a></li>
+                <li><a href="../styrelsen/index.html">Styrelsen</a></li>
+                <li>
+                    <a
+                        id="kontaktaOss1"
+                        href="https://docs.google.com/forms/d/e/1FAIpQLSfdHJQUIJ_1zNwo3tKn1qC0o9uPzKXtirmRmc5elRNLblE-ng/viewform"
+                        >Kontakta oss</a
+                    >
+                </li>
+                <li id="instagram">
+                    <a
+                        href="https://www.instagram.com/berzienceclub/"
+                        target="_blank"
+                        id="instagram1"
+                        ><img src="../Icons/instagram.svg" />Följ oss på
+                        @BerzienceClub!</a
+                    >
+                </li>
             </ul>
-          </li>
-        </ul>
-      </nav>
+        </nav>
 
-      <div id="title">
-        <img src="/pics/Berzience.png" />
-        Berzience
-      </div>
+        <div id="mainBackground">
+            <main id="övrigtMain">
+                <div>
+                    <h2>Organisationsöversikt</h2>
+                    Berzience Club är en ideel förening som är grundad 2023 och
+                    är en medlemsorganisation i
+                    <a href="https://ungaforskare.se/">Unga Forskare.</a>
+                    Berzience Club är helt fristående från skolan och drivs av
+                    och för eleverna på Berzeliusskolans gymnasium. Varje år
+                    väljs en styrelse som har i uppgift att driva Berzience
+                    Club.
+                </div>
 
-      <div class="kontakt">
-        <a
-          href="https://www.instagram.com/berzienceclub/"
-          target="_blank"
-          id="instagram"
-          ><img src="/Icons/instagram.svg"
-        /></a>
-        <a
-          id="kontaktaOss"
-          href="https://docs.google.com/forms/d/e/1FAIpQLSfdHJQUIJ_1zNwo3tKn1qC0o9uPzKXtirmRmc5elRNLblE-ng/viewform"
-          >Kontakta oss</a
-        >
-      </div>
-    </header>
+                <div>
+                    <h2>Berzience Clubs uppdrag</h2>
+                    Berzience Clubs uppdrag är att utbilda och främja intresset
+                    inom STEM-ämnena hos eleverna på Berzeliusskolans gymnasium.
+                    För att göra detta anordnar den elevledda styrelsen event
+                    som sträcker sig från plugghjälp till expert föreläsningar
+                    inom STEM-relaterade områden.
+                </div>
 
-    <nav id="menu">
-      <ul id="navLinks">
-        <li><a href="/index.html">Hem</a></li>
-        <li><a href="/events/index.html">Events</a></li>
-        <li><a href="/organisation/index.html">Organisation</a></li>
-        <li><a href="/årsmöte/index.html">Årsmöte</a></li>
-        <li><a href="/styrelsen/index.html">Styrelsen</a></li>
-        <li>
-          <a
-            id="kontaktaOss1"
-            href="https://docs.google.com/forms/d/e/1FAIpQLSfdHJQUIJ_1zNwo3tKn1qC0o9uPzKXtirmRmc5elRNLblE-ng/viewform"
-            >Kontakta oss</a
-          >
-        </li>
-        <li id="instagram">
-          <a
-            href="https://www.instagram.com/berzienceclub/"
-            target="_blank"
-            id="instagram1"
-            ><img src="/Icons/instagram.svg" />Följ oss på @BerzienceClub!</a
-          >
-        </li>
-      </ul>
-    </nav>
-
-    <div id="mainBackground">
-      <main id="övrigtMain">
-        <div>
-          <h2>Organisationsöversikt</h2>
-          Berzience Club är en ideel förening som är grundad 2023 och är en
-          medlemsorganisation i
-          <a href="https://ungaforskare.se/">Unga Forskare.</a> Berzience Club
-          är helt fristående från skolan och drivs av och för eleverna på
-          Berzeliusskolans gymnasium. Varje år väljs en styrelse som har i
-          uppgift att driva Berzience Club.
+                <div class="files">
+                    <a
+                        href="../pdf/Stadgar Verk. 2025, styrelse III - Berzience Club.pdf"
+                        ><img src="../Icons/pdf.svg" alt="" />
+                        Stadgar
+                    </a>
+                </div>
+            </main>
         </div>
 
-        <div>
-          <h2>Berzience Clubs uppdrag</h2>
-          Berzience Clubs uppdrag är att utbilda och främja intresset inom
-          STEM-ämnena hos eleverna på Berzeliusskolans gymnasium. För att göra
-          detta anordnar den elevledda styrelsen event som sträcker sig från
-          plugghjälp till expert föreläsningar inom STEM-relaterade områden.
-        </div>
+        <footer id="footer">
+            <div id="address">
+                Berzience Club<br />
+                Org. nr. 802545-0894 <br /><br />
 
-        <div class="files">
-          <a href="/pdf/Stadgar Verk. 2025, styrelse III - Berzience Club.pdf"
-            ><img src="/Icons/pdf.svg" alt="" />
-            Stadgar
-          </a>
-        </div>
-      </main>
-    </div>
+                Gustav Adolfsgatan 25,<br />
+                580 03 Linköping
+            </div>
+        </footer>
 
-    <footer id="footer">
-      <div id="address">
-        Berzience Club<br />
-        Org. nr. 802545-0894 <br /><br />
-
-        Gustav Adolfsgatan 25,<br />
-        580 03 Linköping
-      </div>
-    </footer>
-
-    <script src="/script.js"></script>
-  </body>
+        <script src="../script.js"></script>
+    </body>
 </html>
