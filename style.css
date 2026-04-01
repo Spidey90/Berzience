@@ -416,6 +416,10 @@ footer div {
     font-size: 1.6rem;
     font-family: fontSemiBold;
 }
+#meddelande a {
+    color: #486cf9;
+    text-decoration: underline;
+}
 #meddelande #info {
     margin-top: 8px;
     font-family: fontMedium;
@@ -439,6 +443,11 @@ footer div {
     display: grid;
     gap: 16px;
     margin-top: 8px;
+}
+#events ul span {
+    padding: 4px 12px;
+    font-size: 1.12rem;
+    font-family: fontSemiBold;
 }
 #events ul li {
     position: relative;
@@ -610,31 +619,9 @@ footer div {
     flex-direction: row !important;
     justify-content: center;
 }
-.styrelsenMain #potential_man {
-    position: fixed;
-    bottom: 0px;
-    right: 8px;
-    mix-blend-mode: difference;
-    color: white;
-}
-
-.styrelsen {
-    display: flex;
-    flex-direction: column;
-    border: 1px solid hsl(0, 0%, 80%);
-    border-radius: 4px;
-    width: fit-content !important;
-}
-.styrelsen h2 {
-    padding: 8px !important;
-}
-.styrelsen span {
-    font-size: 1.12rem;
-    padding: 12px 8px;
-}
-.styrelsen img {
-    max-width: 92dvw;
-    max-height: 420px !important;
+.styrelsenMain img {
+    max-width: 36dvw;
+    min-width: 300px;
 }
 
 /*Media*/
